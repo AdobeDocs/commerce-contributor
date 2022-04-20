@@ -1,5 +1,5 @@
 ---
-title: Support - Adobe Analytics
+title: Community
 description: This is the support page of Adobe Analytics 
 ---
 
