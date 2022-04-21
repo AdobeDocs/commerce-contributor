@@ -7,4 +7,8 @@ module.exports = [
       title: "Guides",
       path: "/guides/",
     },
+    {
+      title: "Community",
+      path: "/community/"
+    },
   ];
