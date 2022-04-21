@@ -6,12 +6,13 @@ redirect_from:
 - guides/v2.4/contributor-guide/contributing.html
 ---
 
-{:.bs-callout-tip}
-Connect with Magento Contributors and Maintainers to learn more about Magento contributions and special projects. Join us in our [Slack workspace](https://opensource.magento.com/slack), in the [#general](https://magentocommeng.slack.com/archives/C4YS78WE6) channel, follow the [#announcements](https://magentocommeng.slack.com/archives/C7FA71S3V), and browse for more [channels]({{ site.baseurl }}/community/resources/resources.html#community-engineering-slack)!
+<InlineAlert variant="info" slots="text"/>
+
+Connect with Magento Open Source Contributors and Maintainers to learn more about contributions and special projects. Join us in our [Slack workspace](https://opensource.magento.com/slack), in the [#general](https://magentocommeng.slack.com/archives/C4YS78WE6) channel, follow the [#announcements](https://magentocommeng.slack.com/archives/C7FA71S3V), and browse for more [channels](https://devdocs.magento.com/community/resources/resources.html#community-engineering-slack)!
 
 ## Contribute to Magento 2 code {#contribute}
 
-We use the [fork and pull](#forks-and-pull-requests) model to contribute to the Magento 2 codebase. This method allows contributors to maintain their own copy of the forked codebase, which can be easily synced with the main copy. The forked repository is then used to submit a pull request to the base repository to merge a set of changes from the fork into the main repository.
+We use the [fork and pull](#forks-and-pull-requests) model to contribute to the Magento Open Source codebase. This method allows contributors to maintain their own copy of the forked codebase, which can be easily synced with the main copy. The forked repository is then used to submit a pull request to the base repository to merge a set of changes from the fork into the main repository.
 
 Contributions can take the form of new components or features, changes to existing features, tests, documentation (such as developer guides, user guides, examples, or specifications), bug fixes, optimizations, or just good suggestions.
 
@@ -19,7 +20,8 @@ The Community Engineering Team reviews all issues and contributions submitted by
 
 When the Community Engineering Team works on reviewing the suggested changes, we will add a label to the issue to indicate certain information, like the status or who is working the issue. See [Labels](#labels) to learn more.
 
-{:.bs-callout-tip}
+<InlineAlert variant="info" slots="text"/>
+
 Refer to the [Adobe Contributor Agreement](https://opensource.adobe.com/cla.html) for detailed information about the License Agreement. All contributors are required to submit a click-through form to agree to the terms.
 
 ## Community Backlog Priority {#backlog}
@@ -30,10 +32,12 @@ Having clear contribution rules in place helps to build clear expectations for C
 If you would like to contribute improvements or bug fixes to Magento, and make sure it is valuable for the Community and Magento as well, we highly recommend that Community Contributors to take issues from the backlog based on **Priority**.
 Magento and Community Maintainers process contributions based on the issue/pull requests priority starting from P0, P1 to P4.
 
-{:.bs-callout-tip}
+<InlineAlert variant="info" slots="text"/>
+
 **Priority** signifies how important or detrimental a defect is. The defect priority status is set by Product Managers. Priority also helps to determine the scheduling of the fix: Higher priority bugs will be fixed and merged first. It is a reflection on how bad the bug is for the system and also for business or marketing requirements.
 
-{:.bs-callout-tip}
+<InlineAlert variant="info" slots="text"/>
+
 **Severity** is a measure of how ‘bad’ the bug is and how much disruption it causes, without regard to remaining work or the release schedule.
 
 ### Priority and severity descriptions
@@ -109,16 +113,24 @@ Submit feature requests or enhancement suggestions to the [Magento 2 Feature Req
 
 ## Accepted pull requests and ported code {#rules}
 
-{% include contributor/2-4-submission.md %}
+<InlineAlert variant="help" slots="text"/>
+
+**v2.4 Contribution Notice:**
+Adobe is focusing development efforts on v2.4, so we are no longer accepting pull requests to the v2.3, v2.2, v2.1, and v2.0 release lines.
 
 Review the following supported and accepted pull request rules. We defined these rules to simplify and accelerate your submissions, ensure code consistency, manage current and backlog tasks, and so on.
 
-{% include contributor/pull-request-table.md %}
+|     |                 Fix for Existing Issue                 |                     Test Coverage                      |                      Refactoring                       |                      New Feature                       |                      Code Cleanup                      |
+|:----|:------------------------------------------------------:|:------------------------------------------------------:|:------------------------------------------------------:|:------------------------------------------------------:|:------------------------------------------------------:|
+| 2.1 |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |
+| 2.2 |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |
+| 2.3 |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |
+| 2.4 | ![Yes](_images/green-check.png) | ![Yes](_images/green-check.png) | ![Yes](_images/green-check.png) | ![Yes](_images/green-check.png) | ![Yes](_images/green-check.png) |
 
 ## Contribution requirements {#requirements}
 
-1. Contributions must adhere to the [coding standards]({{ site.gdeurl }}/coding-standards/bk-coding-standards.html).
-1. Refer to the [Definition of Done]({{ site.baseurl }}/contributor-guide/contributing_dod.html). We use these guidelines internally to ensure that we deliver well-tested, well-documented, and solid code. We encourage you to use this as well!
+1. Contributions must adhere to the [coding standards](https://devdocs.magento.com/guides/v2.4/coding-standards/bk-coding-standards.html).
+1. Refer to the [Definition of Done](definition-of-done.md). We use these guidelines internally to ensure that we deliver well-tested, well-documented, and solid code. We encourage you to use this as well!
 1. Pull requests (PRs) must be accompanied by a meaningful description of their purpose. Comprehensive descriptions increase the chances that a pull request is merged quickly and without additional clarification requests.
 1. Commits must be accompanied by meaningful commit messages.
 1. PRs that include bug fixes must be accompanied by a step-by-step description of how to reproduce the bug.
@@ -139,13 +151,13 @@ For complete information about contributing to Magento Open Source projects, see
 -  Fix/implement the functionality
 -  Cover the changes with tests
 -  Open a pull request
--  Launch tests and ensure they are green (see more details on [pull request tests]({{ site.baseurl }}/contributor-guide/pull-request-tests.html))
+-  Launch tests and ensure they are green (see more details on [pull request tests](pull-request-tests.md))
 
 ## Squash commits {#squash-commits}
 
 Sometimes your pull request may have more than one commit (the main commit, then changes to it after review, etc). A good practice is to deliver commits that bring finalized, functional parts/bugfixes. In that case, all intermediate commits like "static test fix", "typo fix", "minor refactoring" should be squashed into a single commit. This helps keep a clean history and makes the repo easier to read. There is no requirement to have only one commit per PR. However, the intermediate commits in most cases bring no value into the commits history, which is why it is a good to keep the history clean and useful.
 
-## Magento contributor assistant {#contributor-assist}
+## Contributor assistant
 
 The Magento Contributor Assistant is a bot that runs on all GitHub `magento` repositories. It helps automate issue and pull request workflows by using commands entered as comments.
 
@@ -237,7 +249,7 @@ Admins access will be shared via comment on GitHub.
 
 -  [Community Maintainers](https://github.com/magento/magento2/wiki/Community-Maintainers)
 -  Magento EngCom Team
--  [Contributor]({{ site.baseurl }}/contributor-guide/contributors.html)
+-  [Contributor](../contributors/)
 
 ### Customize deployed instances {#customize-deployed-instances}
 
@@ -253,10 +265,10 @@ with edition {$edition}
 
 Replace `{$edition}` with either of the following values:
 
--  `ee` deploys the {{site.data.var.ee}} edition
--  `b2b` deploys {{site.data.var.ee}} with B2B modules.
+-  `ee` deploys the Adobe Commerce edition
+-  `b2b` deploys Adobe Commerce with B2B modules.
 
-For example, append the following text to the PR comment to deploy a {{site.data.var.ee}} instance with B2B modules:
+For example, append the following text to the PR comment to deploy a Adobe Commerce instance with B2B modules:
 
 ```text
 with edition b2b
@@ -333,10 +345,10 @@ To maintain an effective bug fix workflow, we ask reporters to follow some simpl
 
 Before creating an issue, do the following:
 
--  Check the [Developer Documentation]({{ site.baseurl }}/) and [User Guide]({{ site.user_guide_url }}/getting-started.html) to make sure the behavior you are reporting is really a bug, not a feature.
+-  Check the [Developer Documentation](https://developer.adobe.com/commerce) and [User Guide](https://docs.magento.com/user-guide/getting-started.html) to make sure the behavior you are reporting is really a bug, not a feature.
 -  Check the [existing issues](https://github.com/magento/magento2/issues) to make sure you are not duplicating somebody’s work.
 -  Ensure that information you are reporting is a technical issue. Refer to the [Community Forums](https://community.magento.com/) or [Magento Stack Exchange](http://magento.stackexchange.com/) for technical questions, feature requests, etc.
--  Verify that the issue you are reporting does not relate to {{site.data.var.ee}}. GitHub is intended for {{site.data.var.ce}} users to report on issues related to Open Source only. You can report Commerce-related issues one of two ways:
+-  Verify that the issue you are reporting does not relate to Adobe Commerce. GitHub is intended for Magento Open Source users to report on issues related to Open Source only. You can report Commerce-related issues one of two ways:
 
    -  Use the Support portal associated with your account
    -  If you are a Partner reporting on behalf of a merchant, use the Partner portal
@@ -347,9 +359,10 @@ If you are sure that the problem you are experiencing is a bug, file a new issue
 
 ### Issue template
 
-The [Issue Reporting Template](https://github.com/magento/magento2/blob/{{site.version}}-develop/.github/ISSUE_TEMPLATE.md) is a default placeholder for every new issue. Follow the sections carefully, as it ensures it will pass `Gate 1` quickly. More information on gates is available in [Magento Issue Gates](https://github.com/magento/magento2/wiki/Magento-Issue-Gates).
+The [Issue Reporting Template](https://github.com/magento/magento2/blob/2.4-develop/.github/ISSUE_TEMPLATE.md) is a default placeholder for every new issue. Follow the sections carefully, as it ensures it will pass `Gate 1` quickly. More information on gates is available in [Magento Issue Gates](https://github.com/magento/magento2/wiki/Magento-Issue-Gates).
 
-{:.bs-callout-tip}
+<InlineAlert variant="info" slots="text"/>
+
 Note that a higher level of detail in the report increases the chance that someone will be able to reproduce the issue.
 
 ### Title
@@ -421,4 +434,85 @@ In addition to contributing code, you can help triage issues. This can include r
 
 We apply labels to public pull requests and issues to help other participants retrieve additional information about current progress, component assignments, Magento release lines, and much more. The following information details global labels used in Magento 2 repositories and across Community Engineering contributions.
 
-{% include contributor/labels.md %}
+### Release Lines
+
+Release line labels indicate the specific release lines affected by the issue or PR. For example, if working on a fix for 2.4.0 you would apply the Release Line: 2.4. This effectively includes all releases in this line.
+
+-  `Release Line: 2.3`
+-  `Release Line: 2.4`
+
+### Progress
+
+Progress labels indicate the Pull Request status on each review stage:
+
+-  `Progress: needs update` - The Community Engineering Team needs additional information from the reporter to properly prioritize and process the pull request. <!-- needs update -->
+-  `Progress: on hold` - The pull request is on hold due and will be further reviewed to accept or reject.
+-  `Progress: accept` - The pull request has been accepted and will be merged into mainline code. <!-- accept -->
+-  `Progress: reject` - The pull request has been rejected and will not be merged into mainline code. Possible reasons can include but are not limited to: issue has already been fixed in another code contribution, or there is an issue with the code contribution. <!-- reject -->
+
+### Partners
+
+All partners Pull Requests should be marked with label `partners-contribution`. Additionally, add a partner label for PRs submitted by specific Partners. Use the format: `Partner: <PartnerName>`. The following are Partner examples:
+
+Example labels:
+
+-  `partners-contribution`
+-  `Partner: Atwix`
+-  `Partner: Comwrap`
+-  `Partner: Interactiv4`
+-  `Partner: Wagento`
+
+### Components
+
+Component labels indicate the components affected by the Pull Request. To learn more about available components and assigned architects, see [Components Assignment](https://github.com/magento/architecture/wiki/Component-Assignments).
+
+Example labels:
+
+-  `Component: Catalog`
+-  `Component: Report`
+-  `Component: Checkout`
+
+For edge cases, `Component: Other` and `Component: Multiple` may be used.
+
+### Events
+
+Event labels mark recommended issues and submitted PRs for a specific event. Events may include Contribution Days, Hackathons, Imagine, special events like Smashtoberfest, and others. Contributors and Maintainers can easily locate code when attending those events. Some events may also have a [Community Engineering Slack](https://magentocommeng.slack.com) channel using the same label.
+
+Example labels:
+
+-  `Event: mm18in`
+-  `Event: mm17es`
+-  `Event: mlau18`
+
+### General
+
+General labels include a variety of tasks and definitions for pull requests and issues.
+
+-  `good first issue` - Indicates a good issue for first-time contributors.
+-  `help wanted` - Indicates the creator or author needs help with a decision, advice for resolving, and so on.
+-  `triage wanted` - Indicates the issues are under triage. See this information to learn more about the [Triage Wanted program](https://github.com/magento/magento2/wiki/Triage-Wanted).
+
+### Issue resolution status
+
+Labels applied to issues through verification and completion. For details on the process, see [GitHub Issues Processing Workflow](https://github.com/magento/magento2/wiki/GitHub-Issues-Processing-Workflow).
+
+-  `Issue: Format is not valid` - Gate 1 failed. Automatic verification by the Automated Contributor Assistant failed and the issue needs updates. The [format](https://github.com/magento/magento2/tree/2.4/.github/ISSUE_TEMPLATE) of the issue description and minimum required information is not provided: Preconditions, Steps to Reproduce, Actual Result, Expected Result. Previous label `G1 Failed`.
+-  `Issue: Format is valid` - Gate 1 passed. Automatic verification by the Automated Contributor Assistant passed for all issue content. Previous label `G1 Passed`.
+-  `Issue: Clear Description` - Gate 2 passed. The Community Engineering Team has confirmed that this issue contains the minimum required information to reproduce. Previous label `G2 Passed`.
+-  `Issue: Cannot Reproduce` - Gate 3 failed. The issue could not be reproduced or validated. Previous label `Cannot Reproduce`.
+-  `Issue: Confirmed` - Gate 3 passed. Manual verification of the issue description and reproduction steps was confirmed. Previous label `G3 Passed`.
+-  `Issue: Ready for Work` - Gate 4 passed. The issue is acknowledged and added to the backlog for open development. Previous label `acknowledged`.
+-  `Reproduced on 2.3.x` - The Community Engineering Team reproduced the issue on latest 2.3.x release.
+-  `Reproduced on 2.4.x` - The Community Engineering Team reproduced the issue on latest 2.4.x release.
+-  `Fixed in 2.3.x` - The issue has been fixed in one of the 2.3.x releases.
+-  `Fixed in 2.4.x` - The issue has been fixed in one of the 2.4.x releases or in 2.4-develop branch and will be available with the upcoming patch release.
+-  `non-issue` - A described behavior in the issue description is valid and shouldn't be changed in Magento code base.
+
+### DevDocs
+
+All [contributions to DevDocs](https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md) receive the following labels:
+
+-  `New topic`- New topic submissions for content that has never existed on DevDocs such as tutorials, references, instructions, and so on
+-  `Major update` - Significant original updates to existing content
+-  `Technical` - Updates to the code or processes that alter the technical content of the document, such as code snippets, reference documentation, parameter names and values, and other relevant content
+-  `Editorial` - Fixes for typos, grammatical inconsistencies, or minor rewrites to correct inaccuracies

@@ -112,10 +112,10 @@ Label descriptions:
 *  `Issue: Confirmed` – The maintainer has reproduced the issue using the latest `2.4-develop` branch.
 *  `Issue: Cannot reproduce` – The described issue is not reproducible by the described scenario or reproduction steps.
 *  `non-issue` – The described behavior in the report is correct or expected behavior, and is not an issue.
-*  `Area: xxx` – The {{site.data.var.ce}} functional area that might be the origin of the issue. There is a specific label for each major area.
+*  `Area: xxx` – The Magento Open Source functional area that might be the origin of the issue. There is a specific label for each major area.
 *  `Reproduced on 2.4.x` - The release line where the maintainer reproduced the issue.
 *  `Issue: needs update` – The issue is pending a response from the reporter.
-*  `Reported on 2.x.x` - The original {{site.data.var.ce}} version for the issue report.
+*  `Reported on 2.x.x` - The original Magento Open Source version for the issue report.
 
 ## Questions and Discussion
 

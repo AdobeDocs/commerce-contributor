@@ -25,7 +25,7 @@ The following sections provide additional details about each of these criteria:
 **Functional backward compatibility** means the behaviour of the application is preserved.
 
 Existing product features and functionality must be retained during any changes to the code.
-Any backward-incompatible functional changes must be approved by a product owner.
+Any backward-compatible functional changes must be approved by a product owner.
 The documentation should explain the justification and provide the "business value".
 
 ### Technical Backward Compatibility
@@ -34,12 +34,12 @@ The documentation should explain the justification and provide the "business val
 
 Technical interfaces include PHP interfaces or classes, CLI commands, URLs or any other interfaces that can be used by 3rd-party developer, system integrator, or user of Magento.
 Any change to an interface that can lead to a broken integration is a breaking technical change.
-Technical interfaces and the corresponding level of change is described in [Code Changes][6] and [Module Version Dependencies][7] documents in more details.
+Technical interfaces and the corresponding level of change is described in [Code Changes](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/versioning/codebase-changes.html) and [Module Version Dependencies](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/versioning/dependencies.html) documents in more details.
 
 Technical backward compatibility must be retained between PATCH (marketing) versions of Magento products. It should also be retained between MINOR (marketing) releases if possible.
 Any breaking changes must be approved by an architect, product owner and release manager.
 
-For more information, see [Magento's backward compatibility policy][1] and [Versioning][5] documents.
+For more information, see the [backward compatibility policy](backward-compatible-development) and [Versioning](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/versioning/index.html) documents.
 
 ## Documentation
 
@@ -50,9 +50,9 @@ Documentation for the submitted code should be submitted as a pull request to th
 
 When submitting either code or documentation, a brief summary of the work should be included in the commit message.
 
-Additionally, the code itself should follow our [DocBlock standard][0] and contain high-quality comments and descriptions for all classes and methods.
+Additionally, the code itself should follow our [DocBlock standard](https://devdocs.magento.com/guides/v2.4/coding-standards/docblock-standard-general.html) and contain high-quality comments and descriptions for all classes and methods.
 
-For documenting backward-incompatible changes, please see [Backwards Compatible Development][8].
+For documenting backward-compatible changes, please see [Backwards Compatible Development](backward-compatible-development.md#where-to-document).
 
 ## Tests
 
@@ -108,7 +108,7 @@ Integration test policy:
   For example, `Magento\Framework\SomeClassFilter` may contain a `FilterPool` that comes with default `FilterInterface`'s from `Magento\Framework`. Each of these implementations would have their own coverage pursuant to this document. However, there should also be some basic assertions within the test coverage for `Magento\Framework\SomeClassFilter` that ensure each of the default filters are loaded correctly.
   This should not be explicit coverage such as `$filter->isLoaded('someDefaultFilter')`.
 
-See: [Running Integration Tests][3].
+See: [Running Integration Tests](https://devdocs.magento.com/guides/v2.4/test/integration/integration_test_execution.html).
 
 ### Functional Tests
 
@@ -122,7 +122,7 @@ Functional test policy:
 
 If there is a scenario that is not classified as a P0/P1 but should be, have a discussion with the product owner to get it elevated.
 
-See [Functional Tests][2].
+See [Functional Tests](https://devdocs.magento.com/guides/v2.4/test/testing.html).
 
 ### Unit Tests
 
@@ -189,14 +189,14 @@ Expected code coverage: must cover all applicable files in entire code base.
 
 Code to cover:
 
-*  Must cover any formal backward-incompatible changes on code level.
-   For more information, see [Magento's backward compatibility policy]({{ site.baseurl }}/contributor-guide/backward-compatible-development/).
+*  Must cover any formal backward-compatible changes on code level.
+   For more information, see [backward compatibility policy](backward-compatible-development).
 
 A failure in a legacy test must provide comprehensive explanation of an alternative, if there is any.
 
 Expected code coverage:
 
-*  Must cover the majority of occurrences of the backward-incompatible change.
+*  Must cover the majority of occurrences of the backward-compatible change.
 *  Should cover 100% of occurrences.
 
 Not all changes can be covered.
@@ -213,13 +213,3 @@ A task, when complete by the author, should be reviewed by another Magento commu
 The reviewer should check whether the task meets the original acceptance criteria and verify that there are no code defects and that all points of this definition of done are met.
 
 The work cannot be considered as complete unless all the criteria are verified.
-
-[0]:{{ site.gdeurl }}/coding-standards/docblock-standard-general.html
-[1]:{{ site.baseurl }}/contributor-guide/backward-compatible-development/
-[2]:{{ site.gdeurl }}/test/testing.html
-[3]:{{ site.gdeurl }}/test/integration/integration_test_execution.html
-[4]:https://github.com/magento/devdocs
-[5]:{{ site.gdeurl }}/extension-dev-guide/versioning/index.html
-[6]:{{ site.gdeurl }}/extension-dev-guide/versioning/codebase-changes.html
-[7]:{{ site.gdeurl }}/extension-dev-guide/versioning/dependencies.html
-[8]:{{ site.baseurl }}/contributor-guide/backward-compatible-development/index.html#where-to-document

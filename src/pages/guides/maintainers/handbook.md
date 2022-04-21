@@ -37,7 +37,7 @@ Once you have chosen a pull request, there are some steps to be followed during 
 
 The first thing we encourage a maintainer to check is if the contributor has signed the Adobe CLA. Without this signature, we cannot accept the contribution. If the Contributor has not signed the CLA, that check will be red. Add a comment to the pull request requesting the contributor to sign the CLA.
 
-Once the CLA has been signed, we can check the other builds. Those builds are run based on the contributors pull request and will let us know if the proposed changes are causing existing functionality to break or are not fully compliant with coding standards. If either the Magento Heath Index or Semantic Version Checker fail, the PR should be changed or the proposed changes will need approval by the Magento team. More information can be found on our [Contributor Guide]({{ site.baseurl }}/contributor-guide/pull-request-tests.html).
+Once the CLA has been signed, we can check the other builds. Those builds are run based on the contributors pull request and will let us know if the proposed changes are causing existing functionality to break or are not fully compliant with coding standards. If either the Magento Heath Index or Semantic Version Checker fail, the PR should be changed or the proposed changes will need approval by the Magento team. More information can be found on our [Contributor Guide](../code-contributions/pull-request-tests).
 
 ![Check CLA and Builds](_images/builds-and-checks.png)
 
@@ -49,13 +49,13 @@ It is important to check the pull request is targeted to the correct branch. For
 
 #### Code review
 
-The code review is one of the most important parts of the review process. Our community maintainers are responsible for reviewing the proposed changes and confirm they are following the [Magento Technical Guidelines]({{ site.baseurl }}{{ site.gdeurl }}/coding-standards/technical-guidelines.html). It is important to evaluate if the proposed changes are backward compatible and follow the rules and best practice of our [Backward Compatible Development Guide]({{ site.baseurl }}/contributor-guide/backward-compatible-development/). We count on our Maintainers judgement for other recommendations to increase contribution quality.
+The code review is one of the most important parts of the review process. Our community maintainers are responsible for reviewing the proposed changes and confirm they are following the [Technical Guidelines](https://devdocs.magento.com/guides/v2.4/coding-standards/technical-guidelines.html). It is important to evaluate if the proposed changes are backward compatible and follow the rules and best practice of our [Backward Compatible Development Guide](../code-contributions/backward-compatible-development). We count on our Maintainers judgement for other recommendations to increase contribution quality.
 
 ![Code review](_images/pr-code-review.png)
 
 #### Test coverage
 
-As described on our [Definition of Done]({{ site.baseurl }}/contributor-guide/contributing_dod.html), all code changes must be covered by automated tests. It is part of the review process to:
+As described on our [Definition of Done](../code-contributions/definition-of-done), all code changes must be covered by automated tests. It is part of the review process to:
 
 -  Guarantee the changes are properly covered
 -  Ensure the type of test used to cover the changes is appropriate
@@ -71,27 +71,21 @@ Once all the steps above are complete, the maintainer can approve the contributo
 
 ![Approve Changes](_images/approve-changes.png)
 
-#### Set award labels
-
-We are thankful for all contributions, and we recognize our most active members. Contributors earn points in numerous ways with a focus on PRs in the backlog and special projects. We use labels to highlight the different types of achievements. We encourage maintainers to review all the [existing awards]({{ site.baseurl }}/contributor-guide/contributing.html#points) and based on the information provided decide which award is most suitable.
-
-![Set Award Labels](_images/award-labels.png)
-
 ### Other useful information
 
 Besides the repositories, projects and code review process, there are other tools and processes that maintainers should know about.
 
 #### Related pull requests
 
-Magento is a complex platform and, some changes may require changes in multiple repositories. For example, if a contributor’s PR performs a change on a feature that is being used on the {{site.data.var.ee}} edition, it may require a parallel PR in that repository.
+Magento is a complex platform and, some changes may require changes in multiple repositories. For example, if a contributor’s PR performs a change on a feature that is being used on the Adobe Commerce edition, it may require a parallel PR in that repository.
 
-In that case, builds need to run using the changes from both PRs. To do so, use the 'related pull requests' feature. This feature is enabled by adding the link to the related pull request on the main pull request description using Github keywords. Details on this are in the [Contributor Guide]({{ site.baseurl }}/contributor-guide/pull-request-tests.html#related-pull-requests).
+In that case, builds need to run using the changes from both PRs. To do so, use the 'related pull requests' feature. This feature is enabled by adding the link to the related pull request on the main pull request description using Github keywords. Details on this are in the [Contributor Guide](../code-contributions/pull-request-tests.md#related-pull-requests).
 
 ![Related pull requests](_images/related-prs.png)
 
 #### Pull request deployment tool
 
-The deployment tool helps contributors and maintainers to test changes or validate if an issue exists on clean Magento installation. More information on the deployment tool can be found in the [Contributor's Guide]({{ site.baseurl }}/contributor-guide/contributing.html#contributor-assist).
+The deployment tool helps contributors and maintainers to test changes or validate if an issue exists on clean Magento installation. More information on the deployment tool can be found in the [Contributor's Guide](../code-contributions/contributing.md#contributor-assistant).
 
 ![pull request Deployment Tool](_images/deployment-comments.png)
 
