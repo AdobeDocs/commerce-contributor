@@ -44,17 +44,17 @@ Adobe and Community Maintainers process contributions based on the issue/pull re
 
 | Severity | Description |
 | -------- | ------------- |
-| Severity: S0 | -  Affects critical data or functionality and leaves users with no workaround.<br>-  Significant catastrophic impact.<br>-  A problem that is blocking the ability to work. An immediate fix is needed.<br> |
-| Severity: S1 | -  Affects critical data or functionality and forces users to employ a workaround.<br>-  Impact to the key product qualities.<br>-  An immediate fix is needed.<br> |
-| Severity: S2 | -  Affects non-critical data or functionality and forces users to employ a workaround.<br>-  Impact to the product qualities that makes the product more usable.<br>-  Major restrictions or short-term circumventions are required until a fix is available. A fix is important.<br> |
-| Severity: S3 | -  Affects non-critical data or functionality and does not force users to employ a workaround.<br>-  Problem has moderate impact requiring some restrictions. The fix is in an area that is not critical.<br> |
-| Severity: S4 | -  A minor problem, annoyance, or technical issue with minimal impact.<br>-  Impact that does not prevent or hinder functionality.<br>-  Affects aesthetics, professional look and feel, “quality” or “usability”.<br> |
+| Severity: S0 | -  Affects critical data or functionality and leaves users with no workaround.<br />-  Significant catastrophic impact.<br />-  A problem that is blocking the ability to work. An immediate fix is needed.<br /> |
+| Severity: S1 | -  Affects critical data or functionality and forces users to employ a workaround.<br />-  Impact to the key product qualities.<br />-  An immediate fix is needed.<br /> |
+| Severity: S2 | -  Affects non-critical data or functionality and forces users to employ a workaround.<br />-  Impact to the product qualities that makes the product more usable.<br />-  Major restrictions or short-term circumventions are required until a fix is available. A fix is important.<br /> |
+| Severity: S3 | -  Affects non-critical data or functionality and does not force users to employ a workaround.<br />-  Problem has moderate impact requiring some restrictions. The fix is in an area that is not critical.<br /> |
+| Severity: S4 | -  A minor problem, annoyance, or technical issue with minimal impact.<br />-  Impact that does not prevent or hinder functionality.<br />-  Affects aesthetics, professional look and feel, “quality” or “usability”.<br /> |
 
 | Priority | Description |
 | ------------- | ------------- |
-| Priority: P0 | -  The defect needs to be fixed right now, everything else can wait.<br> - This generally occurs in cases when the entire functionality is blocked. |
-| Priority: P1 | -  Needs to be fixed before any other issues.<br>-  Once P0 defects have been fixed, a defect having this priority is the next candidate for fixing. |
-| Priority: P2 | -  Should be fixed as early as possible<br>-  A defect with this priority could have functionality issues which are not to expectations. |
+| Priority: P0 | -  The defect needs to be fixed right now, everything else can wait.<br /> - This generally occurs in cases when the entire functionality is blocked. |
+| Priority: P1 | -  Needs to be fixed before any other issues.<br />-  Once P0 defects have been fixed, a defect having this priority is the next candidate for fixing. |
+| Priority: P2 | -  Should be fixed as early as possible<br />-  A defect with this priority could have functionality issues which are not to expectations. |
 | Priority: P3 | -  May be fixed according to the position in the backlog.|
 | Priority: P4 | -  No current plan to fix. Fixing can be deferred as a logical part of more important work.|
 

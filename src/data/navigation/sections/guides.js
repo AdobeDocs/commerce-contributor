@@ -5,7 +5,7 @@ module.exports = [
     pages: [
       {
         title: "Backward compatible development",
-        path: "/guides/code-contributions/backward-incompatible-development/",
+        path: "/guides/code-contributions/backward-compatible-development/",
       },
       {
         title: "Definition of done",

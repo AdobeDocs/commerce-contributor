@@ -1,8 +1,6 @@
 ---
-title: Overview - Adobe Analytics
-description: This is the overview page of Adobe Analytics
-contributors:
-  - https://github.com/icaraps 
+title: Commerce Contributor
+description: 
 ---
 
 <Hero slots="heading, text"/>
@@ -27,12 +25,6 @@ The APIs allow for the creation of data rich user interfaces that you can use to
 You can also create reports to explore, get insights, or answer important questions about your data.
 
 ## Discover
-
-<DiscoverBlock width="100%" slots="heading, link, text"/>
-
-### Get Started
-
-[Quickstart Guide](guides/)
 
 Get started with the Adobe Analytics APIs.
 
