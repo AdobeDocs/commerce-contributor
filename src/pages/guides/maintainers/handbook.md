@@ -5,7 +5,7 @@ title: Maintainer's Handbook
 
 This document describes activities performed by a community maintainer, provides some insight and description of the tools integrated within GitHub to assist our maintainers.
 
-### Magento repositories and projects
+### Repositories and projects
 
 Our maintainers work on numerous repositories within the Magento Github organization. The repository that has most activity is [magento2](https://github.com/magento/magento2). Depending on your interest, you might also interact with some of our other repositories, such as:
 
@@ -37,7 +37,7 @@ Once you have chosen a pull request, there are some steps to be followed during 
 
 The first thing we encourage a maintainer to check is if the contributor has signed the Adobe CLA. Without this signature, we cannot accept the contribution. If the Contributor has not signed the CLA, that check will be red. Add a comment to the pull request requesting the contributor to sign the CLA.
 
-Once the CLA has been signed, we can check the other builds. Those builds are run based on the contributors pull request and will let us know if the proposed changes are causing existing functionality to break or are not fully compliant with coding standards. If either the Magento Heath Index or Semantic Version Checker fail, the PR should be changed or the proposed changes will need approval by the Magento team. More information can be found on our [Contributor Guide](../code-contributions/pull-request-tests).
+Once the CLA has been signed, we can check the other builds. Those builds are run based on the contributors pull request and will let us know if the proposed changes are causing existing functionality to break or are not fully compliant with coding standards. If either the Heath Index or Semantic Version Checker fail, the PR should be changed or the proposed changes will need approval by the Adobe team. More information can be found on our [Contributor Guide](../code-contributions/pull-request-tests).
 
 ![Check CLA and Builds](_images/builds-and-checks.png)
 
@@ -77,7 +77,7 @@ Besides the repositories, projects and code review process, there are other tool
 
 #### Related pull requests
 
-Magento is a complex platform and, some changes may require changes in multiple repositories. For example, if a contributor’s PR performs a change on a feature that is being used on the Adobe Commerce edition, it may require a parallel PR in that repository.
+Magento Open source is a complex platform and, some changes may require changes in multiple repositories. For example, if a contributor’s PR performs a change on a feature that is being used on the Adobe Commerce edition, it may require a parallel PR in that repository.
 
 In that case, builds need to run using the changes from both PRs. To do so, use the 'related pull requests' feature. This feature is enabled by adding the link to the related pull request on the main pull request description using Github keywords. Details on this are in the [Contributor Guide](../code-contributions/pull-request-tests.md#related-pull-requests).
 
@@ -85,7 +85,7 @@ In that case, builds need to run using the changes from both PRs. To do so, use 
 
 #### Pull request deployment tool
 
-The deployment tool helps contributors and maintainers to test changes or validate if an issue exists on clean Magento installation. More information on the deployment tool can be found in the [Contributor's Guide](../code-contributions/contributing.md#contributor-assistant).
+The deployment tool helps contributors and maintainers to test changes or validate if an issue exists on a clean installation. More information on the deployment tool can be found in the [Contributor's Guide](../code-contributions/contributing.md#contributor-assistant).
 
 ![pull request Deployment Tool](_images/deployment-comments.png)
 

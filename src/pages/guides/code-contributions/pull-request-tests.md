@@ -3,9 +3,9 @@ group: contributor-guide
 title: Pull Request Tests
 ---
 
-## Magento Automated Testing
+## Automated Testing
 
-Magento Automated Testing infrastructure runs all required automated tests against code in pull requests. You can trigger automated tests by adding a comment to a pull request. Tests are represented both as pull request statuses and checks.
+Automated Testing infrastructure runs all required automated tests against code in pull requests. You can trigger automated tests by adding a comment to a pull request. Tests are represented both as pull request statuses and checks.
 
 The following sections describe the different kinds of tests that are currently available.
 
@@ -16,27 +16,27 @@ See [Backward Compatibility Development](backward-compatible-development) for mo
 
 ### Functional Tests
 
-Functional Tests are PHPUnit-based tests that check Magento functional behavior from the perspective of a user. They click buttons and links in a browser, fill and submit forms, verify what is displayed in the browser window like real users.
+Functional Tests are PHPUnit-based tests that check functional behavior from the perspective of a user. They click buttons and links in a browser, fill and submit forms, verify what is displayed in the browser window like real users.
 
 ### Sample Data Tests
 
-Sample Data Tests are functional tests that run on Magento with Sample Data included.
+Sample Data Tests are functional tests that run on Magento Open Source with Sample Data included.
 
 ### Unit Tests
 
-Unit tests are PHPUnit-based (for PHP) and Jasmine-based (for JS) tests that check the behavior of single methods of Magento classes. The purpose is to validate that each unit of Magento performs as designed.
+Unit tests are PHPUnit-based (for PHP) and Jasmine-based (for JS) tests that check the behavior of single methods of Magento Open Source classes. The purpose is to validate that each unit of Magento Open Source performs as designed.
 
 ### Integration Tests
 
-Integration Tests are PHPUnit-based tests that check the behavior of a group of Magento components. They include three types of tests:
+Integration Tests are PHPUnit-based tests that check the behavior of a group of Magento Open Source components. They include three types of tests:
 
--  Standard Integration tests that check Magento behavior on an installed instance.
--  Setup Integration tests that check Magento behavior during the installation process.
--  Integration Integrity tests that check the consistency of an installed Magento instance (for example, configuration files and database schemes).
+-  Standard Integration tests that check behavior on an installed instance.
+-  Setup Integration tests that check behavior during the installation process.
+-  Integration Integrity tests that check the consistency of an installed instance (for example, configuration files and database schemes).
 
 ### WebAPI Tests
 
-WebAPI Tests are functional tests that check the behavior of Magento Web API endpoints. They send requests to endpoints of an installed Magento instance and then check the response received and the state of the instance. Currently they include three kinds of tests:
+WebAPI Tests are functional tests that check the behavior of Web API endpoints. They send requests to endpoints of an installed instance and then check the response received and the state of the instance. Currently they include three kinds of tests:
 
 -  SOAP Web API tests
 -  REST Web API tests
@@ -44,21 +44,21 @@ WebAPI Tests are functional tests that check the behavior of Magento Web API end
 
 ### Static Tests
 
-Static Tests are a set of different checks that analyze every single file of the Magento code base separately. Most of them analyze the whole Magento code base, whereas some run only against the change set.
+Static Tests are a set of different checks that analyze every single file of the code base separately. Most of them analyze the whole code base, whereas some run only against the change set.
 
 ### Database Compare
 
-Database Compare is a test that compares the database schema and data between a freshly installed Magento instance (from the pull request code) and another instance that was upgraded to the PR code from the latest minor release version of Magento.
+Database Compare is a test that compares the database schema and data between a freshly installed instance (from the pull request code) and another instance that was upgraded to the PR code from the latest minor release version.
 
-### Magento Component Health Index
+### Component Health Index
 
-Magento Component Health Index is a test that analyses Magento code quality and calculates a weighted health index (100 is great, lower is worse) for each Magento Component (module). The index is calculated based on three groups of indicators:
+Component Health Index is a test that analyses code quality and calculates a weighted health index (100 is great, lower is worse) for each Component (module). The index is calculated based on three groups of indicators:
 
 -  [General code quality indicators (GCQI)](http://pdepend.org/documentation/software-metrics/index.html)
 -  Magento-specific code quality indicators (MSCQ)
 -  Legacy API usage indicators (LAI)
 
-Additional information on Magento Automated Testing can be found on the [Magento 2 project wiki](https://github.com/magento/magento2/wiki/Magento-Automated-Testing).
+Additional information on Automated Testing can be found on the [project wiki](https://github.com/magento/magento2/wiki/Magento-Automated-Testing).
 
 ## Running tests for a pull request
 
@@ -93,4 +93,4 @@ https://github.com/<organization>/<repository>/pull/<pull request number>
 When the tests are launched against a pull request that contains links to related pull request in the description, the related pull requests branches will be used as a code base for the tests instead of mainline.
 Check runs will be updated for each of the related pull requests.
 
-Related pull requests are delivered to Magento repositories simultaneously.
+Related pull requests are delivered to Magento Open Source repositories simultaneously.

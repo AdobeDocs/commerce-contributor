@@ -10,7 +10,7 @@ redirect_from:
 
 Connect with Magento Open Source Contributors and Maintainers to learn more about contributions and special projects. Join us in our [Slack workspace](https://opensource.magento.com/slack), in the [#general](https://magentocommeng.slack.com/archives/C4YS78WE6) channel, follow the [#announcements](https://magentocommeng.slack.com/archives/C7FA71S3V), and browse for more [channels](https://devdocs.magento.com/community/resources/resources.html#community-engineering-slack)!
 
-## Contribute to Magento 2 code {#contribute}
+## Contribute to Magento Open Source code
 
 We use the [fork and pull](#forks-and-pull-requests) model to contribute to the Magento Open Source codebase. This method allows contributors to maintain their own copy of the forked codebase, which can be easily synced with the main copy. The forked repository is then used to submit a pull request to the base repository to merge a set of changes from the fork into the main repository.
 
@@ -24,13 +24,13 @@ When the Community Engineering Team works on reviewing the suggested changes, we
 
 Refer to the [Adobe Contributor Agreement](https://opensource.adobe.com/cla.html) for detailed information about the License Agreement. All contributors are required to submit a click-through form to agree to the terms.
 
-## Community Backlog Priority {#backlog}
+## Community Backlog Priority
 
-In order to provide timely resolution on the most critical issues and pull requests, the Magento team has implemented Severity/Priority concepts to our community driven projects. This approach makes open-source collaboration more transparent for all participants.
-Having clear contribution rules in place helps to build clear expectations for Community Contributors and establish clear priorities for Community Maintainers and the Magento team.
+In order to provide timely resolution on the most critical issues and pull requests, the Adobe team has implemented Severity/Priority concepts to our community driven projects. This approach makes open-source collaboration more transparent for all participants.
+Having clear contribution rules in place helps to build clear expectations for Community Contributors and establish clear priorities for Community Maintainers and the ADobe team.
 
-If you would like to contribute improvements or bug fixes to Magento, and make sure it is valuable for the Community and Magento as well, we highly recommend that Community Contributors to take issues from the backlog based on **Priority**.
-Magento and Community Maintainers process contributions based on the issue/pull requests priority starting from P0, P1 to P4.
+If you would like to contribute improvements or bug fixes and make sure it is valuable for the Community as well, we highly recommend that Community Contributors to take issues from the backlog based on **Priority**.
+Adobe and Community Maintainers process contributions based on the issue/pull requests priority starting from P0, P1 to P4.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -62,12 +62,12 @@ Magento and Community Maintainers process contributions based on the issue/pull 
 
 #### Priority
 
-The Magento team defines priorities during regular triage review meetings, based on the community assessment for severity.
+The Adobe team defines priorities during regular triage review meetings, based on the community assessment for severity.
 
 #### Severity
 
 -  Community Maintainers are allowed to set Severity labels during the initial issue triage according to the [Issue Processing Workflow](https://github.com/magento/magento2/wiki/GitHub-Issues-Processing-Workflow).
--  The Magento team can set or edit severity and priority based on our internal triage process and information provided in the initial community triage.
+-  The Adobe team can set or edit severity and priority based on our internal triage process and information provided in the initial community triage.
 -  Issue reporters can provide their own evaluation for severity by selecting a checkbox in the Issue description.
 
 The following list consists of questions you can ask to help determine the proper severity:
@@ -99,19 +99,19 @@ It helps maintainers decide:
 | Medium | A pull request that makes changes which may affect multiple areas or makes considerable changes on a specific area. |
 | Low | A pull request that will probably not affect other areas. |
 
-## GitHub and two-factor authentication {#two-factor}
+## GitHub and two-factor authentication
 
 Adobe **requires all Partners** who contribute code to enable 2FA on their GitHub accounts. You can use a mobile device or 2FA application for added protection. See [Configuring two-factor authentication](https://help.github.com/en/articles/configuring-two-factor-authentication) in the GitHub help.
 
 We also recommend creating a personal access token for your account to use when interacting with GitHub in scripts and on the command line. See [Creating a personal access token for the command line](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) in the GitHub help.
 
-## Questions or enhancement requests? {#question}
+## Questions or enhancement requests?
 
-We capture code-related issues in the [Magento 2 repo](https://github.com/magento/magento2) and documentation-related issues in the [DevDocs repo](https://github.com/magento/devdocs). If you have questions about Magento functionality or processes, we recommend posting them to a question-and-answer site, such as [Stack Exchange](https://magento.stackexchange.com/) and the [Magento Forums](https://community.magento.com/), where Magento community members can quickly provide recommendations and advice.
+We capture code-related issues in the [GitHub repo](https://github.com/magento/magento2) and documentation-related issues in the [DevDocs repo](https://github.com/magento/devdocs). If you have questions about functionality or processes, we recommend posting them to a question-and-answer site, such as [Stack Exchange](https://magento.stackexchange.com/) and the [Community Forums](https://community.magento.com/), where Magento Open Source community members can quickly provide recommendations and advice.
 
-Submit feature requests or enhancement suggestions to the [Magento 2 Feature Requests and Improvements forum](https://community.magento.com/t5/Magento-2-Feature-Requests-and/idb-p/feature-requests). For details about how requests are managed, see [Improvements to GitHub Management](https://community.magento.com/t5/News-Announcements/Improvements-to-GitHub-Management/m-p/44572#M96).
+Submit feature requests or enhancement suggestions to the [Feature Requests and Improvements forum](https://community.magento.com/t5/Magento-2-Feature-Requests-and/idb-p/feature-requests). For details about how requests are managed, see [Improvements to GitHub Management](https://community.magento.com/t5/News-Announcements/Improvements-to-GitHub-Management/m-p/44572#M96).
 
-## Accepted pull requests and ported code {#rules}
+## Accepted pull requests and ported code
 
 <InlineAlert variant="help" slots="text"/>
 
@@ -127,7 +127,7 @@ Review the following supported and accepted pull request rules. We defined these
 | 2.3 |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |
 | 2.4 | ![Yes](_images/green-check.png) | ![Yes](_images/green-check.png) | ![Yes](_images/green-check.png) | ![Yes](_images/green-check.png) | ![Yes](_images/green-check.png) |
 
-## Contribution requirements {#requirements}
+## Contribution requirements
 
 1. Contributions must adhere to the [coding standards](https://devdocs.magento.com/guides/v2.4/coding-standards/bk-coding-standards.html).
 1. Refer to the [Definition of Done](definition-of-done.md). We use these guidelines internally to ensure that we deliver well-tested, well-documented, and solid code. We encourage you to use this as well!
@@ -136,14 +136,14 @@ Review the following supported and accepted pull request rules. We defined these
 1. PRs that include bug fixes must be accompanied by a step-by-step description of how to reproduce the bug.
 1. PRs that include new logic or new features must be submitted along with:
    -  Unit/integration test coverage (we will be releasing more information about writing test coverage in the near future).
-   -  Follow the [Magento DevDocs contribution work flow and guidelines](https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md) to submit proposed documentation updates to the [Magento DevDocs Github repository](https://github.com/magento/devdocs).
+   -  Follow the [DevDocs contribution work flow and guidelines](https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md) to submit proposed documentation updates to the [DevDocs Github repository](https://github.com/magento/devdocs).
 1. For large features or changes, [open an issue](https://github.com/magento/magento2/issues) to discuss your proposal first.  Notifying us in advance can prevent duplicate or unnecessary effort, and also offers an opportunity to get additional background information and help from other contributors.
 1. To report a bug, [open an issue](https://github.com/magento/magento2/issues) and follow the [Issue reporting guidelines](https://github.com/magento/magento2/wiki/Issue-reporting-guidelines).
 1. Verify that all automated tests on your pull request pass successfully.
 
 ## Forks and pull requests
 
-For complete information about contributing to Magento Open Source projects, see the [Beginner Guides](https://github.com/magento/magento2/wiki/Getting-Started) on the Magento 2 repository. These guides help you:
+For complete information about contributing to Magento Open Source projects, see the [Beginner Guides](https://github.com/magento/magento2/wiki/Getting-Started) on the GitHub repository. These guides help you:
 
 -  Select an issue to work on and self-assign
 -  Fork a repository
@@ -153,13 +153,13 @@ For complete information about contributing to Magento Open Source projects, see
 -  Open a pull request
 -  Launch tests and ensure they are green (see more details on [pull request tests](pull-request-tests.md))
 
-## Squash commits {#squash-commits}
+## Squash commits
 
 Sometimes your pull request may have more than one commit (the main commit, then changes to it after review, etc). A good practice is to deliver commits that bring finalized, functional parts/bugfixes. In that case, all intermediate commits like "static test fix", "typo fix", "minor refactoring" should be squashed into a single commit. This helps keep a clean history and makes the repo easier to read. There is no requirement to have only one commit per PR. However, the intermediate commits in most cases bring no value into the commits history, which is why it is a good to keep the history clean and useful.
 
 ## Contributor assistant
 
-The Magento Contributor Assistant is a bot that runs on all GitHub `magento` repositories. It helps automate issue and pull request workflows by using commands entered as comments.
+The Contributor Assistant is a bot that runs on all repositories in the `magento` GitHub organization. It helps automate issue and pull request workflows by using commands entered as comments.
 
 ### Assigning an issue
 
@@ -189,17 +189,17 @@ This command has several variations:
 
 -  All permissions granted for all users.
 
-Currently, the Magento Contributor Assistant automatically deploys a test instance based on a contributor's pull request, or, it provides a vanilla Magento instance on the `magento/magento2` repository. This is used to test pull requests or reported issues.
+Currently, the Contributor Assistant automatically deploys a test instance based on a contributor's pull request, or, it provides a vanilla Magento Open Source instance on the `magento/magento2` repository. This is used to test pull requests or reported issues.
 
--  [Deploy vanilla Magento instance](#vanilla-pr)
+-  [Deploy vanilla Magento Open Source instance](#vanilla-pr)
 -  [Deploy instance based on PR changes](#deploy-pr)
 -  [Combine multiple pull requests](#combine-pr)
 
-### Deploy vanilla Magento instance {#vanilla-pr}
+### Deploy vanilla Magento Open Source instance
 
-When you want to verify an issue or pull request, use the `instance` command to generate a Magento instance. This is a clean installation of a specified version tag or branch of a specified release line.
+When you want to verify an issue or pull request, use the `instance` command to generate an instance. This is a clean installation of a specified version tag or branch of a specified release line.
 
-**Command:** To deploy a Magento instance, add the following command as a comment to the GitHub pull request or issue:
+**Command:** To deploy an instance, add the following command as a comment to the GitHub pull request or issue:
 
 ```text
 @magento give me {$version} instance
@@ -225,11 +225,11 @@ Admins access is shared via comment on GitHub.
 
 -  All permissions granted for all users.
 
-### Deploy instance based on PR changes {#deploy-pr}
+### Deploy instance based on PR changes
 
-To verify and test changes within a pull request, enter a command to generate a Magento instance using code based on the PR.
+To verify and test changes within a pull request, enter a command to generate a Magento Open Source instance using code based on the PR.
 
-**Command:** To deploy, [Community Maintainers](https://github.com/magento/magento2/wiki/Community-Maintainers), a Magento EngCom Team member, or a contributor under the existing Pull Request enters the following command as a comment to the pull request:
+**Command:** To deploy, [Community Maintainers](https://github.com/magento/magento2/wiki/Community-Maintainers), an Adobe EngCom Team member, or a contributor under the existing Pull Request enters the following command as a comment to the pull request:
 
 ```text
 @magento give me test instance
@@ -237,7 +237,7 @@ To verify and test changes within a pull request, enter a command to generate a 
 
 **Actions:**
 
--  It deploys a new Magento instance based on Pull Request changes.
+-  It deploys a new instance based on Pull Request changes.
 -  Deployment takes approximately 2 minutes.
 -  By default, instances have a lifetime of 3 hours. All deployments are then terminated.
 
@@ -248,16 +248,16 @@ Admins access will be shared via comment on GitHub.
 **Permissions:**
 
 -  [Community Maintainers](https://github.com/magento/magento2/wiki/Community-Maintainers)
--  Magento EngCom Team
+-  Adobe EngCom Team
 -  [Contributor](../contributors/)
 
-### Customize deployed instances {#customize-deployed-instances}
+### Customize deployed instances
 
-In some cases a custom environment is required to test an issue or a pull request. You can create a custom environment by appending custom configuration settings to the PR comment to [Deploy a vanilla Magento instance](#vanilla-pr) or [Deploy an instance based on PR changes](#deploy-pr).
+In some cases a custom environment is required to test an issue or a pull request. You can create a custom environment by appending custom configuration settings to the PR comment to [Deploy a vanilla Magento Open Source instance](#deploy-a-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-an-instance-based-on-pr-changes).
 
 #### Specify the edition
 
-Append the following text to your PR comment to specify the edition to use when you [Deploy a vanilla instance](#vanilla-pr) or [Deploy an instance based on PR changes](#deploy-pr).
+Append the following text to your PR comment to specify the edition to use when you [Deploy a vanilla Magento Open Source instance](#deploy-a-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-an-instance-based-on-pr-changes).
 
 ```text
 with edition {$edition}
@@ -276,7 +276,7 @@ with edition b2b
 
 #### Add extensions
 
-Append the following text to your PR comment to specify extensions to add to an instance when you [Deploy a vanilla Magento instance](#vanilla-pr) or [Deploy an instance based on PR changes](#deploy-pr).
+Append the following text to your PR comment to specify extensions to add to an instance when you [Deploy a vanilla Magento Open Source instance](#deploy-a-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-an-instance-based-on-pr-changes).
 
 ```text
 with extensions {$extensionRepo}
@@ -290,7 +290,7 @@ with extensions magento/security-package:1.0-develop, magento/security-package-e
 
 #### Remove extensions
 
-Append the following text to your PR comment to specify extensions that you want to remove from the instance when you [Deploy a vanilla Magento instance](#vanilla-pr) or [Deploy an instance based on PR changes](#deploy-pr).
+Append the following text to your PR comment to specify extensions that you want to remove from the instance when you [Deploy a vanilla Magento Open Source instance](#deploy-a-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-an-instance-based-on-pr-changes).
 
 ```text
 without extensions {$extensionRepo}
@@ -302,11 +302,11 @@ Replace `{$extensionRepo}` with one or more extension repositories to remove bef
 without extensions magento/adobe-stock-integration
 ```
 
-### Import source code to specific repository {#import}
+### Import source code to specific repository
 
 The import command provides the ability to copy a contributor's code or pull request into an internal fork.  The internal team can then proceed with additional fixes or delivery.
 
-**Command:** To import code or a pull request, a member of the Magento team controlling the pull request enters the following command:
+**Command:** To import code or a pull request, a member of the Adobe team controlling the pull request enters the following command:
 
 ```text
 @magento import {code|pr} to {organizationName}/{repositoryName}
@@ -337,9 +337,9 @@ The import command provides the ability to copy a contributor's code or pull req
 
 **Permissions:**
 
--  Magento team
+-  Adobe team
 
-## Report an issue {#report}
+## Report an issue
 
 To maintain an effective bug fix workflow, we ask reporters to follow some simple guidelines.
 
@@ -353,7 +353,7 @@ Before creating an issue, do the following:
    -  Use the Support portal associated with your account
    -  If you are a Partner reporting on behalf of a merchant, use the Partner portal
 
--  Check if the issue exists on the `2.4-develop` branch with a clean Magento installation. We only accept pull requests for the `2.4-develop` branch. If the issue is not reproducible on the `2.4-develop` branch, it will be closed.
+-  Check if the issue exists on the `2.4-develop` branch with a clean installation. We only accept pull requests for the `2.4-develop` branch. If the issue is not reproducible on the `2.4-develop` branch, it will be closed.
 
 If you are sure that the problem you are experiencing is a bug, file a new issue in GitHub following the recommendations below.
 
@@ -385,7 +385,7 @@ Stating preconditions is very important. Provide information on:
 
 -  System configuration settings you have changed
 -  Detailed information on entities created (Products, Customers, etc)
--  Magento version
+-  Magento Open Source version
 -  Anything else that would help a developer reproduce the bug
 
 Example:
@@ -422,17 +422,17 @@ Actual result:
 
 #### Additional information
 
-Additional information is often requested when the bug report is processed. You can save time by providing both Magento and browser logs, screenshots, repository branch and HEAD commit you checked out to install Magento and any other artifacts related to the issue.
+Additional information is often requested when the bug report is processed. You can save time by providing both Magento Open Source and browser logs, screenshots, repository branch and HEAD commit you checked out to install Magento Open Source and any other artifacts related to the issue.
 
 Once the issue is created, it must pass through a series of [Magento Issue Gates](https://github.com/magento/magento2/wiki/Magento-Issue-Gates).
 
-## Help triage issues  [![](https://www.codetriage.com/magento/magento2/badges/users.svg)](https://www.codetriage.com/magento/magento2) {#triage}
+## Help triage issues  [![](https://www.codetriage.com/magento/magento2/badges/users.svg)](https://www.codetriage.com/magento/magento2)
 
 In addition to contributing code, you can help triage issues. This can include reproducing bug reports or asking for vital information, such as affected versions or instructions to reproduce bugs.  If you want to triage issues, you can begin by subscribing to [Magento on CodeTriage](https://www.codetriage.com/magento/magento2).
 
-## Labels applied by the Community Engineering team {#labels}
+## Labels applied by the Community Engineering team
 
-We apply labels to public pull requests and issues to help other participants retrieve additional information about current progress, component assignments, Magento release lines, and much more. The following information details global labels used in Magento 2 repositories and across Community Engineering contributions.
+We apply labels to public pull requests and issues to help other participants retrieve additional information about current progress, component assignments, Magento Open Source release lines, and much more. The following information details global labels used in Magento Open Source repositories and across Community Engineering contributions.
 
 ### Release Lines
 
@@ -506,7 +506,7 @@ Labels applied to issues through verification and completion. For details on the
 -  `Reproduced on 2.4.x` - The Community Engineering Team reproduced the issue on latest 2.4.x release.
 -  `Fixed in 2.3.x` - The issue has been fixed in one of the 2.3.x releases.
 -  `Fixed in 2.4.x` - The issue has been fixed in one of the 2.4.x releases or in 2.4-develop branch and will be available with the upcoming patch release.
--  `non-issue` - A described behavior in the issue description is valid and shouldn't be changed in Magento code base.
+-  `non-issue` - A described behavior in the issue description is valid and shouldn't be changed in the code base.
 
 ### DevDocs
 
