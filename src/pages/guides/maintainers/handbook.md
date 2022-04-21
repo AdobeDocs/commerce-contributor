@@ -37,7 +37,7 @@ Once you have chosen a pull request, there are some steps to be followed during 
 
 The first thing we encourage a maintainer to check is if the contributor has signed the Adobe CLA. Without this signature, we cannot accept the contribution. If the Contributor has not signed the CLA, that check will be red. Add a comment to the pull request requesting the contributor to sign the CLA.
 
-Once the CLA has been signed, we can check the other builds. Those builds are run based on the contributors pull request and will let us know if the proposed changes are causing existing functionality to break or are not fully compliant with coding standards. If either the Heath Index or Semantic Version Checker fail, the PR should be changed or the proposed changes will need approval by the Adobe team. More information can be found on our [Contributor Guide](../code-contributions/pull-request-tests).
+Once the CLA has been signed, we can check the other builds. Those builds are run based on the contributors pull request and will let us know if the proposed changes are causing existing functionality to break or are not fully compliant with coding standards. If either the Heath Index or Semantic Version Checker fail, the PR should be changed or the proposed changes will need approval by the Adobe team. More information can be found on our [Contributor Guide](../code-contributions/pull-request-tests.md).
 
 ![Check CLA and Builds](_images/builds-and-checks.png)
 
@@ -49,13 +49,13 @@ It is important to check the pull request is targeted to the correct branch. For
 
 #### Code review
 
-The code review is one of the most important parts of the review process. Our community maintainers are responsible for reviewing the proposed changes and confirm they are following the [Technical Guidelines](https://devdocs.magento.com/guides/v2.4/coding-standards/technical-guidelines.html). It is important to evaluate if the proposed changes are backward compatible and follow the rules and best practice of our [Backward Compatible Development Guide](../code-contributions/backward-compatible-development). We count on our Maintainers judgement for other recommendations to increase contribution quality.
+The code review is one of the most important parts of the review process. Our community maintainers are responsible for reviewing the proposed changes and confirm they are following the [Technical Guidelines](https://devdocs.magento.com/guides/v2.4/coding-standards/technical-guidelines.html). It is important to evaluate if the proposed changes are backward compatible and follow the rules and best practice of our [Backward Compatible Development Guide](../code-contributions/backward-compatible-development.md). We count on our Maintainers judgement for other recommendations to increase contribution quality.
 
 ![Code review](_images/pr-code-review.png)
 
 #### Test coverage
 
-As described on our [Definition of Done](../code-contributions/definition-of-done), all code changes must be covered by automated tests. It is part of the review process to:
+As described on our [Definition of Done](../code-contributions/definition-of-done.md), all code changes must be covered by automated tests. It is part of the review process to:
 
 -  Guarantee the changes are properly covered
 -  Ensure the type of test used to cover the changes is appropriate

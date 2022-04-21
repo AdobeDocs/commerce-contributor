@@ -18,7 +18,7 @@ Issue gates are a series of steps that are run to make sure the issue has all th
 
 ### Gate 1 - Verification of the report format
 
-The main goal of this initial verification stage is to be sure that the report has well-structured content that meets the requirements from [Issue Reporting Guidelines](contributing.html#report). This stage looks trivial and formal, but it will definitely affect processing speed. Generally, an issue that has the expected structure and clear information will be processed faster than the same report with a poor format.
+The main goal of this initial verification stage is to be sure that the report has well-structured content that meets the requirements from [Issue Reporting Guidelines](contributing.md#report-an-issue). This stage looks trivial and formal, but it will definitely affect processing speed. Generally, an issue that has the expected structure and clear information will be processed faster than the same report with a poor format.
 The reported issue must contain **all** the following keywords in the description section:
 
 *  _Preconditions_
@@ -48,7 +48,7 @@ These are steps for reviewing the issue, verifying reproduction steps, and assig
 
 These are the steps for validating the issue format and all information provided checks out:
 
-1. When the issue is entered, verify that it meets all requirements from the [templates](https://github.com/magento/magento2/tree/2.4-develop/.github/ISSUE_TEMPLATE) and [Issue Reporting Guidelines](contributing.html#report).
+1. When the issue is entered, verify that it meets all requirements from the [templates](https://github.com/magento/magento2/tree/2.4-develop/.github/ISSUE_TEMPLATE) and [Issue Reporting Guidelines](contributing.md#report-an-issue).
 1. If the format is not valid, the maintainer should read the report carefully and edit the issue to better match one of the required [templates](https://github.com/magento/magento2/tree/2.4-develop/.github/ISSUE_TEMPLATE).
 1. The maintainer can select the issue and review all information, reproduction steps, etc. If the information is incomplete, the maintainer requests more information from the reporter and applies the label `Issue: needs update`. All work pauses on this ticket until the reporter provides more information.
 1. If the ticket has enough information, the maintainer analyzes the problem described in the ticket: described steps to reproduce are valid, expected behavior is valid, the configuration described in preconditions is valid.
@@ -80,7 +80,7 @@ Steps for final review of an issue for contributors/developers to work the issue
    *  [ ] Issue is reproducible with one of the supported versions and labeled appropriately.
    *  [ ]  `Area: XXX` is label applied to the ticket.
    *  [ ]  (optional if possible) `Reported on: XXX` label is applied to the ticket.
-   *  [ ]  (optional if possible) `Severity: XX` label is applied to the ticket. See more in [Community Backlog Priority](contributing.html#backlog)
+   *  [ ]  (optional if possible) `Severity: XX` label is applied to the ticket. See more in [Community Backlog Priority](contributing.md#community-backlog-priority)
 
 1. Add the label `Issue: Confirmed` to the ticket.
 1. Wait for a response from the Automated Contributor Assistant, which normally takes 30-60 seconds.
@@ -89,12 +89,12 @@ Steps for final review of an issue for contributors/developers to work the issue
 
 If the issue was reproduced on `Gate 3`, we will create an internal `AC-XXXX` ticket to track the progress of the issue.
 
-Once an issue has been acknowledged and confirmed, it goes through the Triage Process and be [prioritized(triaged)](contributing.html#backlog).
+Once an issue has been acknowledged and confirmed, it goes through the Triage Process and be [prioritized(triaged)](contributing.md#community-backlog-priority).
 After triage, either core developers or community developers may fix it. We encourage everyone to join the Community Contribution Team and submit Pull Request with the bug fix to [magento/magento2](https://github.com/magento/magento2/pulls) repository.
 
 ## Tips and tricks
 
-*  If you need a proper testing environment, a verification instance with limited capabilities may be [requested](contributing.html#vanilla-pr) from the Automated Contributor Assistant.
+*  If you need a proper testing environment, a verification instance with limited capabilities may be [requested](contributing.md#deploy-vanilla-magento-open-source-instance) from the Automated Contributor Assistant.
 *  In most cases, we do not recommend verifying issues on older patch versions, even if it was supplied in the preconditions. Generally, fixes can only be provided with the next patch version, and not with any of the older patches.
 *  Always follow the [Code of Conduct](https://github.com/magento/magento2/blob/2.4-develop/.github/CODE_OF_CONDUCT.md) in issue comments and discussions.
 

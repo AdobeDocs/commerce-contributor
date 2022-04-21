@@ -18,7 +18,7 @@ Contributions can take the form of new components or features, changes to existi
 
 The Community Engineering Team reviews all issues and contributions submitted by the community developers. During the review we might require clarifications from the contributor. If there is no response from the contributor in two weeks (14 days) time, the issue might be closed.
 
-When the Community Engineering Team works on reviewing the suggested changes, we will add a label to the issue to indicate certain information, like the status or who is working the issue. See [Labels](#labels) to learn more.
+When the Community Engineering Team works on reviewing the suggested changes, we will add a label to the issue to indicate certain information, like the status or who is working the issue. See [Labels](#labels-applied-by-the-community-engineering-team) to learn more.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -191,9 +191,9 @@ This command has several variations:
 
 Currently, the Contributor Assistant automatically deploys a test instance based on a contributor's pull request, or, it provides a vanilla Magento Open Source instance on the `magento/magento2` repository. This is used to test pull requests or reported issues.
 
--  [Deploy vanilla Magento Open Source instance](#vanilla-pr)
--  [Deploy instance based on PR changes](#deploy-pr)
--  [Combine multiple pull requests](#combine-pr)
+-  [Deploy vanilla Magento Open Source instance](#deploy-vanilla-magento-open-source-instance)
+-  [Deploy instance based on PR changes](#deploy-instance-based-on-pr-changes)
+-  [Customize deployed instances](#customize-deployed-instances)
 
 ### Deploy vanilla Magento Open Source instance
 
@@ -253,11 +253,11 @@ Admins access will be shared via comment on GitHub.
 
 ### Customize deployed instances
 
-In some cases a custom environment is required to test an issue or a pull request. You can create a custom environment by appending custom configuration settings to the PR comment to [Deploy a vanilla Magento Open Source instance](#deploy-a-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-an-instance-based-on-pr-changes).
+In some cases a custom environment is required to test an issue or a pull request. You can create a custom environment by appending custom configuration settings to the PR comment to [Deploy a vanilla Magento Open Source instance](#deploy-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-instance-based-on-pr-changes).
 
 #### Specify the edition
 
-Append the following text to your PR comment to specify the edition to use when you [Deploy a vanilla Magento Open Source instance](#deploy-a-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-an-instance-based-on-pr-changes).
+Append the following text to your PR comment to specify the edition to use when you [Deploy a vanilla Magento Open Source instance](#deploy-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-instance-based-on-pr-changes).
 
 ```text
 with edition {$edition}
@@ -276,7 +276,7 @@ with edition b2b
 
 #### Add extensions
 
-Append the following text to your PR comment to specify extensions to add to an instance when you [Deploy a vanilla Magento Open Source instance](#deploy-a-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-an-instance-based-on-pr-changes).
+Append the following text to your PR comment to specify extensions to add to an instance when you [Deploy a vanilla Magento Open Source instance](#deploy-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-instance-based-on-pr-changes).
 
 ```text
 with extensions {$extensionRepo}
@@ -290,7 +290,7 @@ with extensions magento/security-package:1.0-develop, magento/security-package-e
 
 #### Remove extensions
 
-Append the following text to your PR comment to specify extensions that you want to remove from the instance when you [Deploy a vanilla Magento Open Source instance](#deploy-a-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-an-instance-based-on-pr-changes).
+Append the following text to your PR comment to specify extensions that you want to remove from the instance when you [Deploy a vanilla Magento Open Source instance](#deploy-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-instance-based-on-pr-changes).
 
 ```text
 without extensions {$extensionRepo}

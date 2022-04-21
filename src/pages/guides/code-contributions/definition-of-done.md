@@ -39,7 +39,7 @@ Technical interfaces and the corresponding level of change is described in [Code
 Technical backward compatibility must be retained between PATCH (marketing) versions of Magento Open Source. It should also be retained between MINOR (marketing) releases if possible.
 Any breaking changes must be approved by an architect, product owner and release manager.
 
-For more information, see the [backward compatibility policy](backward-compatible-development) and [Versioning](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/versioning/index.html) documents.
+For more information, see the [backward compatibility policy](backward-compatible-development.md) and [Versioning](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/versioning/index.html) documents.
 
 ## Documentation
 
@@ -190,7 +190,7 @@ Expected code coverage: must cover all applicable files in entire code base.
 Code to cover:
 
 *  Must cover any formal backward-compatible changes on code level.
-   For more information, see [backward compatibility policy](backward-compatible-development).
+   For more information, see [backward compatibility policy](backward-compatible-development.md).
 
 A failure in a legacy test must provide comprehensive explanation of an alternative, if there is any.
 
