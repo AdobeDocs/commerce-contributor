@@ -1,6 +1,6 @@
 ---
 title: Community | Commerce Contributor
-description: Find resources for the Commerce contributor community. 
+description: Find Commerce contributor community resources. 
 ---
 
 <Hero slots="heading, text" background="rgb(244, 111, 37)"/>
