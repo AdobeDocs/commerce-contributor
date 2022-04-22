@@ -1,14 +1,16 @@
 ---
-group: contributor-guide
-title: GitHub issue processing workflow
+title: GitHub Issue Processing Workflow | Commerce Contributor
+description: Understand the validation workflow that GitHub issues must follow for open-source Commerce projects.
 ---
+
+# GitHub Issue Processing Workflow
 
 The GitHub issue workflow ensures that issues are clear, well written, and thoroughly vetted. Following these procedures allows valid issues to get the attention they deserve.
 
 Issues that are reported on the public [GitHub](https://github.com/magento/magento2/issues) must pass through a series of gates, or stages of quality assessment, to ensure that their quality meets our standards. There are three gates, and an issue must pass through all three of these assessments before we will transfer it to either core developers or community developers.
 The purpose of these gates is to identify core technical issues common to all reported tickets, and to show the progress on each reported issue.
 
-## Issue Gates
+## Issue gates
 
 Issue gates are a series of steps that are run to make sure the issue has all the information needed to reproduce the bug. This includes system configurations, required configurations, reproduction steps and any other required information.
 

@@ -4,8 +4,8 @@ module.exports = [
     path: "/guides/code-contributions/",
     pages: [
       {
-        title: "Backward compatible development",
-        path: "/guides/code-contributions/backward-compatible-development/",
+        title: "Backward compatibility policy",
+        path: "/guides/code-contributions/backward-compatibility-policy/",
       },
       {
         title: "Definition of done",

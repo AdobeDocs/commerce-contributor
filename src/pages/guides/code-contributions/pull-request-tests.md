@@ -1,32 +1,32 @@
 ---
-group: contributor-guide
-title: Pull Request Tests
+title: Pull Request Tests | Commerce Contributor
+description: Use automated testing infrastructure to validate your contributions.
 ---
 
-## Automated Testing
+# Pull request tests
 
-Automated Testing infrastructure runs all required automated tests against code in pull requests. You can trigger automated tests by adding a comment to a pull request. Tests are represented both as pull request statuses and checks.
+Automated testing infrastructure runs all required automated tests against code in pull requests. You can trigger automated tests by adding a comment to a pull request. Tests are represented both as pull request statuses and checks.
 
 The following sections describe the different kinds of tests that are currently available.
 
-### Semantic Version Checker
+## Semantic version checker
 
 Semantic Version Checker is a test that compares the changed code against the mainline and detects levels of code changes. It shows a list of changes grouped by the class (level) of changes (MAJOR, MINOR, PATCH) with an explanation of the change (Class was removed, [public] Method implementation changed, [private] Property has been removed etc.) The allowed level is PATCH.
 See [Backward Compatibility Development](backward-compatible-development.md) for more information.
 
-### Functional Tests
+## Functional tests
 
 Functional Tests are PHPUnit-based tests that check functional behavior from the perspective of a user. They click buttons and links in a browser, fill and submit forms, verify what is displayed in the browser window like real users.
 
-### Sample Data Tests
+## Sample data tests
 
 Sample Data Tests are functional tests that run on Magento Open Source with Sample Data included.
 
-### Unit Tests
+## Unit tests
 
 Unit tests are PHPUnit-based (for PHP) and Jasmine-based (for JS) tests that check the behavior of single methods of Magento Open Source classes. The purpose is to validate that each unit of Magento Open Source performs as designed.
 
-### Integration Tests
+## Integration tests
 
 Integration Tests are PHPUnit-based tests that check the behavior of a group of Magento Open Source components. They include three types of tests:
 
@@ -34,7 +34,7 @@ Integration Tests are PHPUnit-based tests that check the behavior of a group of 
 -  Setup Integration tests that check behavior during the installation process.
 -  Integration Integrity tests that check the consistency of an installed instance (for example, configuration files and database schemes).
 
-### WebAPI Tests
+## WebAPI tests
 
 WebAPI Tests are functional tests that check the behavior of Web API endpoints. They send requests to endpoints of an installed instance and then check the response received and the state of the instance. Currently they include three kinds of tests:
 
@@ -42,15 +42,15 @@ WebAPI Tests are functional tests that check the behavior of Web API endpoints. 
 -  REST Web API tests
 -  GraphQL WEB API tests
 
-### Static Tests
+## Static tests
 
 Static Tests are a set of different checks that analyze every single file of the code base separately. Most of them analyze the whole code base, whereas some run only against the change set.
 
-### Database Compare
+## Database compare
 
 Database Compare is a test that compares the database schema and data between a freshly installed instance (from the pull request code) and another instance that was upgraded to the PR code from the latest minor release version.
 
-### Component Health Index
+## Component health index
 
 Component Health Index is a test that analyses code quality and calculates a weighted health index (100 is great, lower is worse) for each Component (module). The index is calculated based on three groups of indicators:
 
@@ -83,7 +83,7 @@ When a contribution requires changes to more than one repository merged simultan
 
 The related pull requests should be specified in the pull request description in the following format:
 
-```lang-none
+```text
 ### Related Pull Requests
 https://github.com/<organization>/<repository>/pull/<pull request number>
 <links to other realted PRs>

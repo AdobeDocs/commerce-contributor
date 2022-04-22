@@ -1,13 +1,11 @@
 ---
-group: contributor-guide
-title: Backward compatible development
-redirect_from:
-- guides/v2.3/contributor-guide/backward-compatible-development/index.html
-- guides/v2.4/contributor-guide/backward-compatible-development/index.html
+title: Backward Compatibility Policy | Commerce Contributor
+description: Review best practices related to backward compatible development for Commerce projects.
 ---
-This page describes rules and best practices for backward compatible development.
 
-## Backward Compatibility Policy
+# Backward compatibility policy
+
+This page describes rules and best practices for backward compatible development.
 
 See the [versioning](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/versioning/index.html) documentation for the definitions of MAJOR and MINOR changes and how it impacts [extension](https://glossary.magento.com/extension) developers.
 

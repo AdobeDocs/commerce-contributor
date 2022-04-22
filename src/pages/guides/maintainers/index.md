@@ -1,14 +1,13 @@
 ---
-group: contributor-guide
-title: Maintainers
-redirect_from:
-- guides/v2.3/contributor-guide/maintainers.html
-- guides/v2.4/contributor-guide/maintainers.html
+title: Maintainers | Commerce Contributor
+desxcription: Learn what an open-source maintainer does and how to become one.
 ---
+
+# Maintainers
 
 Adobe trusts our active community members to review pull requests and accept or reject proposed code changes. [Community Maintainers](https://magento.com/magento-contributors#maintainers) take part in discussions, reviews, and help process pull requests.
 
-## Who becomes a Maintainer?
+## Who becomes a maintainer?
 
 When considering new maintainers, we look for contributors who have shown a propensity for:
 

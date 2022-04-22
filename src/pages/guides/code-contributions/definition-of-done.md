@@ -1,26 +1,21 @@
 ---
-group: contributor-guide
-title: Definition of Done
-redirect_from:
-- guides/v2.3/contributor-guide/contributing_dod.html
-- guides/v2.4/contributor-guide/contributing_dod.html
+title: Definition of Done | Commerce Contributor
+description: Ensure that your contributions meet the criteria of the Commerce defition of done.
 ---
 
-## Overview
+# Definition of done
 
-The "Definition of Done" (DoD) is a collective term for a set of acceptance criteria that is applied to any changes in the product code base.
-The requirements that result from our DoD are applied by default to all Adobe-owned repositories.
+The "Definition of Done" (DoD) is a collective term for a set of acceptance criteria that is applied to any changes in the product code base. The requirements that result from our DoD are applied by default to all Adobe-owned repositories.
 
-Internally, the Adobe development teams follow the DoD to ensure that all work meets consistent release criteria.
-We encourage our community contributors to also follow the definition of done.
+Internally, the Adobe development teams follow the DoD to ensure that all work meets consistent release criteria. We encourage our community contributors to also follow the definition of done.
 
 At a high level, the criteria defined in our "definition of done" revolve around the principle of writing clean code that is reviewed and includes unit tests and solid documentation along with the code.
 
 The following sections provide additional details about each of these criteria:
 
-## Backward Compatibility
+## Backward compatibility
 
-### Functional Backward Compatibility
+### Functional backward compatibility
 
 **Functional backward compatibility** means the behaviour of the application is preserved.
 
@@ -28,7 +23,7 @@ Existing product features and functionality must be retained during any changes 
 Any backward-compatible functional changes must be approved by a product owner.
 The documentation should explain the justification and provide the "business value".
 
-### Technical Backward Compatibility
+### Technical backward compatibility
 
 **Technical backward compatibility** means the technical interfaces are preserved.
 
@@ -56,7 +51,7 @@ For documenting backward-compatible changes, please see [Backwards Compatible De
 
 ## Tests
 
-### Understanding Black, White, and Gray tests
+### Understanding black, white, and gray tests
 
 *  A black box test does not have any knowledge of how the subject of the test is built.
 *  A white box has knowledge of how the subject of the test is built. The test logic is usually coupled to the implementation and will typically be sensitive to changes.
@@ -70,7 +65,7 @@ Assume there is a method with the signature `function removeLetterFromString(str
 *  A white box test would look into the implementation of the method and see that it calls a microservice API and make sure that each condition of the code has test coverage. For example, this test may force the microservice client to return an error and have a test for the expected handling of that scenario. This wouldn't be a reusable test and it's directly coupled to the implementation.
 *  A gray box test would look at the implementation of the method and see that it calls a microservice API and injects the `$string` into the URL so it may add some extra test coverage for strings that contain unsafe URL characters such as `&?=%/`. This is not coupled to the implementation as the implementation could be changed and the test should still pass.
 
-### Automated Tests
+### Automated tests
 
 Code changes must be covered by automated tests according to Classification of Automated Tests.
 When choosing how to cover your changes, pick the most lightweight (execution time wise) test type that will provide sufficient coverage.
@@ -88,7 +83,7 @@ High level testing policy:
 
   For example: testing a concrete class through DI preference is not safe because it could be overridden via configuration of another loaded module. The test should not ask for the interface but rather the concrete implementation.
 
-### Integration Tests
+### Integration tests
 
 An integration test should be used to cover any code that does not meet the requirements of a unit test or functional test and should be thought of as essentially the default test type.
 
@@ -110,7 +105,7 @@ Integration test policy:
 
 See: [Running Integration Tests](https://devdocs.magento.com/guides/v2.4/test/integration/integration_test_execution.html).
 
-### Functional Tests
+### Functional tests
 
 UI functional tests are inherently unstable regardless of platform or testing framework. For this reason, along with reasons of maintainability and quality assurance delivery time, these tests should be prioritized below all other tests types.
 
@@ -124,7 +119,7 @@ If there is a scenario that is not classified as a P0/P1 but should be, have a d
 
 See [Functional Tests](https://devdocs.magento.com/guides/v2.4/test/testing.html).
 
-### Unit Tests
+### Unit tests
 
 There are a small number of use cases for unit tests. The nature of our code and development practices make it increasingly hard to write and maintain high-quality unit tests.
 Many of them end up being replaced by integration tests or are practically useless from the beginning due to how much mocking is needed to make them pass.
@@ -162,7 +157,7 @@ Examples:
    *  They have many dependencies and interact with resources.
 *  Factories
 
-### Integrity Tests
+### Integrity tests
 
 Code to cover:
 
@@ -202,7 +197,7 @@ Expected code coverage:
 Not all changes can be covered.
 For example, it is possible to scan a file for literals, but it is unfeasible to analyze string concatenation or any other dynamic way of building a variable.
 
-### Functional Manual Tests
+### Functional manual tests
 
 Must cover new or changed application behavior (functional).
 Added/updated functionality should be covered by a functional Zephyr test(s) related to current sprint commitment.
