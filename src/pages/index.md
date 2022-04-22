@@ -1,32 +1,29 @@
 ---
 title: Commerce Contributor
-description: 
+description: Review resources for contributing to Commerce projects like Magento Open Source.
 ---
 
-<Hero slots="heading, text"/>
+<Hero slots="heading, text" background="rgb(244, 111, 37)"/>
 
-# Adobe Analytics API
+# Commerce Contributor
 
-Adobe Product API offers limitless ways to integrate your most important customer data into key business processes. Adobe Product API offer limitless ways.
+Join thousands of community members around the world contributing to open-source Commerce projects, like Magento Open Source and PWA Studio.
 
 <Resources slots="heading, links"/>
 
 ## Resources
 
-*  [Quickstart Guide](https://www.adobe.io/apis/experiencecloud/analytics/docs.html)
-*  [Adobe Analytics Github Repo](https://github.com/AdobeDocs/analytics-2.0-apis)
+*  [Commerce open-source projects](https://developer.adobe.com/open/magento)
+*  [Community Slack workspace](https://opensource.magento.com/slack)
+*  [Contributor statistics](https://developer.adobe.com/open/magento/statistic)
 
 ## Overview
 
-This documentation provides instructions for Adobe Analytics 2.0 APIs. For working with Analytics 1.4 APIs, see [Analytics 1.4 API Documentation](https://github.com/AdobeDocs/analytics-1.4-apis).
-
-The Adobe Analytics APIs are a collection of APIs that power Adobe Analytics products like Analysis Workspace.
-The APIs allow for the creation of data rich user interfaces that you can use to manipulate and integrate data.
-You can also create reports to explore, get insights, or answer important questions about your data.
+This documentation provides resources for contributing to open-source Commerce [projects](https://developer.adobe.com/open/magento).
 
 ## Discover
 
-Get started with the Adobe Analytics APIs.
+Use these guides to learn about how to contribute.
 
 <DiscoverBlock slots="heading, link, text"/>
 
@@ -34,30 +31,28 @@ Get started with the Adobe Analytics APIs.
 
 [Code Contributions](guides/code-contributions/)
 
-Returns information on the user's company that is necessary for making other Adobe Analytics API calls.
+Describes policies and workflows related to open-source code contributions.
 
 <DiscoverBlock slots="link, text"/>
 
 [Doc contributions](guides/doc-contributions/)
 
-Provides configuration guidance and best practices for the /segments endpoint.
+Describes policies and workflows related to open-source documentation contributions.
 
 <DiscoverBlock slots="link, text"/>
 
 [Contributors](guides/contributors/)
 
-Provides configuration guidance and best practices for the /reports endpoint.
+Acknowledges our community of contributors.
 
 <DiscoverBlock slots="link, text"/>
 
 [Maintainers](guides/maintainers/)
 
-For help migrating from the 1.4 versions of the Analytics API to the newer and more capable /reports API.
+Provides details about what maintainers do and how you can become one.
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
 ## Contributing
 
-We encourage you to participate in our open documentation initiative, if you have suggestions, corrections, additions
-or deletions for this documentation, check out the source from [this github repo](https://github.com/adobe/gatsby-theme-spectrum-example), and submit a pull
-request with your contribution.
+We encourage you to participate in our open documentation initiative. If you have suggestions, corrections, additions, or deletions for this documentation, check out the source on [GitHub](https://github.com/adobedocs/commerce-contributor), and open a pull request.

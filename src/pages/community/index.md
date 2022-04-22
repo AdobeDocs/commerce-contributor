@@ -1,50 +1,44 @@
 ---
-title: Community
-description: This is the support page of Adobe Analytics 
+title: Community | Commerce Contributor
+description: Find resources for the Commerce contributor community. 
 ---
 
-<Hero slots="heading, text" background="rgb(19, 93, 183)"/>
+<Hero slots="heading, text" background="rgb(244, 111, 37)"/>
 
-# Support
+# Community
 
-Learn where to ask questions, report bugs, make feature requests, and spark discussions.
+Learn where to ask questions, report bugs, make feature requests, and start discussions.
 
-## Feedback
+## Resources
 
 You've got a place to start discussions.
 
 <DiscoverBlock slots="image, heading, link, text" width="25%"/>
 
-![Adobe Experience Cloud](experience_cloud.png)
+![Community forum](experience-cloud.svg)
 
-### Developer forum
+### Community forum
 
-[Get started](https://adobe.io)
+[Get started](https://community.magento.com/)
 
-Open discussion and support with community experts and Adobe staff.
-
-<DiscoverBlock slots="link, text" width="25%"/>
-
-[Experience league](https://adobe.io)
-
-Tutorials and videos for the whole community.
-
-<DiscoverBlock slots="link, text" width="25%"/>
-
-[Experience forum](https://adobe.io)
-
-Forum to get help and help others
-
-## Community
-
-You've got a place to join the conversation.
+Open discussion and support with community experts and Adobe staff
 
 <DiscoverBlock slots="image, heading, link, text" width="100%"/>
 
-![Stack Overflow](stack-overflow.png)
+![Slack](slack.svg)
 
-### Stack Overflow
+### Slack
 
 [Explore](https://adobe.io)
 
-Developer Q&A using a specific tag.
+Hundreds of channels for Commerce open-source projects
+
+<DiscoverBlock slots="image, heading, link, text" width="100%"/>
+
+![Stack Exchange](stack-exchange.svg)
+
+### Stack Exchange
+
+[Explore](https://magento.stackexchange.com/)
+
+Developer Q&A
