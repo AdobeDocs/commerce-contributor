@@ -15,7 +15,7 @@ You've got a place to start discussions.
 
 <DiscoverBlock slots="image, heading, link, text" width="25%"/>
 
-![Community forum](experience-cloud.svg)
+![Community forum](../_images/experience-cloud.svg)
 
 ### Community forum
 
@@ -25,7 +25,7 @@ Open discussion and support with community experts and Adobe staff
 
 <DiscoverBlock slots="image, heading, link, text" width="100%"/>
 
-![Slack](slack.svg)
+![Slack](../_images/slack.svg)
 
 ### Slack
 
@@ -35,7 +35,7 @@ Hundreds of channels for Commerce open-source projects
 
 <DiscoverBlock slots="image, heading, link, text" width="100%"/>
 
-![Stack Exchange](stack-exchange.svg)
+![Stack Exchange](../_images/stack-exchange.svg)
 
 ### Stack Exchange
 

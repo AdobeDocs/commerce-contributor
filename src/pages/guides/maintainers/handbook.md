@@ -19,7 +19,7 @@ Our maintainers work on numerous repositories within the Magento Github organiza
 
 Because most contributions go to the [magento2](https://github.com/magento/magento2) repository, there are several GitHub projects to help manage these contributions.
 
-![Repository and Projects](_images/repo-and-projects.png)
+![Repository and Projects](../../_images/repo-and-projects.png)
 
 Each project has a description of what it does. One important project is the **High Priority pull request Dashboard**, where you can find the pull requests (PR) that will bring most value for the community and will be delivered first.
 
@@ -27,7 +27,7 @@ Each project has a description of what it does. One important project is the **H
 
 Within projects there are pull request dashboards. There you will find our Kanban board, which has columns representing the PR delivery workflow. The columns title are self-explanatory and should represent the action required for the pull requests on that column.
 
-![pull request Dashboard](_images/pr-dashboard.png)
+![pull request Dashboard](../../_images/pr-dashboard.png)
 
 ## Pull request review process
 
@@ -41,19 +41,19 @@ The first thing we encourage a maintainer to check is if the contributor has sig
 
 Once the CLA has been signed, we can check the other builds. Those builds are run based on the contributors pull request and will let us know if the proposed changes are causing existing functionality to break or are not fully compliant with coding standards. If either the Heath Index or Semantic Version Checker fail, the PR should be changed or the proposed changes will need approval by the Adobe team. More information can be found on our [Contributor Guide](../code-contributions/pull-request-tests.md).
 
-![Check CLA and Builds](_images/builds-and-checks.png)
+![Check CLA and Builds](../../_images/builds-and-checks.png)
 
 ### Check the pull request target
 
 It is important to check the pull request is targeted to the correct branch. For example, if the contributor’s PR does not create backwards incompatible changes, these changes should be targeted at the current minor release branch. If the PR introduces backwards incompatible changes, or it is part of a different project, it must target the correct branch.
 
-![Check pull request Target](_images/pr-target-branch.png)
+![Check pull request Target](../../_images/pr-target-branch.png)
 
 ### Code review
 
-The code review is one of the most important parts of the review process. Our community maintainers are responsible for reviewing the proposed changes and confirm they are following the [Technical Guidelines](https://devdocs.magento.com/guides/v2.4/coding-standards/technical-guidelines.html). It is important to evaluate if the proposed changes are backward compatible and follow the rules and best practice of our [Backward Compatible Development Guide](../code-contributions/backward-compatible-development.md). We count on our Maintainers judgement for other recommendations to increase contribution quality.
+The code review is one of the most important parts of the review process. Our community maintainers are responsible for reviewing the proposed changes and confirm they are following the [Technical Guidelines](https://devdocs.magento.com/guides/v2.4/coding-standards/technical-guidelines.html). It is important to evaluate if the proposed changes are backward compatible and follow the rules and best practice of our [Backward Compatible Development Guide](../code-contributions/backward-compatibility-policy.md). We count on our Maintainers judgement for other recommendations to increase contribution quality.
 
-![Code review](_images/pr-code-review.png)
+![Code review](../../_images/pr-code-review.png)
 
 ### Test coverage
 
@@ -65,13 +65,13 @@ As described on our [Definition of Done](../code-contributions/definition-of-don
 
 If the pull request is not covered by tests, the maintainer should advise the contributor on how to add proper test coverage.
 
-![Test coverage](_images/test-coverage-labels.png)
+![Test coverage](../../_images/test-coverage-labels.png)
 
 ### Approve changes
 
 Once all the steps above are complete, the maintainer can approve the contributor’s PR. After approving the PR, it will proceed through the delivery process and will be tested to guarantee quality.
 
-![Approve Changes](_images/approve-changes.png)
+![Approve Changes](../../_images/approve-changes.png)
 
 ## Other useful information
 
@@ -83,19 +83,19 @@ Magento Open source is a complex platform and, some changes may require changes 
 
 In that case, builds need to run using the changes from both PRs. To do so, use the 'related pull requests' feature. This feature is enabled by adding the link to the related pull request on the main pull request description using Github keywords. Details on this are in the [Contributor Guide](../code-contributions/pull-request-tests.md#related-pull-requests).
 
-![Related pull requests](_images/related-prs.png)
+![Related pull requests](../../_images/related-prs.png)
 
 ### Pull request deployment tool
 
-The deployment tool helps contributors and maintainers to test changes or validate if an issue exists on a clean installation. More information on the deployment tool can be found in the [Contributor's Guide](../code-contributions/contributing.md#contributor-assistant).
+The deployment tool helps contributors and maintainers to test changes or validate if an issue exists on a clean installation. More information on the deployment tool can be found in the [Contributor's Guide](../code-contributions/index.md#contributor-assistant).
 
-![pull request Deployment Tool](_images/deployment-comments.png)
+![pull request Deployment Tool](../../_images/deployment-comments.png)
 
 ### Maintainers Slack channel
 
 We communicate with our community maintainers on our Slack channel. Once you are on-boarded as a maintainer, we will add you to this channel. You can discuss contributions and share your ideas or information with other maintainers.
 
-![Maintainers Slack Channel](_images/slack-channel.png)
+![Maintainers Slack Channel](../../_images/slack-channel.png)
 
 ### Regular meetings
 

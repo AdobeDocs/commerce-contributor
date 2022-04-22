@@ -22,7 +22,7 @@ Maintainers take part in these main activities:
 
 -  Review pull request descriptions to make sure that they are meaningful and contain all required details; expedites pull request delivery without requiring additional clarification from contributors
 -  Review pull requests according to [technical guidelines](https://devdocs.magento.com/guides/v2.4/coding-standards/technical-guidelines.html)
--  Avoid [backward incompatible changes](../code-contributions/backward-compatible-development.md) in proposed changes
+-  Avoid [backward incompatible changes](../code-contributions/backward-compatibility-policy.md) in proposed changes
 -  Make sure all new code is covered with appropriate unit, integration, and functional tests
 -  Review issue descriptions to make sure that they are meaningful and provide clear reproduction steps
 -  Participate in discussions regarding proposed solutions, created issues, and more

@@ -7,7 +7,7 @@ description: Learn about policies and workflows related to open-source code cont
 
 <TextBlock slots="image, heading, text, links" width="50%" />
 
-![Code contributions](code-contributions/_images/code.svg)
+![Code contributions](../_images/code.svg)
 
 ## Code Contributions
 
@@ -17,7 +17,7 @@ Describes policies and workflows related to open-source code contributions
 
 <TextBlock slots="image, heading, text, links" width="50%" />
 
-![Doc contributions](code-contributions/_images/doc.svg)
+![Doc contributions](../_images/doc.svg)
 
 ## Doc Contributions
 
@@ -27,7 +27,7 @@ Describes policies and workflows related to open-source doc contributions
 
 <TextBlock slots="image, heading, text, links" width="50%" />
 
-![Contributors](code-contributions/_images/contributors.svg)
+![Contributors](../_images/contributors.svg)
 
 ## Contributors
 
@@ -37,7 +37,7 @@ Acknowledges our community of contributors
 
 <TextBlock slots="image, heading, text, links" width="50%" />
 
-![Maintainers](code-contributions/_images/maintainers.svg)
+![Maintainers](../_images/maintainers.svg)
 
 ## Maintainers
 

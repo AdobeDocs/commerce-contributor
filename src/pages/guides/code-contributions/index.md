@@ -121,10 +121,10 @@ Review the following supported and accepted pull request rules. We defined these
 
 |     |                 Fix for Existing Issue                 |                     Test Coverage                      |                      Refactoring                       |                      New Feature                       |                      Code Cleanup                      |
 |:----|:------------------------------------------------------:|:------------------------------------------------------:|:------------------------------------------------------:|:------------------------------------------------------:|:------------------------------------------------------:|
-| 2.1 |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |
-| 2.2 |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |
-| 2.3 |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |    ![No](_images/red-x.png)     |
-| 2.4 | ![Yes](_images/green-check.png) | ![Yes](_images/green-check.png) | ![Yes](_images/green-check.png) | ![Yes](_images/green-check.png) | ![Yes](_images/green-check.png) |
+| 2.1 |    ![No](../../_images/red-x.png)     |    ![No](../../_images/red-x.png)     |    ![No](../../_images/red-x.png)     |    ![No](../../_images/red-x.png)     |    ![No](../../_images/red-x.png)     |
+| 2.2 |    ![No](../../_images/red-x.png)     |    ![No](../../_images/red-x.png)     |    ![No](../../_images/red-x.png)     |    ![No](../../_images/red-x.png)     |    ![No](../../_images/red-x.png)     |
+| 2.3 |    ![No](../../_images/red-x.png)     |    ![No](../../_images/red-x.png)     |    ![No](../../_images/red-x.png)     |    ![No](../../_images/red-x.png)     |    ![No](../../_images/red-x.png)     |
+| 2.4 | ![Yes](../../_images/green-check.png) | ![Yes](../../_images/green-check.png) | ![Yes](../../_images/green-check.png) | ![Yes](../../_images/green-check.png) | ![Yes](../../_images/green-check.png) |
 
 ## Contribution requirements
 
