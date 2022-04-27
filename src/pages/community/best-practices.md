@@ -1,11 +1,11 @@
 ---
-group: community
-title: Community contributed best practices
-redirect_from: 
-  - /community/resources/best-practices.html
+title: Best Practices | Commerce Contributor
+description: See our collection of best practices, common solutions, and more!
 ---
 
-This section covers a broad scope of Community contributed best and leading practices, common solutions, and recommendations for Magento.
+# Best practices
+
+This section covers a broad scope of community-contributed best and leading practices, common solutions, and recommendations for Magento Open Source projects.
 
 Topics and areas include:
 
@@ -15,31 +15,26 @@ Topics and areas include:
 *  Local environment options
 *  And much more
 
-{:.bs-callout-info}
-Magento does not officially endorse these best practices.
-They are available in DevDocs because the content has been well received within the Magento community.
+<InlineAlert variant="info" slots="text"/>
 
-## Magento approved best practices
+Adobe does not officially endorse these best practices. They are available here because the content has been well received within the Magento Open Source community.
 
-The DevDocs and Magento teams verified and provide the following best practices and recommendations:
+## Adobe-approved best practices
 
-*  [Best Practices and Benchmarking]({{ site.baseurl }}/guides/v2.4/migration/migration-overview-practices.html) for Migration
-*  [Best Practices for Extension Development]({{ site.baseurl }}/guides/v2.4/ext-best-practices/bk-ext-best-practices.html)
-*  [Upgrade Best Practices]({{ site.baseurl }}/guides/v2.4/comp-mgr/upgrade-best-practices.html)
+The Adobe team verifies and provides the following best practices and recommendations:
 
-   We also recommend the [Commerce Marketplace Help Center](https://marketplacesupport.magento.com/hc/en-us) for extension questions.
-
-*  [Programming Best Practices]({{ site.baseurl }}/guides/v2.4/ext-best-practices/extension-coding/common-programming-bp.html)
-*  [Observers Best Practices]({{ site.baseurl }}/guides/v2.4/ext-best-practices/extension-coding/observers-bp.html)
-*  [Theme Development Best Practices]({{ site.baseurl }}/guides/v2.4/frontend-dev-guide/theme-best-practice.html)
-*  [Performance Best Practices]({{ site.baseurl }}/guides/v2.4/performance-best-practices/introduction.html)
-*  [Best Practices for Store Configuration]({{ site.baseurl }}/cloud/configure/configure-best-practices.html) for {{ site.data.var.ece }}
-*  [Deployment Process]({{ site.baseurl }}/cloud/reference/discover-deploy.html) for {{ site.data.var.ece }}
-
+*  [Best Practices and Benchmarking](https://devdocs.magento.com/guides/v2.4/migration/migration-overview-practices.html) for Migration
+*  [Best Practices for Extension Development](https://devdocs.magento.com/guides/v2.4/ext-best-practices/bk-ext-best-practices.html)
+*  [Upgrade Best Practices](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/prepare/best-practices.html)
+*  [Programming Best Practices](https://devdocs.magento.com/guides/v2.4/ext-best-practices/extension-coding/common-programming-bp.html)
+*  [Observers Best Practices](https://devdocs.magento.com/guides/v2.4/ext-best-practices/extension-coding/observers-bp.html)
+*  [Theme Development Best Practices](https://devdocs.magento.com/guides/v2.4/frontend-dev-guide/theme-best-practice.html)
+*  [Performance Best Practices](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/overview.html)
+*  [Best Practices for Store Configuration](https://devdocs.magento.com/cloud/configure/configure-best-practices.html) for Adobe Commerce on cloud infrastructure
+*  [Deployment Process](https://devdocs.magento.com/cloud/reference/discover-deploy.html) for Adobe Commerce on cloud infrastructure
+*  [Commerce Marketplace Help Center](https://marketplacesupport.magento.com/hc/en-us) for extension questions
 ## Want to contribute?
 
-You can [contribute](https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md) by adding content and new topics through Pull Requests to the [DevDocs](https://github.com/magento/devdocs) repo. Save all files to the `/community/resources` directory. We can help add navigation and format content when reviewing your submitted PRs.
+We encourage you to participate in our open documentation initiative. If you have suggestions, corrections, additions, or deletions for this documentation, check out the source on [GitHub](https://github.com/adobedocs/commerce-contributor), and open a pull request.
 
 Some PRs may require architectural and internal development reviews to verify and approve the contributed best practices. These reviews may require more time to complete before merging content.
-
-If you have any questions, contact us through [#DevDocs Slack](https://magentocommeng.slack.com/archives/CAN932A3H) (or [join us](https://t.co/9HImUyCmyh)) or Twitter [@AdobeCommrcDocs](https://twitter.com/AdobeCommrcDocs).

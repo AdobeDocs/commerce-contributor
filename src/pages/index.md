@@ -37,7 +37,7 @@ Describes policies and workflows related to open-source code contributions
 
 [Community](community/)
 
-Describes policies and workflows related to open-source code contributions
+Provides best practices and other resources contributed by the community
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 

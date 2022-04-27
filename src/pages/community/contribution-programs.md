@@ -1,7 +1,9 @@
 ---
-group: community
-title: Contribution programs
+title: Contribution Programs | Commerce Contributor
+description: Learn about the Adobe Solution Partners program and how to join.
 ---
+
+# Contribution programs
 
 Adobe is pleased to provide a Solution Partners program for partners.
 
@@ -17,6 +19,6 @@ When you join, you start receiving program benefits:
 1. Make sure all of your contributors have an active GitHub account with two-factor authentication enabled.
 1. Create a list of your contributors' emails and their GitHub accounts (example format: `github.com/accountname`).
 1. Contact <engcom@adobe.com> with the list and ask to join.
-1. After onboarding, in addition to {{site.data.var.ce}} projects, you will get permissions to [{{site.data.var.ee}}](https://github.com/magento/partners-magento2ee) and [{{site.data.var.b2b}}](https://github.com/magento/partners-magento2b2b) code repositories for partners.
+1. After onboarding, in addition to {{site.data.var.ce}} projects, you will get permissions to [Adobe Commerce](https://github.com/magento/partners-magento2ee) and [B2B for Adobe Commerce](https://github.com/magento/partners-magento2b2b) code repositories for partners.
 
 If you need help, contact us at <engcom@adobe.com> and we will walk you through enrollment.

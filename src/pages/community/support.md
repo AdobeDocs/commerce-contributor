@@ -1,17 +1,15 @@
 ---
-layout: full-width
-group: community
-subgroup: resources
-title: Adobe Commerce Support
-redirect_from:
-  - /community/resources/support.html
+title: Adobe Commerce Support | Commerce Contributor
+description: Get help with troubleshooting by visiting our support knowledge base.
 ---
 
-If you have issues, receive error messages, or need additional How To's, see our [{{site.data.var.ee}} Support Knowledge Base](https://support.magento.com). The knowledge base includes a growing amount of troubleshooting, how to, and FAQ articles for Magento 2 Commerce, Commerce (Cloud), and Open Source. We are constantly adding new content for Magento platform, services, modules, and much more.
+# Adobe Commerce Support
+
+If you have issues, receive error messages, or need additional How To's, see our [Adobe Commerce Support Knowledge Base](https://support.magento.com). The knowledge base includes a growing amount of troubleshooting, how to, and FAQ articles for Adobe Commerce and Magento Open Source.
 
 *  Search using keywords to find answers and help
 *  Browse through various categories
 *  Watch videos for more information
 *  Provide feedback as you read articles
 
-New to knowledge bases? See the [{{site.data.var.ee}} Help Center User Guide](https://support.magento.com/hc/en-us/articles/360000913794).
+New to knowledge bases? See the [Adobe Commerce Help Center User Guide](https://support.magento.com/hc/en-us/articles/360000913794).

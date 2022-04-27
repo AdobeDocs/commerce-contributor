@@ -1,9 +1,5 @@
 module.exports = [
     {
-      title: "Resources",
-      path: "/community/resources/",
-    },
-    {
         title: "Best practices",
         path: "/community/best-practices/",
     },
@@ -14,6 +10,10 @@ module.exports = [
     {
         title: "Contribution programs",
         path: "/community/contribution-programs/",
+    },
+    {
+        title: "Support",
+        path: "/community/support/",
     },
   ];
   

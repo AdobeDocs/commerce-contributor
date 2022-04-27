@@ -1,9 +1,7 @@
 ---
 title: Community | Commerce Contributor
-description: Find Commerce contributor community resources. 
+description: Find Commerce open-source contributor community resources.
 ---
-
-<Hero slots="heading, text" background="rgb(244, 111, 37)"/>
 
 # Community
 
@@ -17,11 +15,17 @@ You've got a place to start discussions.
 
 ![Community forum](../_images/experience-cloud.svg)
 
-### Community forum
+### Community forum & blog
 
 [Get started](https://community.magento.com/)
 
 Open discussion and support with community experts and Adobe staff
+
+<DiscoverBlock slots="link, text"/>
+
+[Magento DevBlog](https://community.magento.com/t5/Magento-DevBlog/bg-p/devblog)
+
+The DevBlog is a great resource for news about Magento Open Source projects, new community resources, and events.
 
 <DiscoverBlock slots="image, heading, link, text" width="100%"/>
 
@@ -29,9 +33,9 @@ Open discussion and support with community experts and Adobe staff
 
 ### Slack
 
-[Explore](https://adobe.io)
+[Explore](https://magentocommeng.slack.com)
 
-Hundreds of channels for Commerce open-source projects
+Hundreds of channels for Commerce open-source projects ([self sign-up](https://join.slack.com/t/magentocommeng/shared_invite/zt-mje5x2ye-3VGeNoaNxDGYMDle6qLuXA))
 
 <DiscoverBlock slots="image, heading, link, text" width="100%"/>
 

@@ -8,7 +8,7 @@ module.exports = [
       path: "/guides/",
     },
     {
-      title: "Community resources",
+      title: "Community",
       path: "/community/"
     },
   ];
