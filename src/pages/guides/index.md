@@ -1,32 +1,46 @@
 ---
-title: Guides - Adobe Analytics
-description: This is the guides overview page of Adobe Analytics 
+title: Guide | Commerce Contributor
+description: Learn about policies and workflows related to open-source code contributions.
 ---
 
-# Get Started
+# Commerce Contributor Guides
 
-To get started with Analytics 2.0 APIs you must first decide whether your application will need
-an OAuth client or a JWT client.
+<TextBlock slots="image, heading, text, links" width="50%" />
 
-## Authentication
+![Code contributions](../_images/code.svg)
 
-There are multiple type of authentication for authenticating with the analytics APIs. General information
-about authenticating with Adobe's APIs is located here. Specific information related to authenticating
-with the analytics APIs is available in the sections below
+## Code Contributions
 
-## OAuth
+Describes policies and workflows related to open-source code contributions
 
-Use an OAuth client if you are creating an application that requires an end use to authenticate before
-calling the Adobe Analytics APIs. The OAuth tokens expire after 24 hours and the end user must then
-re-authenticate before they will be able to call the APIs. To authenticate with an OAuth client, you first
-create an OAuth client on the [Adobe I/O Console](https://console.adobe.io).
+*  [Learn more](code-contributions/)
 
-<InlineAlert variant="info" slots="text"/>
+<TextBlock slots="image, heading, text, links" width="50%" />
 
-The refresh token grant type is automatically added to OAuth clients created after September 18, 2019
+![Doc contributions](../_images/doc.svg)
 
-## JWT
+## Doc Contributions
 
-A JWT client is best if you are creating an application that needs to programmatically authenticate calls to
-the Adobe Analytics APIs. A new JWT token can be generated whenever the old one is about to expire so your application
-can continue to make API calls.  
+Describes policies and workflows related to open-source doc contributions
+
+*  [Learn more](doc-contributions/)
+
+<TextBlock slots="image, heading, text, links" width="50%" />
+
+![Contributors](../_images/contributors.svg)
+
+## Contributors
+
+Acknowledges our community of contributors
+
+*  [Learn more](contributors/)
+
+<TextBlock slots="image, heading, text, links" width="50%" />
+
+![Maintainers](../_images/maintainers.svg)
+
+## Maintainers
+
+Provides details about what maintainers do and how you can become one
+
+*  [Learn more](maintainers/)
