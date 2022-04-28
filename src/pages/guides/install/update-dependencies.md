@@ -1,14 +1,11 @@
 ---
-title: Update installation dependencies
-functional_areas:
-  - Install
-  - System
-  - Setup
+title: Update Installation Dependencies | Commerce Contributor
+description: Use Composer to manage you project dependencies.
 ---
 
-## Introduction to installation dependencies
+# Update installation dependencies
 
-We now use [Composer](http://getcomposer.org) to resolve dependencies before you install the Magento software and extensions.
+We use [Composer](http://getcomposer.org) to resolve dependencies before you install the Magento software and extensions.
 
 [Composer](https://glossary.magento.com/composer) is a separate application that manages [PHP](https://glossary.magento.com/php) dependencies. Before you can install the Magento software, you must perform the following tasks in the order shown:
 

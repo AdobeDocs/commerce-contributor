@@ -1,10 +1,9 @@
 ---
-title: Contributor install
-functional_areas:
-  - Install
-  - System
-  - Setup
+title: Contributor Install | Commerce Contributor
+description: Install Magento Open Source using the git-based meethod if you plan on contributing to the source code. 
 ---
+
+# Contributor install
 
 If you are a code or documentation contributor, this install guide is for you! Use Composer to install Magento, then switch over to a released version and update any installation dependencies.
 

@@ -1,12 +1,11 @@
 ---
-title: Clone the repository
-functional_areas:
-  - Install
-  - System
-  - Setup
+title: Clone the Git Repository | Commerce Contributor
+description: Use the git-based method to install Magento Open Source if you plan on contributing to the code.
 ---
 
-You can clone the latest code from the [Magento GitHub repository](https://github.com/magento/magento2), and use code from a release branch or a development branch.
+# Clone the git repository
+
+You can clone the latest code from the [Magento Open Source GitHub repository](https://github.com/magento/magento2), and use code from a release branch or a development branch.
 
 -  A **release branch** is a _stable_, full-featured code branch officially released with a version number, such as 2.4. You _must_ use a release branch with the [Data Migration Tool](https://devdocs.magento.com/guides/v2.4/migration/bk-migration-guide.html).
 
