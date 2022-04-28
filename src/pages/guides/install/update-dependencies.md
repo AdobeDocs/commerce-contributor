@@ -10,8 +10,8 @@ We use [Composer](http://getcomposer.org) to resolve dependencies before you ins
 [Composer](https://glossary.magento.com/composer) is a separate application that manages [PHP](https://glossary.magento.com/php) dependencies. Before you can install the Magento software, you must perform the following tasks in the order shown:
 
 1. [Install the Composer software](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/dev_install.html).
-1. [Create the file system owner](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html) so Composer writes files to the web server docroot as the correct user.
-1. Run the [<code>composer install</code> command](#install-composer-install) from your Magento root directory (for example, `/var/www/magento2/`).
+1. [Create the file system owner](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html) so Composer can write files to the web server docroot as the correct user.
+1. [Update dependencies](#update-dependencies) in your local root project directory (for example, `/var/www/magento2/`).
 
 The Magento root directory is a subdirectory of your web server's docroot.
 
@@ -55,9 +55,8 @@ If so, create [`auth.json`](https://devdocs.magento.com/guides/v2.4/install-gde/
 
 ## Set file ownership and permissions
 
-See https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-system-perms.html.
-
 You must set read and write permissions for the web server group before you install Adobe Commerce or Magento Open Source. It is necessary so that the command line can write to the file system. See [file ownership and permissions](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
 
 <InlineAlert variant="help" slots="text"/>
+
 Hooray! You've completed the contributor install. Need more advanced help? Check out our [Advanced install](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli.html) guide.

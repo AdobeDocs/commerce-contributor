@@ -51,6 +51,7 @@ To create an authentication file:
 1. Save your changes and exit the text editor.
 
 <InlineAlert variant="warning" slots="text"/>
+
 Pushing an `auth.json` file to a public repository can expose your credentials.
 
-After completing the tasks discussed on this page, see [Update installation dependencies](https://devdocs.magento.com/guides/v2.4/install-gde/install/prepare-install.html).
+After completing the tasks discussed on this page, see [update installation dependencies](update-dependencies.md#update-installation-dependencies).
