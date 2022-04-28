@@ -6,35 +6,34 @@ functional_areas:
   - Setup
 ---
 
-You can clone the latest code from the [Magento GitHub repository][gh-repo], and use code from a release branch or a development branch.
+You can clone the latest code from the [Magento GitHub repository](https://github.com/magento/magento2), and use code from a release branch or a development branch.
 
--  A **release branch** is a _stable_, full-featured code branch officially released with a version number, such as 2.4. You _must_ use a release branch with the [Data Migration Tool][].
+-  A **release branch** is a _stable_, full-featured code branch officially released with a version number, such as 2.4. You _must_ use a release branch with the [Data Migration Tool](https://devdocs.magento.com/guides/v2.4/migration/bk-migration-guide.html).
 
 -  A **development branch**, or feature branch, is a less-stable code branch with the latest code intended as the next version or to introduce a specific feature.
 
-You can checkout a specific branch after you clone the repository to your local development environment. See [Cloning a repository][gh-clone] in the _GitHub Docs_.
+You can checkout a specific branch after you clone the repository to your local development environment. See [Cloning a repository](https://help.github.com/articles/cloning-a-repository-from-github/) in the _GitHub Docs_.
 
 ## Authentication and access
 
-The {{site.data.var.ee}} repository requires authentication, so you must prepare the following:
+The Adobe Commerce repository requires authentication, so you must prepare the following:
 
--  **[Magento authentication key][]**—You must have an authentication key to access the {{site.data.var.ee}} Composer package on `repo.magento.com` and to enable install and update commands for your project.
+-  **[Authentication key](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/connect-auth.html)**—You must have an authentication key to access the Adobe Commerce Composer package on `repo.magento.com` and to enable install and update commands for your project.
 
--  **[GitHub personal access token][gh-token]**—Composer requires a _personal access token_ in the `github-oauth` property to authorize GitHub repository access. When you create this token, select all options in the `repo` scope.
+-  **[GitHub personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)**—Composer requires a _personal access token_ in the `github-oauth` property to authorize GitHub repository access. When you create this token, select all options in the `repo` scope.
 
 ## Authentication file
 
-You must create an `auth.json` file that contains your {{site.data.var.ee}} [authorization credentials][] in the Magento root directory.
+You must create an `auth.json` file that contains your Adobe Commerce [authorization credentials](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/connect-auth.html) in the Magento root directory.
 
-{:.procedure}
 To create an authentication file:
 
 1. If you do not have an `auth.json` file in your Magento root directory, create one.
 
    -  Using a text editor, create an `auth.json` file in the Magento root directory.
-   -  Copy the contents of the [sample `auth.json` file][sample] into the new `auth.json` file.
+   -  Copy the contents of the [sample `auth.json` file](https://github.com/magento/magento2/blob/2.4/auth.json.sample) into the new `auth.json` file.
 
-1. Replace `<public-key>` and `<private-key>` with your {{site.data.var.ee}} authentication credentials. Add the `github-oauth` section and replace the `<personal-access-token>` with the one you created for your GitHub account.
+1. Replace `<public-key>` and `<private-key>` with your Adobe Commerce authentication credentials. Add the `github-oauth` section and replace the `<personal-access-token>` with the one you created for your GitHub account.
 
    ```json
    {
@@ -52,17 +51,7 @@ To create an authentication file:
 
 1. Save your changes and exit the text editor.
 
-{:.bs-callout-warning}
+<InlineAlert variant="warning" slots="text"/>
 Pushing an `auth.json` file to a public repository can expose your credentials.
 
-After completing the tasks discussed on this page, see [Update installation dependencies][].
-
-<!-- LINK DEFINITIONS -->
-[authorization credentials]: {{page.baseurl}}/install-gde/prereq/connect-auth.html
-[Data Migration Tool]: {{page.baseurl}}/migration/bk-migration-guide.html
-[gh-clone]: https://help.github.com/articles/cloning-a-repository-from-github/
-[gh-repo]: https://github.com/magento/magento2
-[gh-token]: https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
-[Magento authentication key]: {{page.baseurl}}/install-gde/prereq/connect-auth.html
-[sample]: {{ site.mage2bloburl }}/{{ page.guide_version }}/auth.json.sample
-[Update installation dependencies]: {{page.baseurl}}/install-gde/install/prepare-install.html
+After completing the tasks discussed on this page, see [Update installation dependencies](https://devdocs.magento.com/guides/v2.4/install-gde/install/prepare-install.html).

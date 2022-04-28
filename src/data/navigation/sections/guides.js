@@ -44,7 +44,7 @@ module.exports = [
     ],
   },
   {
-    title: "Install",
+    title: "Contributor install",
     path: "/guides/install/",
     pages: [
       {
