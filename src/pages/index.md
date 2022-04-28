@@ -1,6 +1,6 @@
 ---
 title: Commerce Contributor
-description: Review resources for contributing to Commerce projects like Magento Open Source and PWA Studio.
+description: Review resources for contributing to Adobe Commerce open-source projects like Magento Open Source and PWA Studio.
 ---
 
 <Hero slots="heading, text" background="rgb(244, 111, 37)"/>
