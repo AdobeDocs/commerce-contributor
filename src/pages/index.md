@@ -1,6 +1,6 @@
 ---
 title: Commerce Contributor
-description: Review resources for contributing to Commerce projects like Magento Open Source and PWA Studio.
+description: Review resources for contributing to Adobe Commerce open-source projects like Magento Open Source and PWA Studio.
 ---
 
 <Hero slots="heading, text" background="rgb(244, 111, 37)"/>
@@ -37,7 +37,7 @@ Describes policies and workflows related to open-source code contributions
 
 [Community](community/)
 
-Describes policies and workflows related to open-source code contributions
+Provides best practices and other resources contributed by the community
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
