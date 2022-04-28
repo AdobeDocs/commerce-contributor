@@ -33,6 +33,7 @@ The Adobe team verifies and provides the following best practices and recommenda
 *  [Best Practices for Store Configuration](https://devdocs.magento.com/cloud/configure/configure-best-practices.html) for Adobe Commerce on cloud infrastructure
 *  [Deployment Process](https://devdocs.magento.com/cloud/reference/discover-deploy.html) for Adobe Commerce on cloud infrastructure
 *  [Commerce Marketplace Help Center](https://marketplacesupport.magento.com/hc/en-us) for extension questions
+
 ## Want to contribute?
 
 We encourage you to participate in our open documentation initiative. If you have suggestions, corrections, additions, or deletions for this documentation, check out the source on [GitHub](https://github.com/adobedocs/commerce-contributor), and open a pull request.
