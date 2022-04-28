@@ -5,7 +5,7 @@ description: Use this as a guide for organizing a successful Contribution Day ev
 
 # Contribution Day organizer's handbook
 
-Thank you for taking the time to organize a Magento Contribution Day! This handbook aims to answer any questions you have on the matter, but if you still have questions feel free to email the Community Engineering team: `engcom@adobe.com`.
+Thank you for taking the time to organize a Contribution Day! This handbook aims to answer any questions you have on the matter, but if you still have questions feel free to email the Community Engineering team: `engcom@adobe.com`.
 
 ## Before the event
 
@@ -28,7 +28,7 @@ How many people do you foresee attending? Depending on the numbers, you may want
 
 ### Public or private?
 
-We are big proponents of open source and transparency so we love to see events accessible to the public. That said, there are occasions where private events may be beneficial. For example, an internal Contribution Day could be used as a company developer training opportunity in order to level up your Magento developers and get them involved in the evolution of Magento.
+We are big proponents of open source and transparency so we love to see events accessible to the public. That said, there are occasions where private events may be beneficial. For example, an internal Contribution Day could be used as a company developer training opportunity in order to level up your developers and get them involved in the evolution of Magento Open Source.
 
 ### Venue
 
@@ -96,7 +96,7 @@ Having the above information can also be useful as feedback into [issue backlog 
 Once your website and registration page is ready, you should compile materials to send to your attendees after they register and before the event. Some basic information that should be present in this material includes:
 
 *  Links to any relevant Contribution Day boards or backlogs containing issues that would be good challenges for attendees.
-*  A friendly reminder on basic contribution guidelines. A good place to start are the generic [Contribution Guidelines](../guides/code-contributions/), but specific community projects focused on during your event may have their own CONTRIBUTION.md with project-specific guidelines in addition to the generic Magento ones.
+*  A friendly reminder on basic contribution guidelines. A good place to start are the generic [contribution guidelines](../guides/code-contributions/), but specific community projects focused on during your event may have their own `CONTRIBUTION.md` file with project-specific guidelines.
 *  Share any [social media promotional decisions](#marketing-and-communication) like which hashtag to use.
 
 ### Marketing and communication
@@ -115,7 +115,7 @@ What is the best way for (potential) attendees to contact you? Do you have an em
 
 #### Magento involvement
 
-While we may be able to send one or more members of the Magento Community Engineering team to your event to help with running the event and guiding contributors, please note that these events are organized and run by you - not Magento. As such, **Magento should not be mentioned as a sponsor or co-organizer**. These events are first and foremost community events by the community and for the community.
+While we may be able to send one or more members of the Magento Community Engineering team to your event to help with running the event and guiding contributors, please note that these events are organized and run by you—not Adobe. As such, **Adobe should not be mentioned as a sponsor or co-organizer**. These events are first and foremost community events by the community and for the community.
 
 ### Contribution backlog
 
@@ -130,7 +130,7 @@ During the event it is good to have an agenda accessible to attendees, so they k
 | Time      | Title                                                                             | Details                                                                                                                                                                                                                                                                                                                                                                          |
 |-----------|-----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 9AM-10AM  | Coffee and Introductions                                                          | Start the event off with an introduction round for the attendees, a description of the venue, Wi-Fi information, social media information (hashtags), communication channels (i.e. Slack channel), highlight people to contact for help and key locations such as toilets, coffee and smoking areas. This helps to make sure people feel as comfortable as possible at the event. |
-| 10AM-11AM | How to contribute, find issues to work on and set up your development environment | An introduction on how to go about contributing, how to find issues to work on and how to get a local development environment going. This is all about helping give attendees context, which is especially important for first-time contributors. Unless your attendees are all veteran Magento contributors, consider having some amount of time allotted for this.                       |
+| 10AM-11AM | How to contribute, find issues to work on and set up your development environment | An introduction on how to go about contributing, how to find issues to work on and how to get a local development environment going. This is all about helping give attendees context, which is especially important for first-time contributors. Unless your attendees are all veteran Magento Open Source contributors, consider having some amount of time allotted for this.                       |
 | 11AM-1PM  | Development Time                                                                  | Get hacking!                                                                                                                                                                                                                                                                                                                                                                     |
 | 1PM-2PM   | Lunch                                                                             | Enjoy your lunch!                                                                                                                                                                                                                                                                                                                                                                          |
 | 2PM-4PM   | Development Time                                                                  | Get hacking!                                                                                                                                                                                                                                                                                                                                                                     |
@@ -139,7 +139,7 @@ During the event it is good to have an agenda accessible to attendees, so they k
 
 ### Tracking contributions
 
-The Magento Community Engineering team would love it if you are able to track activity and contributions that arise out of your event! This helps us highlight the benefits for the community, from the community, to the Magento ecosystem and provides us with evidence for further supporting such community events in the future. We are particularly interested in understanding how a contributor's activity evolves before, during and after a Contribution Day event, so information we are most interested in is:
+The Magento Community Engineering team would love it if you are able to track activity and contributions that arise out of your event! This helps us highlight the benefits for the community, from the community, to the Magento Open Sourceecosystem and provides us with evidence for further supporting such community events in the future. We are particularly interested in understanding how a contributor's activity evolves before, during and after a Contribution Day event, so information we are most interested in is:
 
 *  Number of participants
 *  URLs to pull requests and issues filed during the event
@@ -158,7 +158,7 @@ One of the best ways to gather feedback is to put together a survey using a tool
 *  What did you like about the Contribution Day?
 *  What did you dislike about the Contribution Day?
 *  Was there any information that would have been helpful before the Contribution Day?
-*  How likely is it that you would recommend Magento Contribution Days to a friend or colleague?
+*  How likely is it that you would recommend Contribution Days to a friend or colleague?
 *  Any comments about the facilities or environment of the event?
 *  Any additional comments?
 
