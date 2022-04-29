@@ -44,3 +44,13 @@ Acknowledges our community of contributors
 Provides details about what maintainers do and how you can become one
 
 *  [Learn more](maintainers/)
+
+<TextBlock slots="image, heading, text, links" width="50%" />
+
+![Contributor install](../_images/install.svg)
+
+## Contributor install
+
+Learn how contributing developers install Magento Open Source
+
+*  [Learn more](install/)

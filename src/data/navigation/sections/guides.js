@@ -43,4 +43,22 @@ module.exports = [
       },
     ],
   },
+  {
+    title: "Contributor install",
+    path: "/guides/install/",
+    pages: [
+      {
+        title: "Clone the git repository",
+        path: "/guides/install/clone-repository/",
+      },
+      {
+        title: "Change to a released version",
+        path: "/guides/install/change-version/",
+      },
+      {
+        title: "Update dependencies",
+        path: "/guides/install/update-dependencies/",
+      },
+    ],
+  }
 ];
