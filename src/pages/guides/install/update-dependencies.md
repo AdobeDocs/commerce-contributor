@@ -57,6 +57,6 @@ If so, create [`auth.json`](https://devdocs.magento.com/guides/v2.4/install-gde/
 
 You must set read and write permissions for the web server group before you install Adobe Commerce or Magento Open Source. It is necessary so that the command line can write to the file system. See [file ownership and permissions](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
 
-<InlineAlert variant="help" slots="text"/>
+<InlineAlert variant="success" slots="text"/>
 
 Hooray! You've completed the contributor install. Need more advanced help? Check out our [Advanced install](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli.html) guide.
