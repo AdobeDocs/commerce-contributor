@@ -1,13 +1,13 @@
 ---
-title: Definition of Done | Automated Tests
-description: Automated tests and the Commerce definition of done.
+title: Automated Tests | Commerce Contributor
+description: Learn about rules that govern automated testing for Commerce contributions, including integration tests, unit tests, functional tests, integrity tests, and static tests.
 ---
 
-## Overview
+# Automated tests
 
 All changes to Adobe Commerce projects should be covered by automated tests to meet the "Definition of Done" (DoD).
 
-### Understanding black, white, and gray tests
+## Understanding black, white, and gray tests
 
 *  A black box test does not have any knowledge of how the subject of the test is built.
 *  A white box has knowledge of how the subject of the test is built. The test logic is usually coupled to the implementation and will typically be sensitive to changes.
@@ -21,7 +21,7 @@ Assume there is a method with the signature `function removeLetterFromString(str
 *  A white box test would look into the implementation of the method and see that it calls a micro-service API and make sure that each condition of the code has test coverage. For example, this test may force the micro-service client to return an error and have a test for the expected handling of that scenario. This would not be a reusable test and it is directly coupled to the implementation.
 *  A gray box test would look at the implementation of the method and see that it calls a micro-service API and injects the `$string` into the URL so it may add some extra test coverage for strings that contain unsafe URL characters such as `&?=%/`. This is not coupled to the implementation as the implementation could be changed and the test should still pass.
 
-### Automated tests
+## Automated tests
 
 Code changes must be covered by automated tests according to Classification of Magento Automated Tests.
 When choosing how to cover your changes, pick the most lightweight (execution-time wise) test type that will provide sufficient coverage.
@@ -39,7 +39,7 @@ These tests must test the concrete implementation's behavior in a way that can n
 
 For example: testing a concrete class through DI preference is not safe because it could be overridden via configuration of another loaded module. The test should not ask for the interface but rather the concrete implementation.
 
-### Integration tests
+## Integration tests
 
 An integration test should be used to cover any code that does not meet the requirements of a unit test or functional test and should be thought of as essentially the default test type.
 
@@ -59,9 +59,9 @@ Integration test policy:
 For example, `Magento\Framework\SomeClassFilter` may contain a `FilterPool` that comes with default `FilterInterface`'s from `Magento\Framework`. Each of these implementations would have their own coverage pursuant to this document. However, there should also be some basic assertions within the test coverage for `Magento\Framework\SomeClassFilter` that ensure each of the default filters are loaded correctly.
 This should not be explicit coverage such as `$filter->isLoaded('someDefaultFilter')`.
 
-See: [Running Integration Tests][1].
+See: [Running Integration Tests](https://devdocs.magento.com/guides/v2.4/test/integration/integration_test_execution.html).
 
-### Functional tests
+## Functional tests
 
 UI functional tests are inherently unstable regardless of platform or testing framework. For this reason, along with reasons of maintainability and quality assurance delivery time, these tests should be prioritized below all other tests types.
 
@@ -74,9 +74,9 @@ However, aside from those cases, UI functional tests should only be used to cove
 
 If there is a scenario that is not classified as a P0/P1 but should be, have a discussion with the product owner to get it elevated.
 
-See [Functional Tests][0].
+See [Functional Tests](https://devdocs.magento.com/guides/v2.4/test/testing.html).
 
-### Unit tests
+## Unit tests
 
 There are a small number of use cases for unit tests in Magento. The nature of our code and development practices make it increasingly hard to write and maintain high-quality unit tests.
 Many of them end up being replaced by integration tests or are practically useless from the beginning due to how much mocking is needed to make them pass.
@@ -113,7 +113,7 @@ Examples:
 *  Model triad classes (Model/Resource Model/Collection) as they have many dependencies and interact with resources.
 *  Factories
 
-### Integrity tests
+## Integrity tests
 
 Code to cover:
 
@@ -128,7 +128,7 @@ For example:
 *  Scan for all XML-files of certain type and validate them using appropriate XML-schema.
 *  Scan for declarations of templates and invoke "fallback" mechanism to ensure they resolve.
 
-### Static tests
+## Static tests
 
 Code to cover:
 
@@ -142,19 +142,15 @@ Expected code coverage:
 
 The static tests should be delivered to the Magento Coding Standard [repository](https://github.com/magento/magento-coding-standard).
 
-See [Magento Coding Standard contributing guide][2] for details.
+See [code contributions](../code-contributions/) for details.
 
 Not all changes can be covered.
 For example, it is possible to scan a file for literals, but it is unfeasible to analyze string concatenation or any other dynamic way of building a variable.
 
-### Functional Manual Tests
+## Functional Manual Tests
 
 Must cover new or changed application behavior (functional).
 Added/updated functionality should be covered by a functional Zephyr test(s) related to current sprint commitment.
 
 The work cannot be considered as complete unless all the criteria are verified.
 
-[0]:https://devdocs.magento.com/guides/v2.4/test/testing.html
-[1]:https://devdocs.magento.com/guides/v2.4/test/integration/integration_test_execution.html
-[2]:../code-contributions/
-[3]:./backward-compatibility-policy.md

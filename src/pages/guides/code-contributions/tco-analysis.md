@@ -1,9 +1,9 @@
 ---
-title: Definition of Done | TCO Analysis
+title: Total Cost of Ownership Analysis | Commerce Contributor
 description: Total cost of ownership and the Commerce definition of done.
 ---
 
-## Overview
+# Total cost of ownership (TCO) analysis
 
 All functional changes must be analyzed for the impact on merchant total cost of ownership (TCO) and the results of the analysis should be added to the pull request or issue description to meet the "Definition of Done" (DoD).
 
@@ -14,7 +14,7 @@ The goal of TCO analysis is to identify:
    -  The level of the change (patch/minor/major)
    -  Potential number of affected extensions/customizations (several/many/most/all)
 
-### Changes that have impact on TCO
+## Changes that have impact TCO
 
 Changes can impact total cost of ownership if the extensions or customizations, established processes or integrations within the projects build on Adobe Commerce framework may need to be adjusted to accommodate the changes.
 
@@ -38,7 +38,7 @@ Some changes that have impact on TCO:
 -  Any layout or block changes
 -  Removing or renaming of any files
 
-### Level of change
+## Level of change
 
 If the changes may have a TCO impact, the level of the change should be identified.
 If the backward incompatible change results an a SVC build failure - the level of change can be viewed in the SVC build result.
@@ -88,13 +88,13 @@ This table lists the levels for the changes that are not currently covered by SV
 |                                        | Added required argument, input field, directive argument   | MAJOR |
 |                                        | Changed kind of argument, type, field| MAJOR |
 
-### Potential number of affected customizations
+## Potential number of affected customizations
 
 In order to identify the scope of the impact, usage of the changed code should be detected in the available code/extensions/customizations.
 
 The analysis result should indicate the proportion of reviewed modules to the modules referencing (using) the changed code.
 
-### TCO Analysis result example
+## TCO analysis result example
 
 The analysis should indicate all the changes that have TCO impact or state that there is "No TCO impact".
 
@@ -106,7 +106,6 @@ Change to SomeClass::someMethod is PATCH level but impacts 5 out of 10 reviewed 
 Change to CLI command is MAJOR level, it impacts 2 out of 10 reviewed custom modules.
 ```
 
-A custom module is a [Magento module][1] that is not part of Adobe Commerce product.
+A custom module is a [module](https://devdocs.magento.com/architecture/archi_perspectives/components/modules/mod_intro.html) that is not part of the Adobe Commerce product.
 A change impacts a custom module if its code needs to be changed in response.
 
-[1]: https://devdocs.magento.com/architecture/archi_perspectives/components/modules/mod_intro.html

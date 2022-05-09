@@ -13,7 +13,7 @@ module.exports = [
       },
       {
         title: "Backward compatibility definition of done",
-        path: "/guides/code-contributions/dod-backward-compat/",
+        path: "/guides/code-contributions/backward-compatibility-definition-of-done/",
       },
       {
         title: "Definition of done",
@@ -33,7 +33,7 @@ module.exports = [
       },
       {
         title: "Total cost of ownershop analysis",
-        path: "/guides/code-contributions/tco-analysis/",
+        path: "/guides/code-contributions/total-cost-of-ownership-analysis/",
       },
     ],
   },
