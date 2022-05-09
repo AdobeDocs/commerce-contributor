@@ -32,5 +32,5 @@ For more information, see [Magento's backward compatibility policy][2] and [Vers
 
 [0]:https://devdocs.magento.com/guides/v2.4/extension-dev-guide/versioning/codebase-changes.html
 [1]:https://devdocs.magento.com/guides/v2.4/extension-dev-guide/versioning/dependencies.html
-[2]:./backward-compatibility-policy.html
+[2]:./backward-compatibility-policy.md
 [3]:https://devdocs.magento.com/guides/v2.4/extension-dev-guide/versioning/

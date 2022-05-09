@@ -66,8 +66,8 @@ The work cannot be considered as complete unless all the criteria are verified.
 
 [0]:./dod-backward-compat.md
 [1]:https://devdocs.magento.com/guides/v2.4/coding-standards/docblock-standard-general.html
-[2]:./backward-compatibility-policy.html
-[3]:./automated-tests.html
-[4]:./tco-analysis.html
+[2]:./backward-compatibility-policy.md
+[3]:./automated-tests.md
+[4]:./tco-analysis.md
 [5]:https://github.com/magento/magento-coding-standard
 [6]:https://github.com/magento/devdocs

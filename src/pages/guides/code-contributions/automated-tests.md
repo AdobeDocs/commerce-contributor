@@ -157,4 +157,4 @@ The work cannot be considered as complete unless all the criteria are verified.
 [0]:https://devdocs.magento.com/guides/v2.4/test/testing.html
 [1]:https://devdocs.magento.com/guides/v2.4/test/integration/integration_test_execution.html
 [2]:../code-contributions/
-[3]:./backward-compatibility-policy.html
+[3]:./backward-compatibility-policy.md
