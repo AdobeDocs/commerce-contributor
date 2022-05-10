@@ -1,6 +1,6 @@
 ---
 title: Total Cost of Ownership Analysis | Commerce Contributor
-description: Total cost of ownership and the Commerce definition of done.
+description: Upgrading is more than just merging code. Learn more about the total cost of ownership and the Commerce definition of done.
 ---
 
 # Total cost of ownership (TCO) analysis
