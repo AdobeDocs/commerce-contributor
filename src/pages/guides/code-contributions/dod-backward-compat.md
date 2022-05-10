@@ -28,4 +28,3 @@ Technical backward compatibility must be retained between PATCH (marketing) vers
 Any breaking changes must be approved by an architect, product owner and release manager.
 
 For more information, see [Backward compatibility policy](backward-compatibility-policy.md) and [Versioning](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/versioning/).
-

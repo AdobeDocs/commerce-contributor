@@ -153,4 +153,3 @@ Must cover new or changed application behavior (functional).
 Added/updated functionality should be covered by a functional Zephyr test(s) related to current sprint commitment.
 
 The work cannot be considered as complete unless all the criteria are verified.
-

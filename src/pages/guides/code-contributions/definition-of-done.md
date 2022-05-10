@@ -63,4 +63,3 @@ All functional changes should analyzed for the impact on merchant total cost of 
 The details on TCO analysis required to meet the DoD can be found in [Total cost of ownership analysis](total-cost-of-ownership-analysis.md).
 
 The work cannot be considered as complete unless all the criteria are verified.
-
