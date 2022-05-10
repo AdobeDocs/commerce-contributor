@@ -54,7 +54,7 @@ For documenting backward-incompatible changes, see the [Backward compatibility p
 
 All backward incompatible changes should be approved and covered by static tests.
 
-The details on backward compatibility criteria included in the DoD can be found in [DoD - Backward Compatibility][0]
+The details on backward compatibility criteria included in the DoD can be found in [DoD - Backward Compatibility](definition-of-done-backward-compatibility.md)
 
 ## TCO Analysis
 
