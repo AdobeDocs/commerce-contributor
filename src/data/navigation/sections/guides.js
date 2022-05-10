@@ -4,8 +4,16 @@ module.exports = [
     path: "/guides/code-contributions/",
     pages: [
       {
+        title: "Automated tests",
+        path: "/guides/code-contributions/automated-tests/",
+      },
+      {
         title: "Backward compatibility policy",
         path: "/guides/code-contributions/backward-compatibility-policy/",
+      },
+      {
+        title: "Backward compatibility definition of done",
+        path: "/guides/code-contributions/backward-compatibility-definition-of-done/",
       },
       {
         title: "Definition of done",
@@ -22,6 +30,10 @@ module.exports = [
       {
         title: "Pull request tests",
         path: "/guides/code-contributions/pull-request-tests/",
+      },
+      {
+        title: "Total cost of ownershop analysis",
+        path: "/guides/code-contributions/total-cost-of-ownership-analysis/",
       },
     ],
   },
