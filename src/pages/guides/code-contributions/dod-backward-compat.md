@@ -7,7 +7,6 @@ description: Backward compatibility ensures that new code does not break old cod
 
 All backward incompatible changes should be approved and covered by static tests to meet the "Definition of Done" (DoD).
 
-
 ## Functional backward compatibility
 
 **Functional backward compatibility** means the behavior of the application is preserved.
