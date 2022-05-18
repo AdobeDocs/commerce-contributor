@@ -13,7 +13,7 @@ module.exports = [
       },
       {
         title: "Backward compatibility definition of done",
-        path: "/guides/code-contributions/backward-compatibility-definition-of-done/",
+        path: "/guides/code-contributions/definition-of-done-backward-compatibility/",
       },
       {
         title: "Definition of done",
