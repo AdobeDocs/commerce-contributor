@@ -13,7 +13,7 @@ As well as using the native installation path to set up a system with all the re
 
 - It allows you to replicate the same set up that you have in production inside a container. 
 
-- Also, you can have different containers with different configurations for extensive testing.
+- You can have different containers with different configurations for extensive testing.
 
 Two are the scenarios in which a Docker-based environment is most useful:
 
