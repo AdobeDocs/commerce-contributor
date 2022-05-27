@@ -9,7 +9,7 @@ As well as using the native installation path to set up a system with all the re
 
 - It is generally easier to set up a Docker-based development environment than a native one.
 
-- Reproducing the same environment in another machine is just a matter of copying a `Dockerfile` and/or `docker-compose.yml` files to it and build new containers from them.
+- Reproducing the same environment in another machine is just a matter of copying a `Dockerfile` and/or `docker-compose.yml` files to it and building new containers from them.
 
 - It allows to replicate the same set up you have in production inside a container. 
 
