@@ -11,7 +11,7 @@ As well as using the native installation path to set up a system with all the re
 
 - Reproducing the same environment in another machine is just a matter of copying a `Dockerfile` and/or `docker-compose.yml` files to it and building new containers from them.
 
-- It allows to replicate the same set up you have in production inside a container. 
+- It allows you to replicate the same set up that you have in production inside a container. 
 
 - Also, you can have different containers with different configurations for extensive testing.
 
