@@ -15,7 +15,7 @@ As well as using the native installation path to set up a system with all the re
 
 - You can have different containers with different configurations for extensive testing.
 
-Two are the scenarios in which a Docker-based environment is most useful:
+The following two scenarios describe when a Docker-based environment is most useful:
 
 - For demos, Commerce Cloud compatibility testing and basic development we recommend [Magento Cloud Docker](https://github.com/magento/magento-cloud-docker). You can have more information in [Adobe Commerce Devdocs](https://devdocs.magento.com/cloud/docker/docker-development.html).
 
