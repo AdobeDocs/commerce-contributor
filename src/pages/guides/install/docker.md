@@ -17,7 +17,7 @@ As well as using the native installation path to set up a system with all the re
 
 The following two scenarios describe when a Docker-based environment is most useful:
 
-- For demos, Commerce Cloud compatibility testing and basic development we recommend [Magento Cloud Docker](https://github.com/magento/magento-cloud-docker). You can have more information in [Adobe Commerce Devdocs](https://devdocs.magento.com/cloud/docker/docker-development.html).
+- For demos, Commerce Cloud compatibility testing, and basic development we recommend [Magento Cloud Docker](https://github.com/magento/magento-cloud-docker). See [Cloud Docker Development](https://devdocs.magento.com/cloud/docker/docker-development.html).
 
 - For development, aside Magento Cloud Docker, there are several community projects aimed to provide a Docker environment suitable for coding, like [Docker Magento]( https://github.com/markshust/docker-magento) and [Magento2Docker](https://github.com/yvoronoy/magento2docker). Please refer to each project's documentation for more details.
 
