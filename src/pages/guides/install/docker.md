@@ -7,7 +7,7 @@ description: Recommendations on how to use Magento in Docker containers.
 
 As well as using the native installation path to set up a system with all the requirements to run Adobe Commerce or Magento Open Source, you can also use Docker, either with a custom project or using an existing solution. There are several advantages in using Docker instead of a native set up:
 
-- It is generally easier to set-up a Docker-based development environment than a native one.
+- It is generally easier to set up a Docker-based development environment than a native one.
 
 - Reproducing the same environment in another machine is just a matter of copying a `Dockerfile` and/or `docker-compose.yml` files to it and build new containers from them.
 
