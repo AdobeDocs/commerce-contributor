@@ -5,7 +5,7 @@ description: Install Magento Open Source using the git-based meethod if you plan
 
 # Contributor install
 
-If you are a code or documentation contributor, this install guide is for you! Use Composer to install Magento, then switch over to a released version and update any installation dependencies.
+If you are a Coder/Developer or documentation contributor, this install guide is for you! Use Composer to install Magento, then switch over to a released version and update any installation dependencies.
 
 <InlineAlert variant="success" slots="text"/>
 
