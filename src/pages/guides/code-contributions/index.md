@@ -7,7 +7,7 @@ description: Review all operational aspects of contributing to Commerce open-sou
 
 <InlineAlert variant="info" slots="text"/>
 
-Connect with Magento Open Source Contributors and Maintainers to learn more about contributions and special projects. Join us in our [Slack workspace](https://opensource.magento.com/slack), in the [#general](https://magentocommeng.slack.com/archives/C4YS78WE6) channel, follow the [#announcements](https://magentocommeng.slack.com/archives/C7FA71S3V), and browse for more [channels](https://devdocs.magento.com/community/resources/resources.html#community-engineering-slack)!
+Connect with Magento Open Source Contributors and Maintainers to learn more about contributions and special projects. Join us in our [Slack workspace](https://opensource.magento.com/slack), in the [#general](https://magentocommeng.slack.com/archives/C4YS78WE6) channel, follow the [#announcements](https://magentocommeng.slack.com/archives/C7FA71S3V), and browse for more [channels](https://developer.adobe.com/commerce/contributor/community/)!
 
 ## Contribute to Magento Open Source code
 

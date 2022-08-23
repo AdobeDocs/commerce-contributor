@@ -106,5 +106,5 @@ Change to SomeClass::someMethod is PATCH level but impacts 5 out of 10 reviewed 
 Change to CLI command is MAJOR level, it impacts 2 out of 10 reviewed custom modules.
 ```
 
-A custom module is a [module](https://devdocs.magento.com/architecture/archi_perspectives/components/modules/mod_intro.html) that is not part of the Adobe Commerce product.
+A custom module is a [module](https://developer.adobe.com/commerce/php/architecture/modules/overview/) that is not part of the Adobe Commerce product.
 A change impacts a custom module if its code needs to be changed in response.
