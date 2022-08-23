@@ -24,11 +24,11 @@ Adobe does not officially endorse these best practices. They are available here 
 The Adobe team verifies and provides the following best practices and recommendations:
 
 *  [Best Practices and Benchmarking](https://devdocs.magento.com/guides/v2.4/migration/migration-overview-practices.html) for Migration
-*  [Best Practices for Extension Development](https://devdocs.magento.com/guides/v2.4/ext-best-practices/bk-ext-best-practices.html)
+*  [Best Practices for Extension Development](https://developer.adobe.com/commerce/php/best-practices/)
 *  [Upgrade Best Practices](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/prepare/best-practices.html)
-*  [Programming Best Practices](https://devdocs.magento.com/guides/v2.4/ext-best-practices/extension-coding/common-programming-bp.html)
-*  [Observers Best Practices](https://devdocs.magento.com/guides/v2.4/ext-best-practices/extension-coding/observers-bp.html)
-*  [Theme Development Best Practices](https://devdocs.magento.com/guides/v2.4/frontend-dev-guide/theme-best-practice.html)
+*  [Programming Best Practices](https://developer.adobe.com/commerce/php/best-practices/extensions/)
+*  [Observers Best Practices](https://developer.adobe.com/commerce/php/best-practices/extensions/observers/)
+*  [Theme Development Best Practices](https://developer.adobe.com/commerce/frontend-core/guide/best-practices/)
 *  [Performance Best Practices](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/overview.html)
 *  [Best Practices for Store Configuration](https://devdocs.magento.com/cloud/configure/configure-best-practices.html) for Adobe Commerce on cloud infrastructure
 *  [Deployment Process](https://devdocs.magento.com/cloud/reference/discover-deploy.html) for Adobe Commerce on cloud infrastructure

@@ -128,7 +128,7 @@ Review the following supported and accepted pull request rules. We defined these
 
 ## Contribution requirements
 
-1. Contributions must adhere to the [coding standards](https://devdocs.magento.com/guides/v2.4/coding-standards/bk-coding-standards.html).
+1. Contributions must adhere to the [coding standards](https://developer.adobe.com/commerce/php/coding-standards/).
 1. Refer to the [Definition of Done](definition-of-done.md). We use these guidelines internally to ensure that we deliver well-tested, well-documented, and solid code. We encourage you to use this as well!
 1. Pull requests (PRs) must be accompanied by a meaningful description of their purpose. Comprehensive descriptions increase the chances that a pull request is merged quickly and without additional clarification requests.
 1. Commits must be accompanied by meaningful commit messages.
