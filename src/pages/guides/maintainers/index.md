@@ -14,14 +14,14 @@ When considering new maintainers, we look for contributors who have shown a prop
 -  Contributing good and accepted code to multiple projects, including fixes for issues and new features
 -  Participating in discussions in our development projects, including the [architecture](https://github.com/magento/architecture) and [backlog](https://github.com/magento/backlog) projects
 -  Reviewing and discussing pull requests from other contributors
--  Helping other contributors with complex decisions and questions, like architecture questions, and providing advice according to [technical guidelines](https://devdocs.magento.com/guides/v2.4/coding-standards/technical-guidelines.html)
+-  Helping other contributors with complex decisions and questions, like architecture questions, and providing advice according to [technical guidelines](https://developer.adobe.com/commerce/php/coding-standards/technical-guidelines/)
 
 ## Maintainer activities
 
 Maintainers take part in these main activities:
 
 -  Review pull request descriptions to make sure that they are meaningful and contain all required details; expedites pull request delivery without requiring additional clarification from contributors
--  Review pull requests according to [technical guidelines](https://devdocs.magento.com/guides/v2.4/coding-standards/technical-guidelines.html)
+-  Review pull requests according to [technical guidelines](https://developer.adobe.com/commerce/php/coding-standards/technical-guidelines/)
 -  Avoid [backward incompatible changes](../code-contributions/backward-compatibility-policy.md) in proposed changes
 -  Make sure all new code is covered with appropriate unit, integration, and functional tests
 -  Review issue descriptions to make sure that they are meaningful and provide clear reproduction steps

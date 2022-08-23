@@ -59,7 +59,7 @@ Integration test policy:
 For example, `Magento\Framework\SomeClassFilter` may contain a `FilterPool` that comes with default `FilterInterface`'s from `Magento\Framework`. Each of these implementations would have their own coverage pursuant to this document. However, there should also be some basic assertions within the test coverage for `Magento\Framework\SomeClassFilter` that ensure each of the default filters are loaded correctly.
 This should not be explicit coverage such as `$filter->isLoaded('someDefaultFilter')`.
 
-See: [Running Integration Tests](https://devdocs.magento.com/guides/v2.4/test/integration/integration_test_execution.html).
+See: [Running Integration Tests](https://developer.adobe.com/commerce/testing/guide/integration/).
 
 ## Functional tests
 
@@ -74,7 +74,7 @@ However, aside from those cases, UI functional tests should only be used to cove
 
 If there is a scenario that is not classified as a P0/P1 but should be, have a discussion with the product owner to get it elevated.
 
-See [Functional Tests](https://devdocs.magento.com/guides/v2.4/test/testing.html).
+See [Functional Tests](https://developer.adobe.com/commerce/testing/guide/).
 
 ## Unit tests
 

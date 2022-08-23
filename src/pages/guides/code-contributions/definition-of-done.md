@@ -46,7 +46,7 @@ Documentation for the submitted code should be submitted as a pull request to th
 
 When submitting either code or documentation, a brief summary of the work should be included in the commit message.
 
-Additionally, the code itself should follow our [DocBlock standard](https://devdocs.magento.com/guides/v2.4/coding-standards/docblock-standard-general.html) and contain high-quality comments and descriptions for all classes and methods.
+Additionally, the code itself should follow our [DocBlock standard](https://developer.adobe.com/commerce/php/coding-standards/docblock/) and contain high-quality comments and descriptions for all classes and methods.
 
 For documenting backward-incompatible changes, see the [Backward compatibility policy](backward-compatibility-policy.md).
 
