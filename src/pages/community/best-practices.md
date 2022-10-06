@@ -15,7 +15,6 @@ Topics and areas include:
 *  Local environment options
 *  And much more
 
-
 ## Adobe-approved best practices
 
 The Adobe team verifies and provides the following best practices and recommendations:
