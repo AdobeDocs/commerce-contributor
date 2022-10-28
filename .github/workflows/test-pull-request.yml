@@ -86,8 +86,10 @@ jobs:
           cmd: install
 
       - name: Check internal links
-        run: yarn test:links
-     
+        uses: borales/actions-yarn@v3
+        with:
+          cmd: test:links
+
       - name: Build site
         if: ${{ success() }}
         uses: borales/actions-yarn@v3
