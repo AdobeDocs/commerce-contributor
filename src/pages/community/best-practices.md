@@ -19,7 +19,7 @@ Topics and areas include:
 
 The Adobe team verifies and provides the following best practices and recommendations:
 
-*  [Best Practices and Benchmarking](https://devdocs.magento.com/guides/v2.4/migration/migration-overview-practices.html) for Migration
+*  [Data migration and benchmarking best practices](https://experienceleague.adobe.com/docs/commerce-operations/tools/data-migration/best-practices.html)
 *  [Best Practices for Extension Development](https://developer.adobe.com/commerce/php/best-practices/)
 *  [Upgrade Best Practices](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/prepare/best-practices.html)
 *  [Programming Best Practices](https://developer.adobe.com/commerce/php/best-practices/extensions/)
