@@ -15,10 +15,6 @@ Topics and areas include:
 *  Local environment options
 *  And much more
 
-<InlineAlert variant="info" slots="text"/>
-
-Adobe does not officially endorse these best practices. They are available here because the content has been well received within the Magento Open Source community.
-
 ## Adobe-approved best practices
 
 The Adobe team verifies and provides the following best practices and recommendations:
