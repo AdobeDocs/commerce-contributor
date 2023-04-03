@@ -7,7 +7,7 @@ description: Use Composer to manage you project dependencies.
 
 We use [Composer](http://getcomposer.org) to resolve dependencies before you install the Magento software and extensions.
 
-[Composer](https://glossary.magento.com/composer) is a separate application that manages [PHP](https://glossary.magento.com/php) dependencies. Before you can install the Magento software, you must perform the following tasks in the order shown:
+Composer is a separate application that manages PHP dependencies. Before you can install the Magento software, you must perform the following tasks in the order shown:
 
 1. [Install the Composer software](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/dev_install.html).
 1. [Create the file system owner](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html) so Composer can write files to the web server docroot as the correct user.
@@ -27,7 +27,7 @@ For you to be able to run the Magento application, make sure you perform all tas
 
 Update installation dependencies as follows:
 
-1. Log in to your Magento server as the [file system owner](https://glossary.magento.com/magento-file-system-owner) or [switch to that user](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. Log in to your Magento server as the file system owner or [switch to that user](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
 1. Change to the Magento installation directory and run `composer install`. Examples:
 
    CentOS:

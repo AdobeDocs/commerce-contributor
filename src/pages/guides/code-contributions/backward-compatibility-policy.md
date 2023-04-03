@@ -7,7 +7,7 @@ description: Review best practices related to backward compatible development fo
 
 This page describes rules and best practices for backward compatible development.
 
-See the [versioning](https://developer.adobe.com/commerce/php/development/versioning/) documentation for the definitions of MAJOR and MINOR changes and how it impacts [extension](https://glossary.magento.com/extension) developers.
+See the [versioning](https://developer.adobe.com/commerce/php/development/versioning/) documentation for the definitions of MAJOR and MINOR changes and how it impacts extension developers.
 
  <InlineAlert variant="info" slots="text"/>
 
@@ -43,7 +43,7 @@ Introducing a new dependency from an existing module is a backward incompatible 
 
 ### PHP
 
-The following is a list of prohibited [PHP](https://glossary.magento.com/php) code changes and possible alternative implementations.
+The following is a list of prohibited PHP code changes and possible alternative implementations.
 
 #### Interface/class removal
 
@@ -108,7 +108,7 @@ private function updateScopedPrice($price, $storeId)
 
 #### Modifying the default values of optional arguments in public and protected methods
 
-This is forbidden because the default argument values of public or protected methods are part of the [API](https://glossary.magento.com/api) of the class/interface.
+This is forbidden because the default argument values of public or protected methods are part of the API of the class/interface.
 
 As an alternative, Create a new method with new interface following the alternative implementation for creating a new method for a class or interface.
 
@@ -120,7 +120,7 @@ Do not modify a method argument type.
 
 #### Modifying the types of thrown exceptions
 
-Do not modify the types of thrown exceptions unless a new [exception](https://glossary.magento.com/exception) is a sub-type of the old one.
+Do not modify the types of thrown exceptions unless a new exception is a sub-type of the old one.
 
 #### Throwing a new type of exception from an existing method
 
@@ -212,7 +212,7 @@ Do not remove or rename constants.
 
 #### Removing, renaming, or changing the type of event arguments
 
-Do not remove or rename [event](https://glossary.magento.com/event) arguments.
+Do not remove or rename event arguments.
 Do not change argument types.
 Instead of changing argument name or type, introduce new event argument with new name or type and deprecate the old argument by adding `@deprecated` annotation before dispatching the event.
 
@@ -246,7 +246,7 @@ The following is a list of prohibited JS code changes:
 
 ### XML Schema
 
-The following is a list of prohibited [XML](https://glossary.magento.com/xml) Schema changes:
+The following is a list of prohibited XML Schema changes:
 
 -  Adding an obligatory node
 -  Adding an obligatory attribute
@@ -274,7 +274,7 @@ The following is a list of prohibited CSS/Less changes:
 The following is a list of prohibited API changes:
 
 -  Removing or renaming an event
--  Removing or renaming a [layout](https://glossary.magento.com/layout) handle
+-  Removing or renaming a layout handle
 -  Removing or renaming a store configuration path
 -  Modifying the directory structure
 -  Removing an @api annotation
@@ -304,7 +304,7 @@ Changing the value of a constant is itself a backward compatible change.
 Even if client code saves the value in permanent storage or use it as input or output of a method, it is the responsibility of that code to ensure that it is a reliable implementation.
 
 The client code should have enough control over the constant's value.
-Do not rely on a value of a constant from another [module](https://glossary.magento.com/module) or another vendor.
+Do not rely on a value of a constant from another module or another vendor.
 
 #### Stop setting a value to the Registry
 
