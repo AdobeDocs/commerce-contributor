@@ -22,6 +22,7 @@ The basic checklist used to evaluate if the DoD has been met is:
 -  All functional changes should be documented.
 -  All backward incompatible changes should be approved and covered by static tests if possible. Static tests should be delivered to the [magento-coding-standard][5] repository.
 -  TCO impact should be defined for all changes.
+-  All functional changes should be reflected in the API and covered by api-functional tests
 
 The following sections provide additional details about each of these criteria:
 
@@ -63,3 +64,12 @@ All functional changes should analyzed for the impact on merchant total cost of 
 The details on TCO analysis required to meet the DoD can be found in [Total cost of ownership analysis](total-cost-of-ownership-analysis.md).
 
 The work cannot be considered as complete unless all the criteria are verified.
+
+## API Coverage
+
+In order to ensure the changes are relflected in the API:
+
+- Changes of functionality must be covered by api-functional tests
+- API coverage must be added if the functionality that is changed or introduced is not covered by API
+- Admin panel or integrations facing functionality must be covered by REST/SOAP WebAPI
+- Frontend facing functionality must be covered by GraphQL API
