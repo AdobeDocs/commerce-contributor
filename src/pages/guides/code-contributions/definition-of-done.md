@@ -36,6 +36,12 @@ The reviewer should check whether the task meets the original acceptance criteri
 
 To meet the DoD, all changes to Adobe Commerce projects should be covered by automated tests.
 
+- Functionality exposed in the storefront must be covered with functional and GraphQL tests
+- Functionality exposed in the admin panel must be covered with api-functional tests
+- Changes affecting code API must be covered by integration tests
+
+Unit test coverage is generally not recommended and should be applied only for testing parts of code containing complex calculations in isolation.
+
 Details on different types of automated tests can be found in [Automated tests](automated-tests.md).
 
 ## Documentation
@@ -67,9 +73,9 @@ The work cannot be considered as complete unless all the criteria are verified.
 
 ## API Coverage
 
-In order to ensure the changes are relflected in the API:
+In order to ensure the changes are reflected in the API:
 
 - Changes of functionality must be covered by api-functional tests
 - API coverage must be added if the functionality that is changed or introduced is not covered by API
-- Admin panel or integrations facing functionality must be covered by REST/SOAP WebAPI
+- Admin panel or integrations facing functionality must be covered by REST WebAPI
 - Frontend facing functionality must be covered by GraphQL API
