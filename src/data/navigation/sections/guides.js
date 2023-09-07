@@ -32,7 +32,7 @@ module.exports = [
         path: "/guides/code-contributions/pull-request-tests/",
       },
       {
-        title: "Total cost of ownershop analysis",
+        title: "Total cost of ownership analysis",
         path: "/guides/code-contributions/total-cost-of-ownership-analysis/",
       },
     ],
