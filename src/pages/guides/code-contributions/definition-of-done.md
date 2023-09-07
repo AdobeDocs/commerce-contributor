@@ -78,4 +78,4 @@ In order to ensure the changes are reflected in the API:
 - Changes of functionality must be covered by api-functional tests
 - API coverage must be added if the functionality that is changed or introduced is not covered by API
 - Admin panel or integrations facing functionality must be covered by REST WebAPI
-- Frontend facing functionality must be covered by GraphQL API
+- Storefront facing functionality must be covered by GraphQL API
