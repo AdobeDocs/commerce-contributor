@@ -1,6 +1,9 @@
 ---
 title: Use Docker | Commerce Contributor
 description: Recommendations on how to use Adobe Commerce or Magento Open Source in Docker containers.
+keywords:
+  - Docker
+  - Install
 ---
 
 # Use Docker

@@ -1,6 +1,8 @@
 ---
 title: Update Installation Dependencies | Commerce Contributor
 description: Use Composer to manage you project dependencies.
+keywords:
+  - Install
 ---
 
 # Update installation dependencies

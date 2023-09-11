@@ -1,6 +1,8 @@
 ---
 title: Contributor Install | Commerce Contributor
-description: Install Magento Open Source using the git-based meethod if you plan on contributing to the source code. 
+description: Install Magento Open Source using the git-based meethod if you plan on contributing to the source code.
+keywords:
+  - Install
 ---
 
 # Contributor install

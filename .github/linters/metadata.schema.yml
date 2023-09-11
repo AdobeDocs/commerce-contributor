@@ -19,10 +19,12 @@ properties:
         - Cloud
         - Configuration
         - Cron
+        - Docker
         - Events
         - Extensibility
         - Extensions
         - GraphQL
+        - Install
         - Integration
         - Inventory
         - Payments
