@@ -1,6 +1,6 @@
 ---
 title: Maintainers | Commerce Contributor
-desxcription: Learn what an open-source maintainer does and how to become one.
+description: Learn what an open-source maintainer does and how to become one.
 ---
 
 # Maintainers

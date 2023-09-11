@@ -1,6 +1,6 @@
 ---
 title: Automated Tests | Commerce Contributor
-description: Learn about rules that govern automated testing for Commerce contributions, including integration tests, unit tests, functional tests, integrity tests, and static tests.
+description: Learn about rules that govern automated testing for Commerce contributions.
 ---
 
 # Automated tests
