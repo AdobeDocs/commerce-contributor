@@ -1,6 +1,8 @@
 ---
 title: Clone the Git Repository | Commerce Contributor
 description: Use the git-based method to install Magento Open Source if you plan on contributing to the code.
+keywords:
+  - Install
 ---
 
 # Clone the git repository

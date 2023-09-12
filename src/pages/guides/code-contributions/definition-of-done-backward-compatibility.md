@@ -1,5 +1,5 @@
 ---
-title: Backward Compatibility Definition of Done | Commerce Contributor
+title: Backward Compatibility | Commerce Contributor
 description: Backward compatibility ensures that new code does not break old code. Learn about backward compatibility and the defintion of done in Commerce projects.
 ---
 

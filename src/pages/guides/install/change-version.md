@@ -1,6 +1,8 @@
 ---
 title: Change to a Released Version | Commerce Contributor
 description: Learn how to switch to a released version of Magento Open Source after installing from a development branch.
+keywords:
+  - Install
 ---
 
 # Change to a released version
