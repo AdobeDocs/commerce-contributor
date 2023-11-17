@@ -26,7 +26,7 @@ Refer to the [Adobe Contributor Agreement](https://opensource.adobe.com/cla.html
 ## Community backlog priority
 
 In order to provide timely resolution on the most critical issues and pull requests, the Adobe team has implemented Severity/Priority concepts to our community driven projects. This approach makes open-source collaboration more transparent for all participants.
-Having clear contribution rules in place helps to build clear expectations for Community Contributors and establish clear priorities for Community Maintainers and the ADobe team.
+Having clear contribution rules in place helps to build clear expectations for Community Contributors and establish clear priorities for Community Maintainers and the Adobe team.
 
 If you would like to contribute improvements or bug fixes and make sure it is valuable for the Community as well, we highly recommend that Community Contributors to take issues from the backlog based on **Priority**.
 Adobe and Community Maintainers process contributions based on the issue/pull requests priority starting from P0, P1 to P4.
