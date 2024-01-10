@@ -142,11 +142,4 @@ You can provide feedback using the following options:
 -  Have feedback on a specific page? Click the **Edit in GitHub** link at the top right of the page to report on the currently open topic.
 -  Have a Community code contribution that needs documentation? Create an issue in the corresponding [AdobeDocs GitHub repo](https://github.com/topics/adobe-commerce-devsite).
 
-## Contact DevDocs
-
-Have a question? Need help? Adobe staff, Maintainers, and other Contributors are available through:
-
--  [Slack](https://magentocommeng.slack.com/archives/CAN932A3H) ([Join us](https://opensource.magento.com/slack))
--  [Twitter @AdobeCommrcDocs](https://twitter.com/AdobeCommrcDocs)
-
 Thank you for contributing to the documentation!
