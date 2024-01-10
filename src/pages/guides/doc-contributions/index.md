@@ -15,7 +15,7 @@ Adobe staff members and [community maintainers](../maintainers/) review issues a
 
 ## Contributor attribution
 
-If you write and contribute a new topic, we will add your name (or your company's name) at the top of the page and link it to your GitHub profile (or company website)! For example:
+If you write and contribute a new topic, we add your name (or your company's name) at the top of the page and link it to your GitHub profile (or company website)! For example:
 
 ![Contributor attribution](../../_images/contributor-attribution-example.png)
 
@@ -29,7 +29,7 @@ If you write and contribute a new topic, we will add your name (or your company'
 
 <InlineAlert variant="info" slots="text" />
 
-If you use a fork instead of a branch, please set permissions to allow maintainers to edit and update the PR. See [Allowing changes to a pull request branch created from a fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork) in the _GitHub documentation_.
+If you use a fork instead of a branch, set permissions to allow maintainers to edit and update the PR. See [Allowing changes to a pull request branch created from a fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork) in the _GitHub documentation_.
 
 ## Contribute documentation
 
@@ -39,14 +39,14 @@ The following diagram shows the contribution workflow:
 
 ### Project boards
 
-All issues and PRs are automatically added to the following GitHub project boards"
+New issues and PRs automatically appear in the following GitHub project boards:
 
 - [Commerce - Issues](https://github.com/orgs/AdobeDocs/projects/6/views/1)—If you are not sure where to start contributing, search for issues with the `help wanted` and `good first issue` labels. These issues receive higher priority for processing.
 - [Commerce - Pull Requests](https://github.com/orgs/AdobeDocs/projects/5/views/1)—Track the progress of all PRs.
 
 ### Create a branch
 
-1. Create a new branch from your fork using a name that best describes the work or references a GitHub issue number.
+1. Create a branch from your fork using a name that best describes the work or references a GitHub issue number.
 1. Edit or create markdown (`.md`) files in your branch.
 1. Push your branch to your fork.
 
@@ -95,10 +95,10 @@ Use the following guidelines to help you with the writing process:
 -  Define the goal of your topic. What exactly do you want to teach the reader?
 -  Make the title of your topic reflect the content.
 -  Keep your sentences concise. Separate conceptual information from procedural steps.
--  Batch several small changes into a single pull request (instead of separate ones) to ensure your contributions are approved and merged quickly. Have several typo fixes across several areas of documentation? Combine them into a single PR.
+-  Batch several small changes into a single pull request (instead of separate ones) to ensure that your contributions are approved and merged quickly. Have several typo fixes across several areas of documentation? Combine them into a single PR.
 -  Remember to write in present tense, use the second person, and use active voice (not passive). For example, _"The log captures commands, output..."_.
 -  Use notes to alert readers about important details.
--  Use cross-references to other topics sparingly. We can help you with the syntax if it is not clear. The template provides an example you can use.
+-  Use cross-references to other topics sparingly. We can help you with the syntax if it is not clear. The template provides an example that you can use.
 
 ### Review changes locally
 
