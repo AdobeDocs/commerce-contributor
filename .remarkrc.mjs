@@ -26,7 +26,6 @@ const remarkConfig = {
 			{
 				skipUrlPatterns: [
 					"https://magento.biterg.io",
-					"https://marketplacesupport.magento.com",
 					"https://github.com/magento/partners-magento2ee",
 					"https://github.com/magento/partners-magento2b2b",
 					"https://www.php.net"
