@@ -28,7 +28,6 @@ The Adobe team verifies and provides the following best practices and recommenda
 *  [Performance Best Practices](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/overview.html)
 *  [Best Practices for Store Configuration](https://devdocs.magento.com/cloud/configure/configure-best-practices.html) for Adobe Commerce on cloud infrastructure
 *  [Deployment Process](https://devdocs.magento.com/cloud/reference/discover-deploy.html) for Adobe Commerce on cloud infrastructure
-*  [Commerce Marketplace Help Center](https://marketplacesupport.magento.com/hc/en-us) for extension questions
 
 ## Want to contribute?
 
