@@ -25,6 +25,7 @@ const remarkConfig = {
 			remarkLintNoDeadUrls,
 			{
 				skipUrlPatterns: [
+					"https://magento.biterg.io",
 					"https://github.com/magento/partners-magento2ee",
 					"https://github.com/magento/partners-magento2b2b"
 				]
