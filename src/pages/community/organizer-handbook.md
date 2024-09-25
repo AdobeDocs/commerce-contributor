@@ -15,7 +15,7 @@ Preparation is paramount for a good Contribution Day.
 
 Contributions can come in many shapes and sizes, and it is important to fit the event to your audience. There tends to be two types of Contribution Days:
 
-*  General focus Contribution Days. These events are great for getting people started in contributing. During these events, attendees will normally tackle issues that you and Magento Community Engineering can organize in preparation for the event. Another great starting place is our public [GitHub Community Backlog](https://github.com/magento/magento2/projects/20) project, but really, attendees should feel free to work on anything they desire.
+*  General focus Contribution Days. These events are great for getting people started in contributing. During these events, attendees will normally tackle issues that you and Magento Community Engineering can organize in preparation for the event.
 *  Project-specific Contribution Days. These events are tailored to one or more community driven projects (one of the many satellite projects available on [GitHub](https://github.com/magento)). Before the event the project team will prepare a list of tasks that can be worked on during the event.
 
 ### Event date
