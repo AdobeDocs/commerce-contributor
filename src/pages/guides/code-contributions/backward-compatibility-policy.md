@@ -137,8 +137,8 @@ Prefix the type name with a question mark when declaring a parameter with a `nul
 ```php
 <?php
 /**
- * Copyright &copy; Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
+ * Copyright Adobe
+ * All rights reserved.
  */
 
 use Magento\Framework\App\ObjectManager;
