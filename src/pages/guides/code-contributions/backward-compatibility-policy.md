@@ -137,7 +137,7 @@ Prefix the type name with a question mark when declaring a parameter with a `nul
 ```php
 <?php
 /**
- * Copyright Adobe
+ * Copyright [first year code created] Adobe
  * All rights reserved.
  */
 
