@@ -152,7 +152,7 @@ class ExistingClass
         \Old\Dependency\Interface $oldDependency,
         $oldRequiredConstructorParameter,
         $oldOptionalConstructorParameter = null,
-        \New\Dependency\Interface $newDependency = null
+        ?\New\Dependency\Interface $newDependency = null
     ) {
         ...
         $this->newDependency = $newDependency ?: ObjectManager::getInstance()->get(\New\Dependency\Interface::class);
