@@ -61,7 +61,7 @@ Adobe and Community Maintainers process contributions based on the issue/pull re
 
 #### Priority
 
-The Adobe team defines priorities during regular triage review meetings, based on the community assessment for severity. Community also take part in the triaging of the issues/PRs via joining the meeting link scheduled for every [Tuesday from 11:00 to 12:00 UTC](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDc1MjA0MDYtOWQ0OC00MzA4LWE3ZDktNmNmOTI4M2VhNmZh%40thread.v2/0?context=%7b%22Tid%22%3a%22fa7b1b5a-7b34-4387-94ae-d2c178decee1%22%2c%22Oid%22%3a%22f091ed26-f7d9-4be2-b040-6a0b5f3083c0%22%7).
+The Adobe team defines priorities during regular triage review meetings, based on the community assessment for severity. Community members can participate in triaging issues and PRs by joining the scheduled [meeting](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDc1MjA0MDYtOWQ0OC00MzA4LWE3ZDktNmNmOTI4M2VhNmZh%40thread.v2/0?context=%7b%22Tid%22%3a%22fa7b1b5a-7b34-4387-94ae-d2c178decee1%22%2c%22Oid%22%3a%22f091ed26-f7d9-4be2-b040-6a0b5f3083c0%22%7) held every Tuesday from 11:00 to 12:00 UTC.
 
 #### Severity
 
