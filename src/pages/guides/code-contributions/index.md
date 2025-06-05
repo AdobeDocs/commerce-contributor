@@ -15,7 +15,7 @@ We use the [fork and pull](#forks-and-pull-requests) model to contribute to the 
 
 Contributions can take the form of new components or features, changes to existing features, tests, documentation (such as developer guides, user guides, examples, or specifications), bug fixes, optimizations, or just good suggestions.
 
-The Community Engineering Team reviews all issues and contributions submitted by the community developers. During the review we might require clarifications from the contributor. If there is no response from the contributor in two weeks (14 days) time, the issue might be closed.
+The Community Engineering Team reviews all issues and contributions submitted by the community developers. During the review we might require clarifications from the contributor. If there is no response from the contributor in 4 weeks (28 days) time, the issue might be closed.
 
 When the Community Engineering Team works on reviewing the suggested changes, we will add a label to the issue to indicate certain information, like the status or who is working the issue. See [Labels](#labels-applied-by-the-community-engineering-team) to learn more.
 
@@ -61,7 +61,7 @@ Adobe and Community Maintainers process contributions based on the issue/pull re
 
 #### Priority
 
-The Adobe team defines priorities during regular triage review meetings, based on the community assessment for severity.
+The Adobe team defines priorities during regular triage review meetings, based on the community assessment for severity. Community members can participate in triaging issues and PRs by joining the scheduled [meeting](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDc1MjA0MDYtOWQ0OC00MzA4LWE3ZDktNmNmOTI4M2VhNmZh%40thread.v2/0?context=%7b%22Tid%22%3a%22fa7b1b5a-7b34-4387-94ae-d2c178decee1%22%2c%22Oid%22%3a%22f091ed26-f7d9-4be2-b040-6a0b5f3083c0%22%7) held every Tuesday from 11:00 to 12:00 UTC.
 
 #### Severity
 
@@ -82,21 +82,6 @@ The following list consists of questions you can ask to help determine the prope
 -  Are the inputs to make the defect easy to reproduce? (i.e. special data is not required)
 
 The number of 'Yes' answers should help you to determine the severity.
-
-### Pull request risk assessment
-
-The 'Risk:' label highlights the risk that the suggested changes may bring to the platform.
-It helps maintainers decide:
-
--  to which version the pull requests should be delivered
--  which reviewers should see it
--  whether a request should be approved or not
-
-| Risk | Description |
-| ------------- | ------------- |
-| High | A pull request that makes changes on the framework or changes that will affect multiple areas. |
-| Medium | A pull request that makes changes which may affect multiple areas or makes considerable changes on a specific area. |
-| Low | A pull request that will probably not affect other areas. |
 
 ## GitHub and two-factor authentication
 
@@ -187,156 +172,6 @@ This command has several variations:
 **Permissions:**
 
 -  All permissions granted for all users.
-
-Currently, the Contributor Assistant automatically deploys a test instance based on a contributor's pull request, or, it provides a vanilla Magento Open Source instance on the `magento/magento2` repository. This is used to test pull requests or reported issues.
-
--  [Deploy vanilla Magento Open Source instance](#deploy-vanilla-magento-open-source-instance)
--  [Deploy instance based on PR changes](#deploy-instance-based-on-pr-changes)
--  [Customize deployed instances](#customize-deployed-instances)
-
-### Deploy vanilla Magento Open Source instance
-
-When you want to verify an issue or pull request, use the `instance` command to generate an instance. This is a clean installation of a specified version tag or branch of a specified release line.
-
-**Command:** To deploy an instance, add the following command as a comment to the GitHub pull request or issue:
-
-```text
-@magento give me {$version} instance
-```
-
-Replace `{$version}` with the version tag or branch. The following values are supported: the version tag for the latest release and `2.4-develop` for the development branch.
-
-```text
-@magento give me 2.4.3 instance
-```
-
-**Actions:** The following actions complete the command:
-
--  If the instance does not exist, it is deployed. Deployment takes approximately 2 minutes.
--  If the instance exists, a fresh instance is redeployed.
--  By default, instances have a lifetime of 3 hours. All deployments are then terminated.
-
-**Admin access:**
-
-Admins access is shared via comment on GitHub.
-
-**Permissions:**
-
--  All permissions granted for all users.
-
-### Deploy instance based on PR changes
-
-To verify and test changes within a pull request, enter a command to generate a Magento Open Source instance using code based on the PR.
-
-**Command:** To deploy, [Community Maintainers](https://github.com/magento/magento2/wiki/Community-Maintainers), an Adobe EngCom Team member, or a contributor under the existing Pull Request enters the following command as a comment to the pull request:
-
-```text
-@magento give me test instance
-```
-
-**Actions:**
-
--  It deploys a new instance based on Pull Request changes.
--  Deployment takes approximately 2 minutes.
--  By default, instances have a lifetime of 3 hours. All deployments are then terminated.
-
-**Admin access:**
-
-Admins access will be shared via comment on GitHub.
-
-**Permissions:**
-
--  [Community Maintainers](https://github.com/magento/magento2/wiki/Community-Maintainers)
--  Adobe EngCom Team
--  [Contributor](../contributors/)
-
-### Customize deployed instances
-
-In some cases a custom environment is required to test an issue or a pull request. You can create a custom environment by appending custom configuration settings to the PR comment to [Deploy a vanilla Magento Open Source instance](#deploy-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-instance-based-on-pr-changes).
-
-#### Specify the edition
-
-Append the following text to your PR comment to specify the edition to use when you [Deploy a vanilla Magento Open Source instance](#deploy-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-instance-based-on-pr-changes).
-
-```text
-with edition {$edition}
-```
-
-Replace `{$edition}` with either of the following values:
-
--  `ee` deploys the Adobe Commerce edition
--  `b2b` deploys Adobe Commerce with B2B modules.
-
-For example, append the following text to the PR comment to deploy a Adobe Commerce instance with B2B modules:
-
-```text
-with edition b2b
-```
-
-#### Add extensions
-
-Append the following text to your PR comment to specify extensions to add to an instance when you [Deploy a vanilla Magento Open Source instance](#deploy-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-instance-based-on-pr-changes).
-
-```text
-with extensions {$extensionRepo}
-```
-
-Replace `{$extensionRepo}` with one or more extension repositories to include when compiling your instance.  If you specify multiple repositories, use a comma after each repository. You can specify a specific branch in a repository using the pattern: `org/repo-name:branch-name`. For example:
-
-```text
-with extensions magento/security-package:1.0-develop, magento/security-package-ee
-```
-
-#### Remove extensions
-
-Append the following text to your PR comment to specify extensions that you want to remove from the instance when you [Deploy a vanilla Magento Open Source instance](#deploy-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-instance-based-on-pr-changes).
-
-```text
-without extensions {$extensionRepo}
-```
-
-Replace `{$extensionRepo}` with one or more extension repositories to remove before compiling your instance. If you specify multiple repositories, use a comma after each repository. For example:
-
-```text
-without extensions magento/adobe-stock-integration
-```
-
-### Import source code to specific repository
-
-The import command provides the ability to copy a contributor's code or pull request into an internal fork.  The internal team can then proceed with additional fixes or delivery.
-
-**Command:** To import code or a pull request, a member of the Adobe team controlling the pull request enters the following command:
-
-```text
-@magento import {code|pr} to {organizationName}/{repositoryName}
-```
-
-**Usage Examples:**
-
--  To import the code only use
-
-```text
-@magento import code to magento-team/magento2
-@magento import code to https://github.com/magento-team/magento2
-```
-
--  To import the pull request use
-
-```text
-@magento import pr to magento-team/magento2
-@magento import pull request to magento-team/magento2
-@magento import pr to https://github.com/magento-team/magento2
-@magento import pull request to https://github.com/magento-team/magento2
-```
-
-**Actions:**
-
--  Code: A branch with a copy of the contributor's source code is created within the target repository.
--  PR: A copy of the pull request is created within the target repository.
-
-**Permissions:**
-
--  Adobe team
 
 ## Report an issue
 
