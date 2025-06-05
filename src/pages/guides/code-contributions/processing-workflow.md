@@ -96,7 +96,6 @@ After triage, either core developers or community developers may fix it. We enco
 
 ## Tips and tricks
 
-*  If you need a proper testing environment, a verification instance with limited capabilities may be [requested](index.md#deploy-vanilla-magento-open-source-instance) from the Automated Contributor Assistant.
 *  In most cases, we do not recommend verifying issues on older patch versions, even if it was supplied in the preconditions. Generally, fixes can only be provided with the next patch version, and not with any of the older patches.
 *  Always follow the [Code of Conduct](https://github.com/magento/magento2/blob/2.4-develop/.github/CODE_OF_CONDUCT.md) in issue comments and discussions.
 
