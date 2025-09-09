@@ -13,7 +13,7 @@ description: Learn about policies and workflows related to open-source code cont
 
 Describes policies and workflows related to open-source code contributions
 
-*  [Learn more](code-contributions/)
+*  [Learn more](code-contributions/index.md)
 
 <TextBlock slots="image, heading, text, links" width="50%" />
 
@@ -23,7 +23,7 @@ Describes policies and workflows related to open-source code contributions
 
 Describes policies and workflows related to open-source doc contributions
 
-*  [Learn more](doc-contributions/)
+*  [Learn more](doc-contributions/index.md)
 
 <TextBlock slots="image, heading, text, links" width="50%" />
 
@@ -33,7 +33,7 @@ Describes policies and workflows related to open-source doc contributions
 
 Acknowledges our community of contributors
 
-*  [Learn more](contributors/)
+*  [Learn more](contributors/index.md)
 
 <TextBlock slots="image, heading, text, links" width="50%" />
 
@@ -43,7 +43,7 @@ Acknowledges our community of contributors
 
 Provides details about what maintainers do and how you can become one
 
-*  [Learn more](maintainers/)
+*  [Learn more](maintainers/index.md)
 
 <TextBlock slots="image, heading, text, links" width="50%" />
 
@@ -53,4 +53,4 @@ Provides details about what maintainers do and how you can become one
 
 Learn how contributing developers install Magento Open Source
 
-*  [Learn more](install/)
+*  [Learn more](install/index.md)

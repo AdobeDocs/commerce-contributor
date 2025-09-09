@@ -96,7 +96,7 @@ Having the above information can also be useful as feedback into [issue backlog 
 Once your website and registration page is ready, you should compile materials to send to your attendees after they register and before the event. Some basic information that should be present in this material includes:
 
 *  Links to any relevant Contribution Day boards or backlogs containing issues that would be good challenges for attendees.
-*  A friendly reminder on basic contribution guidelines. A good place to start are the generic [contribution guidelines](../guides/code-contributions/), but specific community projects focused on during your event may have their own `CONTRIBUTION.md` file with project-specific guidelines.
+*  A friendly reminder on basic contribution guidelines. A good place to start are the generic [contribution guidelines](../guides/code-contributions/index.md), but specific community projects focused on during your event may have their own `CONTRIBUTION.md` file with project-specific guidelines.
 *  Share any [social media promotional decisions](#marketing-and-communication) like which hashtag to use.
 
 ### Marketing and communication
