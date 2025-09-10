@@ -1,15 +1,14 @@
 - pathPrefix:
     - /commerce/contributor/
 
-- home:
-    - [Commerce](/commerce/docs)
-
 - pages:
+    - [Commerce](https://developer.adobe.com/commerce/docs)
     - [Contributor](index.md)
     - [Guides](guides/index.md)
     - [Community](community/index.md)
 
 - subPages:
+    - [Guides](guides/index.md)
     - [Code contributions](guides/code-contributions/index.md)
       - [Automated tests](guides/code-contributions/automated-tests.md)
       - [Backward compatibility policy](guides/code-contributions/backward-compatibility-policy.md)
@@ -27,6 +26,7 @@
         - [Clone the git repository](guides/install/clone-repository.md)
         - [Change to a released version](guides/install/change-version.md)
         - [Update dependencies](guides/install/update-dependencies.md)
+    - [Community](community/index.md)
     - [Best practices](community/best-practices.md)
     - [Contribution Day organizer's handbook](community/organizer-handbook.md)
     - [Contribution programs](community/contribution-programs.md)
