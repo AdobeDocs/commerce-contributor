@@ -43,17 +43,17 @@ Adobe and Community Maintainers process contributions based on the issue/pull re
 
 | Severity | Description |
 | -------- | ------------- |
-| Severity: S0 | -  Affects critical data or functionality and leaves users with no workaround.-  Significant catastrophic impact.-  A problem that is blocking the ability to work. An immediate fix is needed. |
-| Severity: S1 | -  Affects critical data or functionality and forces users to employ a workaround.-  Impact to the key product qualities.-  An immediate fix is needed. |
-| Severity: S2 | -  Affects non-critical data or functionality and forces users to employ a workaround.-  Impact to the product qualities that makes the product more usable.-  Major restrictions or short-term circumventions are required until a fix is available. A fix is important. |
-| Severity: S3 | -  Affects non-critical data or functionality and does not force users to employ a workaround.-  Problem has moderate impact requiring some restrictions. The fix is in an area that is not critical. |
-| Severity: S4 | -  A minor problem, annoyance, or technical issue with minimal impact.-  Impact that does not prevent or hinder functionality.-  Affects aesthetics, professional look and feel, "quality" or "usability". |
+| Severity: S0 | -  Affects critical data or functionality and leaves users with no workaround.&lt;br/&gt;-  Significant catastrophic impact.&lt;br/&gt;-  A problem that is blocking the ability to work. An immediate fix is needed.&lt;br/&gt; |
+| Severity: S1 | -  Affects critical data or functionality and forces users to employ a workaround.&lt;br/&gt;-  Impact to the key product qualities.&lt;br/&gt;-  An immediate fix is needed.&lt;br/&gt; |
+| Severity: S2 | -  Affects non-critical data or functionality and forces users to employ a workaround.&lt;br/&gt;-  Impact to the product qualities that makes the product more usable.&lt;br/&gt;-  Major restrictions or short-term circumventions are required until a fix is available. A fix is important.&lt;br/&gt; |
+| Severity: S3 | -  Affects non-critical data or functionality and does not force users to employ a workaround.&lt;br/&gt;-  Problem has moderate impact requiring some restrictions. The fix is in an area that is not critical.&lt;br/&gt; |
+| Severity: S4 | -  A minor problem, annoyance, or technical issue with minimal impact.&lt;br/&gt;-  Impact that does not prevent or hinder functionality.&lt;br/&gt;-  Affects aesthetics, professional look and feel, "quality" or "usability".&lt;br/&gt; |
 
 | Priority | Description |
 | ------------- | ------------- |
-| Priority: P0 | -  The defect needs to be fixed right now, everything else can wait. - This generally occurs in cases when the entire functionality is blocked. |
-| Priority: P1 | -  Needs to be fixed before any other issues.-  Once P0 defects have been fixed, a defect having this priority is the next candidate for fixing. |
-| Priority: P2 | -  Should be fixed as early as possible-  A defect with this priority could have functionality issues which are not to expectations. |
+| Priority: P0 | -  The defect needs to be fixed right now, everything else can wait.&lt;br/&gt; - This generally occurs in cases when the entire functionality is blocked. |
+| Priority: P1 | -  Needs to be fixed before any other issues.&lt;br/&gt;-  Once P0 defects have been fixed, a defect having this priority is the next candidate for fixing. |
+| Priority: P2 | -  Should be fixed as early as possible&lt;br/&gt;-  A defect with this priority could have functionality issues which are not to expectations. |
 | Priority: P3 | -  May be fixed according to the position in the backlog.|
 | Priority: P4 | -  No current plan to fix. Fixing can be deferred as a logical part of more important work.|
 
@@ -279,10 +279,10 @@ Release line labels indicate the specific release lines affected by the issue or
 
 Progress labels indicate the Pull Request status on each review stage:
 
--  `Progress: needs update` - The Community Engineering Team needs additional information from the reporter to properly prioritize and process the pull request. 
+-  `Progress: needs update` - The Community Engineering Team needs additional information from the reporter to properly prioritize and process the pull request. &lt;!-- needs update --&gt;
 -  `Progress: on hold` - The pull request is on hold due and will be further reviewed to accept or reject.
--  `Progress: accept` - The pull request has been accepted and will be merged into mainline code. 
--  `Progress: reject` - The pull request has been rejected and will not be merged into mainline code. Possible reasons can include but are not limited to: issue has already been fixed in another code contribution, or there is an issue with the code contribution. 
+-  `Progress: accept` - The pull request has been accepted and will be merged into mainline code. &lt;!-- accept --&gt;
+-  `Progress: reject` - The pull request has been rejected and will not be merged into mainline code. Possible reasons can include but are not limited to: issue has already been fixed in another code contribution, or there is an issue with the code contribution. &lt;!-- reject --&gt;
 
 ### Partners
 
