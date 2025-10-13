@@ -19,11 +19,11 @@ Our maintainers work on numerous repositories within the Magento Github organiza
 
 Because most contributions go to the [magento2](https://github.com/magento/magento2) repository, there are several GitHub projects to help manage these contributions.
 
-![Repository and Projects](../../_images/repo-and-projects.png)
+![Repository and Projects](../../_images/repo-and-projects-v2.png)
 
-Each project has a description of what it does. One important project is the **High Priority pull request Dashboard**, where you can find the pull requests (PR) that will bring most value for the community and will be delivered first.
+Each project has a description of what it does. One important project is the **Community Dashboard**, where you can find the pull requests (PR) that will bring most value for the community and will be delivered first.
 
-## Pull request dashboard
+## Pull requests dashboard
 
 Within projects there are pull request dashboards. There you will find our Kanban board, which has columns representing the PR delivery workflow. The columns title are self-explanatory and should represent the action required for the pull requests on that column.
 
@@ -31,7 +31,7 @@ Within projects there are pull request dashboards. There you will find our Kanba
 
 ## Pull request review process
 
-The first step in the review process is to choose and self-assign a pull request from the dashboard. To help maintainers choose a PR to review, there are several labels, the most important being **Priority**. We encourage our maintainers to choose pull requests with the highest priority from the **High Priority pull request Dashboard** in the **Pending Review** column.
+The first step in the review process is to choose and self-assign a pull request from the dashboard. To help maintainers choose a PR to review, there are several labels, the most important being **Priority**. We encourage our maintainers to choose pull requests with the highest priority from the **Community Dashboard** in the **Pending Review** column.
 
 Once you have chosen a pull request, there are some steps to be followed during the review process.
 
@@ -85,12 +85,6 @@ In that case, builds need to run using the changes from both PRs. To do so, use 
 
 ![Related pull requests](../../_images/related-prs.png)
 
-### Pull request deployment tool
-
-The deployment tool helps contributors and maintainers to test changes or validate if an issue exists on a clean installation. More information on the deployment tool can be found in the [Contributor's Guide](../code-contributions/index.md#contributor-assistant).
-
-![pull request Deployment Tool](../../_images/deployment-comments.png)
-
 ### Maintainers Slack channel
 
 We communicate with our community maintainers on our Slack channel. Once you are on-boarded as a maintainer, we will add you to this channel. You can discuss contributions and share your ideas or information with other maintainers.
@@ -99,7 +93,6 @@ We communicate with our community maintainers on our Slack channel. Once you are
 
 ### Regular meetings
 
-Currently, we have two meetings that we encourage our maintainers to attend and engage with the Community Engineering team:
+Currently, we have a meeting that we encourage our maintainers to attend and engage with the Community Engineering team:
 
--  Maintainer’s Call – Once a month.
--  [Community Contributions Triage](https://github.com/magento/magento2/wiki/Public-Triage-Meeting) – Scheduled twice a week.
+-  [Community Contributions Triage](https://github.com/magento/magento2/wiki/Public-Triage-Meeting) – Scheduled once a week.
