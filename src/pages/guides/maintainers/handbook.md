@@ -45,7 +45,7 @@ Once the CLA has been signed, we can check the other builds. Those builds are ru
 
 ### Check the pull request target
 
-It is important to check the pull request is targeted to the correct branch. For example, if the contributor’s PR does not create backwards incompatible changes, these changes should be targeted at the current minor release branch. If the PR introduces backwards incompatible changes, or it is part of a different project, it must target the correct branch.
+It is important to ensure that pull requests are targeted to the correct branch. Currently, on the Magento2 repository, we are processing only those PRs that are aimed at the 2.4-develop branch. Please make sure your PR targets this branch.
 
 ![Check pull request Target](../../_images/pr-target-branch.png)
 
