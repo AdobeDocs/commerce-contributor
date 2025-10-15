@@ -120,7 +120,7 @@ Review the following supported and accepted pull request rules. We defined these
 1. PRs that include bug fixes must be accompanied by a step-by-step description of how to reproduce the bug.
 1. PRs that include new logic or new features must be submitted along with:
    -  Unit/integration test coverage (we will be releasing more information about writing test coverage in the near future).
-   -  Follow the [DevDocs contribution work flow and guidelines](../doc-contributions/index.md) to submit proposed documentation updates.
+   -  Follow the [documentation contribution workflow and guidelines](../doc-contributions/index.md) to submit proposed documentation updates.
 1. For large features or changes, [open an issue](https://github.com/magento/magento2/issues) to discuss your proposal first.  Notifying us in advance can prevent duplicate or unnecessary effort, and also offers an opportunity to get additional background information and help from other contributors.
 1. To report a bug, [open an issue](https://github.com/magento/magento2/issues) and follow the [Issue reporting guidelines](https://github.com/magento/magento2/wiki/Issue-reporting-guidelines).
 1. Verify that all automated tests on your pull request pass successfully.

@@ -439,14 +439,6 @@ These backward incompatible changes do not need manual documentation:
 -  Adding/removing a class/interface constant
 -  Adding removing a class property
 
-### Where to document
-
-In the [AdobeDocs/commerce-php](https://github.com/AdobeDocs/commerce-php) repository, manually add backward incompatible changes to the following file:
-
-`https://github.com/AdobeDocs/commerce-php/blob/main/src/pages/development/backward-incompatible-changes/index.md`
-
-In order to update the page, create a pull request to the DevSite repository with your changes.
-
 ## GraphQl backward compatibility policy
 
 -  For backward compatibility, the GraphQL schema should be considered an API.
