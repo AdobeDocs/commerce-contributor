@@ -1,0 +1,31 @@
+- pathPrefix:
+    - /commerce/contributor/
+
+- pages:
+    - [Commerce](https://developer.adobe.com/commerce/docs)
+    - [Contributor](index.md)
+    - [Guides](guides/index.md)
+    - [Community](community/index.md)
+
+- subPages:
+    - [Code contributions](guides/code-contributions/index.md)
+      - [Automated tests](guides/code-contributions/automated-tests.md)
+      - [Backward compatibility policy](guides/code-contributions/backward-compatibility-policy.md)
+      - [Backward compatibility definition of done](guides/code-contributions/definition-of-done-backward-compatibility.md)
+      - [Definition of done](guides/code-contributions/definition-of-done.md)
+      - [GitHub issue processing workflow](guides/code-contributions/processing-workflow.md)
+      - [PHPStorm plugin code inspections](guides/code-contributions/phpstorm-code-inspections.md)
+      - [Pull request tests](guides/code-contributions/pull-request-tests.md)
+      - [Total cost of ownership analysis](guides/code-contributions/total-cost-of-ownership-analysis.md)
+    - [Doc contributions](guides/doc-contributions/index.md)
+    - [Contributors](guides/contributors/index.md)
+    - [Maintainers](guides/maintainers/index.md)
+        - [Maintainer's handbook](guides/maintainers/handbook.md)
+    - [Contributor install](guides/install/index.md)
+        - [Clone the git repository](guides/install/clone-repository.md)
+        - [Change to a released version](guides/install/change-version.md)
+        - [Update dependencies](guides/install/update-dependencies.md)
+    - [Best practices](community/best-practices.md)
+    - [Contribution Day organizer's handbook](community/organizer-handbook.md)
+    - [Contribution programs](community/contribution-programs.md)
+    - [Support](community/support.md)
