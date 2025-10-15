@@ -1,6 +1,6 @@
 ---
 title: Automated Tests | Commerce Contributor
-description: Learn about rules that govern automated testing for Commerce contributions, including integration tests, unit tests, functional tests, integrity tests, and static tests.
+description: Learn about rules that govern automated testing for Commerce contributions.
 ---
 
 # Automated tests
@@ -142,7 +142,7 @@ Expected code coverage:
 
 The static tests should be delivered to the Magento Coding Standard [repository](https://github.com/magento/magento-coding-standard).
 
-See [code contributions](../code-contributions/) for details.
+See [code contributions](index.md) for details.
 
 Not all changes can be covered.
 For example, it is possible to scan a file for literals, but it is unfeasible to analyze string concatenation or any other dynamic way of building a variable.

@@ -137,8 +137,8 @@ Prefix the type name with a question mark when declaring a parameter with a `nul
 ```php
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
+ * Copyright [first year code created] Adobe
+ * All rights reserved.
  */
 
 use Magento\Framework\App\ObjectManager;
@@ -152,7 +152,7 @@ class ExistingClass
         \Old\Dependency\Interface $oldDependency,
         $oldRequiredConstructorParameter,
         $oldOptionalConstructorParameter = null,
-        \New\Dependency\Interface $newDependency = null
+        ?\New\Dependency\Interface $newDependency = null
     ) {
         ...
         $this->newDependency = $newDependency ?: ObjectManager::getInstance()->get(\New\Dependency\Interface::class);
@@ -422,7 +422,7 @@ Deprecated code is preserved for the following time frames:
 
 ## Documentation of Backward Incompatible Changes
 
-Backward incompatible changes must be approved by an architect and documented in the scope of the task that introduces those changes.
+[Backward incompatible changes](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/) must be approved by an architect and documented in the scope of the task that introduces those changes.
 
 Examples of these tasks include:
 
@@ -438,9 +438,6 @@ These backward incompatible changes do not need manual documentation:
 -  Modifying a method signature
 -  Adding/removing a class/interface constant
 -  Adding removing a class property
-
-Auto-generated [Magento Open Source changes]https://devdocs.magento.com/guides/v2.4/release-notes/backward-incompatible-changes/reference.html)
-Auto-generated [Adobe Commerce changes](https://devdocs.magento.com/guides/v2.4/release-notes/backward-incompatible-changes/reference.html)
 
 ### Where to document
 

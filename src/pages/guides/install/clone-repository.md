@@ -1,13 +1,15 @@
 ---
 title: Clone the Git Repository | Commerce Contributor
 description: Use the git-based method to install Magento Open Source if you plan on contributing to the code.
+keywords:
+  - Install
 ---
 
 # Clone the git repository
 
 You can clone the latest code from the [Magento Open Source GitHub repository](https://github.com/magento/magento2), and use code from a release branch or a development branch.
 
--  A **release branch** is a _stable_, full-featured code branch officially released with a version number, such as 2.4. You _must_ use a release branch with the [Data Migration Tool](https://devdocs.magento.com/guides/v2.4/migration/bk-migration-guide.html).
+-  A **release branch** is a _stable_, full-featured code branch officially released with a version number, such as 2.4. You _must_ use a release branch with the [Data Migration Tool](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/data-migration/how-migration-works).
 
 -  A **development branch**, or feature branch, is a less-stable code branch with the latest code intended as the next version or to introduce a specific feature.
 
@@ -17,13 +19,13 @@ You can checkout a specific branch after you clone the repository to your local 
 
 The Adobe Commerce repository requires authentication, so you must prepare the following:
 
--  **[Authentication key](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/connect-auth.html)**—You must have an authentication key to access the Adobe Commerce Composer package on `repo.magento.com` and to enable install and update commands for your project.
+-  **[Authentication key](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/authentication-keys)**—You must have an authentication key to access the Adobe Commerce Composer package on `repo.magento.com` and to enable install and update commands for your project.
 
 -  **[GitHub personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)**—Composer requires a _personal access token_ in the `github-oauth` property to authorize GitHub repository access. When you create this token, select all options in the `repo` scope.
 
 ## Authentication file
 
-You must create an `auth.json` file that contains your Adobe Commerce [authorization credentials](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/connect-auth.html) in the Magento root directory.
+You must create an `auth.json` file that contains your Adobe Commerce [authorization credentials](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/authentication-keys) in the Magento root directory.
 
 To create an authentication file:
 

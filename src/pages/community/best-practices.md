@@ -26,9 +26,8 @@ The Adobe team verifies and provides the following best practices and recommenda
 *  [Observers Best Practices](https://developer.adobe.com/commerce/php/best-practices/extensions/observers/)
 *  [Theme Development Best Practices](https://developer.adobe.com/commerce/frontend-core/guide/best-practices/)
 *  [Performance Best Practices](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/overview.html)
-*  [Best Practices for Store Configuration](https://devdocs.magento.com/cloud/configure/configure-best-practices.html) for Adobe Commerce on cloud infrastructure
-*  [Deployment Process](https://devdocs.magento.com/cloud/reference/discover-deploy.html) for Adobe Commerce on cloud infrastructure
-*  [Commerce Marketplace Help Center](https://marketplacesupport.magento.com/hc/en-us) for extension questions
+*  [Best Practices for Store Configuration](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/best-practices) for Adobe Commerce on cloud infrastructure
+*  [Deployment Process](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices) for Adobe Commerce on cloud infrastructure
 
 ## Want to contribute?
 

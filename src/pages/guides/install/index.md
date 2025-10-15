@@ -1,6 +1,8 @@
 ---
 title: Contributor Install | Commerce Contributor
-description: Install Magento Open Source using the git-based meethod if you plan on contributing to the source code. 
+description: Install Magento Open Source using the git-based meethod if you plan on contributing to the source code.
+keywords:
+  - Install
 ---
 
 # Contributor install
@@ -9,12 +11,12 @@ If you are a code or documentation contributor, this install guide is for you! U
 
 <InlineAlert variant="success" slots="text"/>
 
-Are you a non-contributor? Check out our [Quick start install](https://devdocs.magento.com/guides/v2.4/install-gde/composer.html) guide. Do you have more advanced install problems to solve? Check out our [Advanced install](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli.html) guide.
+Are you a non-contributor? Check out our [Quick start install](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/composer) guide. Do you have more advanced install problems to solve? Check out our [Advanced install](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/advanced) guide.
 
 ## Intended audience
 
 The audience for this topic is anyone who contributes to the Magento Open Source codebase.
-You should be highly technical, understand Composer and Git commands, and be able to upgrade the Magento system software and extensions using those commands. If that isn't you, go back and [choose another starting point](https://devdocs.magento.com/guides/v2.4/install-gde/bk-install-guide.html).
+You should be highly technical, understand Composer and Git commands, and be able to upgrade the Magento system software and extensions using those commands. If that isn't you, go back and [choose another starting point](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/overview).
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -25,8 +27,8 @@ You cannot have a live store that accepts orders and so on.
 
 Before you continue, make sure you've done all of the following:
 
--  Set up a server that meets our [system requirements](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html)
--  Created the [file system owner](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html)
+-  Set up a server that meets our [system requirements](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)
+-  Created the [file system owner](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/file-system/overview)
 
 We use [Composer](https://getcomposer.org/) to manage Magento components and their dependencies. Using Composer to get the Magento software metapackage provides the following advantages:
 

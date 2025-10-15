@@ -15,7 +15,7 @@ We use the [fork and pull](#forks-and-pull-requests) model to contribute to the 
 
 Contributions can take the form of new components or features, changes to existing features, tests, documentation (such as developer guides, user guides, examples, or specifications), bug fixes, optimizations, or just good suggestions.
 
-The Community Engineering Team reviews all issues and contributions submitted by the community developers. During the review we might require clarifications from the contributor. If there is no response from the contributor in two weeks (14 days) time, the issue might be closed.
+The Community Engineering Team reviews all issues and contributions submitted by the community developers. During the review we might require clarifications from the contributor. If there is no response from the contributor in 4 weeks (28 days) time, the issue might be closed.
 
 When the Community Engineering Team works on reviewing the suggested changes, we will add a label to the issue to indicate certain information, like the status or who is working the issue. See [Labels](#labels-applied-by-the-community-engineering-team) to learn more.
 
@@ -26,7 +26,7 @@ Refer to the [Adobe Contributor Agreement](https://opensource.adobe.com/cla.html
 ## Community backlog priority
 
 In order to provide timely resolution on the most critical issues and pull requests, the Adobe team has implemented Severity/Priority concepts to our community driven projects. This approach makes open-source collaboration more transparent for all participants.
-Having clear contribution rules in place helps to build clear expectations for Community Contributors and establish clear priorities for Community Maintainers and the ADobe team.
+Having clear contribution rules in place helps to build clear expectations for Community Contributors and establish clear priorities for Community Maintainers and the Adobe team.
 
 If you would like to contribute improvements or bug fixes and make sure it is valuable for the Community as well, we highly recommend that Community Contributors to take issues from the backlog based on **Priority**.
 Adobe and Community Maintainers process contributions based on the issue/pull requests priority starting from P0, P1 to P4.
@@ -37,23 +37,23 @@ Adobe and Community Maintainers process contributions based on the issue/pull re
 
 <InlineAlert variant="info" slots="text"/>
 
-**Severity** is a measure of how ‘bad’ the bug is and how much disruption it causes, without regard to remaining work or the release schedule.
+**Severity** is a measure of how 'bad' the bug is and how much disruption it causes, without regard to remaining work or the release schedule.
 
 ### Priority and severity descriptions
 
 | Severity | Description |
 | -------- | ------------- |
-| Severity: S0 | -  Affects critical data or functionality and leaves users with no workaround.<br />-  Significant catastrophic impact.<br />-  A problem that is blocking the ability to work. An immediate fix is needed.<br /> |
-| Severity: S1 | -  Affects critical data or functionality and forces users to employ a workaround.<br />-  Impact to the key product qualities.<br />-  An immediate fix is needed.<br /> |
-| Severity: S2 | -  Affects non-critical data or functionality and forces users to employ a workaround.<br />-  Impact to the product qualities that makes the product more usable.<br />-  Major restrictions or short-term circumventions are required until a fix is available. A fix is important.<br /> |
-| Severity: S3 | -  Affects non-critical data or functionality and does not force users to employ a workaround.<br />-  Problem has moderate impact requiring some restrictions. The fix is in an area that is not critical.<br /> |
-| Severity: S4 | -  A minor problem, annoyance, or technical issue with minimal impact.<br />-  Impact that does not prevent or hinder functionality.<br />-  Affects aesthetics, professional look and feel, “quality” or “usability”.<br /> |
+| Severity: S0 | -  Affects critical data or functionality and leaves users with no workaround.&lt;br/&gt;-  Significant catastrophic impact.&lt;br/&gt;-  A problem that is blocking the ability to work. An immediate fix is needed.&lt;br/&gt; |
+| Severity: S1 | -  Affects critical data or functionality and forces users to employ a workaround.&lt;br/&gt;-  Impact to the key product qualities.&lt;br/&gt;-  An immediate fix is needed.&lt;br/&gt; |
+| Severity: S2 | -  Affects non-critical data or functionality and forces users to employ a workaround.&lt;br/&gt;-  Impact to the product qualities that makes the product more usable.&lt;br/&gt;-  Major restrictions or short-term circumventions are required until a fix is available. A fix is important.&lt;br/&gt; |
+| Severity: S3 | -  Affects non-critical data or functionality and does not force users to employ a workaround.&lt;br/&gt;-  Problem has moderate impact requiring some restrictions. The fix is in an area that is not critical.&lt;br/&gt; |
+| Severity: S4 | -  A minor problem, annoyance, or technical issue with minimal impact.&lt;br/&gt;-  Impact that does not prevent or hinder functionality.&lt;br/&gt;-  Affects aesthetics, professional look and feel, "quality" or "usability".&lt;br/&gt; |
 
 | Priority | Description |
 | ------------- | ------------- |
-| Priority: P0 | -  The defect needs to be fixed right now, everything else can wait.<br /> - This generally occurs in cases when the entire functionality is blocked. |
-| Priority: P1 | -  Needs to be fixed before any other issues.<br />-  Once P0 defects have been fixed, a defect having this priority is the next candidate for fixing. |
-| Priority: P2 | -  Should be fixed as early as possible<br />-  A defect with this priority could have functionality issues which are not to expectations. |
+| Priority: P0 | -  The defect needs to be fixed right now, everything else can wait.&lt;br/&gt; - This generally occurs in cases when the entire functionality is blocked. |
+| Priority: P1 | -  Needs to be fixed before any other issues.&lt;br/&gt;-  Once P0 defects have been fixed, a defect having this priority is the next candidate for fixing. |
+| Priority: P2 | -  Should be fixed as early as possible&lt;br/&gt;-  A defect with this priority could have functionality issues which are not to expectations. |
 | Priority: P3 | -  May be fixed according to the position in the backlog.|
 | Priority: P4 | -  No current plan to fix. Fixing can be deferred as a logical part of more important work.|
 
@@ -61,7 +61,7 @@ Adobe and Community Maintainers process contributions based on the issue/pull re
 
 #### Priority
 
-The Adobe team defines priorities during regular triage review meetings, based on the community assessment for severity.
+The Adobe team defines priorities during regular triage review meetings, based on the community assessment for severity. Community members can participate in triaging issues and PRs by joining the scheduled [meeting](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDc1MjA0MDYtOWQ0OC00MzA4LWE3ZDktNmNmOTI4M2VhNmZh%40thread.v2/0?context=%7b%22Tid%22%3a%22fa7b1b5a-7b34-4387-94ae-d2c178decee1%22%2c%22Oid%22%3a%22f091ed26-f7d9-4be2-b040-6a0b5f3083c0%22%7) held every Tuesday from 11:00 to 12:00 UTC.
 
 #### Severity
 
@@ -82,21 +82,6 @@ The following list consists of questions you can ask to help determine the prope
 -  Are the inputs to make the defect easy to reproduce? (i.e. special data is not required)
 
 The number of 'Yes' answers should help you to determine the severity.
-
-### Pull request risk assessment
-
-The 'Risk:' label highlights the risk that the suggested changes may bring to the platform.
-It helps maintainers decide:
-
--  to which version the pull requests should be delivered
--  which reviewers should see it
--  whether a request should be approved or not
-
-| Risk | Description |
-| ------------- | ------------- |
-| High | A pull request that makes changes on the framework or changes that will affect multiple areas. |
-| Medium | A pull request that makes changes which may affect multiple areas or makes considerable changes on a specific area. |
-| Low | A pull request that will probably not affect other areas. |
 
 ## GitHub and two-factor authentication
 
@@ -188,164 +173,14 @@ This command has several variations:
 
 -  All permissions granted for all users.
 
-Currently, the Contributor Assistant automatically deploys a test instance based on a contributor's pull request, or, it provides a vanilla Magento Open Source instance on the `magento/magento2` repository. This is used to test pull requests or reported issues.
-
--  [Deploy vanilla Magento Open Source instance](#deploy-vanilla-magento-open-source-instance)
--  [Deploy instance based on PR changes](#deploy-instance-based-on-pr-changes)
--  [Customize deployed instances](#customize-deployed-instances)
-
-### Deploy vanilla Magento Open Source instance
-
-When you want to verify an issue or pull request, use the `instance` command to generate an instance. This is a clean installation of a specified version tag or branch of a specified release line.
-
-**Command:** To deploy an instance, add the following command as a comment to the GitHub pull request or issue:
-
-```text
-@magento give me {$version} instance
-```
-
-Replace `{$version}` with the version tag or branch. The following values are supported: the version tag for the latest release and `2.4-develop` for the development branch.
-
-```text
-@magento give me 2.4.3 instance
-```
-
-**Actions:** The following actions complete the command:
-
--  If the instance does not exist, it is deployed. Deployment takes approximately 2 minutes.
--  If the instance exists, a fresh instance is redeployed.
--  By default, instances have a lifetime of 3 hours. All deployments are then terminated.
-
-**Admin access:**
-
-Admins access is shared via comment on GitHub.
-
-**Permissions:**
-
--  All permissions granted for all users.
-
-### Deploy instance based on PR changes
-
-To verify and test changes within a pull request, enter a command to generate a Magento Open Source instance using code based on the PR.
-
-**Command:** To deploy, [Community Maintainers](https://github.com/magento/magento2/wiki/Community-Maintainers), an Adobe EngCom Team member, or a contributor under the existing Pull Request enters the following command as a comment to the pull request:
-
-```text
-@magento give me test instance
-```
-
-**Actions:**
-
--  It deploys a new instance based on Pull Request changes.
--  Deployment takes approximately 2 minutes.
--  By default, instances have a lifetime of 3 hours. All deployments are then terminated.
-
-**Admin access:**
-
-Admins access will be shared via comment on GitHub.
-
-**Permissions:**
-
--  [Community Maintainers](https://github.com/magento/magento2/wiki/Community-Maintainers)
--  Adobe EngCom Team
--  [Contributor](../contributors/)
-
-### Customize deployed instances
-
-In some cases a custom environment is required to test an issue or a pull request. You can create a custom environment by appending custom configuration settings to the PR comment to [Deploy a vanilla Magento Open Source instance](#deploy-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-instance-based-on-pr-changes).
-
-#### Specify the edition
-
-Append the following text to your PR comment to specify the edition to use when you [Deploy a vanilla Magento Open Source instance](#deploy-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-instance-based-on-pr-changes).
-
-```text
-with edition {$edition}
-```
-
-Replace `{$edition}` with either of the following values:
-
--  `ee` deploys the Adobe Commerce edition
--  `b2b` deploys Adobe Commerce with B2B modules.
-
-For example, append the following text to the PR comment to deploy a Adobe Commerce instance with B2B modules:
-
-```text
-with edition b2b
-```
-
-#### Add extensions
-
-Append the following text to your PR comment to specify extensions to add to an instance when you [Deploy a vanilla Magento Open Source instance](#deploy-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-instance-based-on-pr-changes).
-
-```text
-with extensions {$extensionRepo}
-```
-
-Replace `{$extensionRepo}` with one or more extension repositories to include when compiling your instance.  If you specify multiple repositories, use a comma after each repository. You can specify a specific branch in a repository using the pattern: `org/repo-name:branch-name`. For example:
-
-```text
-with extensions magento/security-package:1.0-develop, magento/security-package-ee
-```
-
-#### Remove extensions
-
-Append the following text to your PR comment to specify extensions that you want to remove from the instance when you [Deploy a vanilla Magento Open Source instance](#deploy-vanilla-magento-open-source-instance) or [Deploy an instance based on PR changes](#deploy-instance-based-on-pr-changes).
-
-```text
-without extensions {$extensionRepo}
-```
-
-Replace `{$extensionRepo}` with one or more extension repositories to remove before compiling your instance. If you specify multiple repositories, use a comma after each repository. For example:
-
-```text
-without extensions magento/adobe-stock-integration
-```
-
-### Import source code to specific repository
-
-The import command provides the ability to copy a contributor's code or pull request into an internal fork.  The internal team can then proceed with additional fixes or delivery.
-
-**Command:** To import code or a pull request, a member of the Adobe team controlling the pull request enters the following command:
-
-```text
-@magento import {code|pr} to {organizationName}/{repositoryName}
-```
-
-**Usage Examples:**
-
--  To import the code only use
-
-```text
-@magento import code to magento-team/magento2
-@magento import code to https://github.com/magento-team/magento2
-```
-
--  To import the pull request use
-
-```text
-@magento import pr to magento-team/magento2
-@magento import pull request to magento-team/magento2
-@magento import pr to https://github.com/magento-team/magento2
-@magento import pull request to https://github.com/magento-team/magento2
-```
-
-**Actions:**
-
--  Code: A branch with a copy of the contributor's source code is created within the target repository.
--  PR: A copy of the pull request is created within the target repository.
-
-**Permissions:**
-
--  Adobe team
-
 ## Report an issue
 
 To maintain an effective bug fix workflow, we ask reporters to follow some simple guidelines.
 
 Before creating an issue, do the following:
 
--  Check the [Developer Documentation](https://developer.adobe.com/commerce) and [User Guide](https://docs.magento.com/user-guide/getting-started.html) to make sure the behavior you are reporting is really a bug, not a feature.
--  Check the [existing issues](https://github.com/magento/magento2/issues) to make sure you are not duplicating somebody’s work.
+-  Check the [Developer Documentation](https://developer.adobe.com/commerce) and [User Guide](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home) to make sure the behavior you are reporting is really a bug, not a feature.
+-  Check the [existing issues](https://github.com/magento/magento2/issues) to make sure you are not duplicating somebody's work.
 -  Ensure that information you are reporting is a technical issue. Refer to the [Community Forums](https://community.magento.com/) or [Magento Stack Exchange](http://magento.stackexchange.com/) for technical questions, feature requests, etc.
 -  Verify that the issue you are reporting does not relate to Adobe Commerce. GitHub is intended for Magento Open Source users to report on issues related to Open Source only. You can report Commerce-related issues one of two ways:
 
@@ -444,10 +279,10 @@ Release line labels indicate the specific release lines affected by the issue or
 
 Progress labels indicate the Pull Request status on each review stage:
 
--  `Progress: needs update` - The Community Engineering Team needs additional information from the reporter to properly prioritize and process the pull request. <!-- needs update -->
+-  `Progress: needs update` - The Community Engineering Team needs additional information from the reporter to properly prioritize and process the pull request. &lt;!-- needs update --&gt;
 -  `Progress: on hold` - The pull request is on hold due and will be further reviewed to accept or reject.
--  `Progress: accept` - The pull request has been accepted and will be merged into mainline code. <!-- accept -->
--  `Progress: reject` - The pull request has been rejected and will not be merged into mainline code. Possible reasons can include but are not limited to: issue has already been fixed in another code contribution, or there is an issue with the code contribution. <!-- reject -->
+-  `Progress: accept` - The pull request has been accepted and will be merged into mainline code. &lt;!-- accept --&gt;
+-  `Progress: reject` - The pull request has been rejected and will not be merged into mainline code. Possible reasons can include but are not limited to: issue has already been fixed in another code contribution, or there is an issue with the code contribution. &lt;!-- reject --&gt;
 
 ### Partners
 

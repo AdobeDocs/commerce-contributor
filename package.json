@@ -6,31 +6,11 @@
     "type": "git",
     "url": "https://github.com/AdobeDocs/commerce-contributor"
   },
-  "dependencies": {
-    "@adobe/gatsby-theme-aio": "4.10.5",
-    "gatsby": "4.22.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+  "scripts": {
+    "dev": "node ./dev.mjs",
+    "lint": "npx --yes github:AdobeDocs/adp-devsite-utils runLint -v"
   },
   "devDependencies": {
-    "remark-cli": "^10.0.1",
-    "remark-validate-links": "^11.0.2"
-  },
-  "scripts": {
-    "start": "gatsby build && gatsby serve",
-    "start:prefix": "gatsby build --prefix-paths && gatsby serve --prefix-paths",
-    "dev": "gatsby develop",
-    "dev:https": "gatsby develop --https --host localhost.corp.adobe.com --port 9000",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test:links": "remark src/pages --quiet --frail",
-    "lint": "docker run --rm -e RUN_LOCAL=true --env-file .github/super-linter.env -v \"$PWD\":/tmp/lint github/super-linter:slim-v4.10.1"
-  },
-  "remarkConfig": {
-    "plugins": [
-      "remark-validate-links"
-    ]
-  },
-  "packageManager": "yarn@3.2.4"
+    "express": "5.1.0"
+  }
 }

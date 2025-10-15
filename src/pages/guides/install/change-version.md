@@ -1,6 +1,8 @@
 ---
 title: Change to a Released Version | Commerce Contributor
 description: Learn how to switch to a released version of Magento Open Source after installing from a development branch.
+keywords:
+  - Install
 ---
 
 # Change to a released version
@@ -25,14 +27,14 @@ You have the following options:
 
 To change versions after cloning:
 
-1. Log in to your web server as, or switch to, [the file system owner](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. Log in to your web server as, or switch to, [the file system owner](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/file-system/overview).
 1. Use the following command to uninstall the Magento Open Source software:
 
    ```bash
    php <your Magento clone dir>/bin/magento setup:uninstall
    ```
 
-1. Either remove your old Magento clone directory or [update the software](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/dev_update-magento.html).
+1. Either remove your old Magento clone directory or [update the software](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/developer/git-installs).
 1. If you have not already done so, clone the Magento 2 GitHub repository as follows:
 
    ```bash
@@ -51,15 +53,15 @@ To change versions after cloning:
    git checkout tags/2.2.0 -b 2.2.0
    ```
 
-1. Install the Magento Open Source software using the [command line](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-install.html).
+1. Install the Magento Open Source software using the [command line](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/tutorials/install).
 
 ## Change versions by installing the software in a new database instance
 
 To change versions after cloning:
 
-1. Log in to your Magento server as, or switch to, [the file system owner](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
-1. Create a [new database instance](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/mysql.html#instgde-prereq-mysql-config) for your installation.
-1. [Back up](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-backup.html#instgde-cli-uninst-back) the Magento file system, database, and media files:
+1. Log in to your Magento server as, or switch to, [the file system owner](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/file-system/overview).
+1. Create a [new database instance](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/database-server/mysql) for your installation.
+1. [Back up](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/tutorials/backup) the Magento file system, database, and media files:
 
    ```bash
    php <magento_root>/bin/magento setup:backup --code --media --db
@@ -85,4 +87,4 @@ To change versions after cloning:
 
 1. Install the Magento software in your new database instance.
 
-   You must install using the [command line](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-install.html).
+   You must install using the [command line](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/tutorials/install).
