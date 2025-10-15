@@ -439,7 +439,7 @@ These backward incompatible changes do not need manual documentation:
 -  Adding/removing a class/interface constant
 -  Adding removing a class property
 
-## GraphQl backward compatibility policy
+## GraphQL backward compatibility policy
 
 -  For backward compatibility, the GraphQL schema should be considered an API.
 -  To allow for the evolution of GraphQL, we allow MINOR changes to be added within a PATCH. This may change in the future.
