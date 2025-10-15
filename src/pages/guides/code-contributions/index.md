@@ -91,9 +91,9 @@ We also recommend creating a personal access token for your account to use when 
 
 ## Questions or enhancement requests?
 
-We capture code-related issues in the [GitHub repo](https://github.com/magento/magento2) and documentation-related issues in the [DevDocs repo](https://github.com/magento/devdocs). If you have questions about functionality or processes, we recommend posting them to a question-and-answer site, such as [Stack Exchange](https://magento.stackexchange.com/) and the [Community Forums](https://community.magento.com/), where Magento Open Source community members can quickly provide recommendations and advice.
+We capture code-related issues in the [GitHub repo](https://github.com/magento/magento2) and documentation-related issues in the [Commerce Docs - Issues Project Board](https://github.com/orgs/AdobeDocs/projects/6). If you have questions about functionality or processes, we recommend posting them to a question-and-answer site, such as [Stack Exchange](https://magento.stackexchange.com/) and the [Community Forums](https://community.magento.com/), where Magento Open Source community members can quickly provide recommendations and advice.
 
-Submit feature requests or enhancement suggestions to the [Feature Requests and Improvements forum](https://community.magento.com/t5/Magento-2-Feature-Requests-and/idb-p/feature-requests). For details about how requests are managed, see [Improvements to GitHub Management](https://community.magento.com/t5/News-Announcements/Improvements-to-GitHub-Management/m-p/44572#M96).
+Submit feature requests or enhancement suggestions to the [Feature Requests and Improvements forum](https://community.magento.com/t5/Magento-2-x-Feature-Requests-and/idb-p/feature-requests). For details about how requests are managed, see [Improvements to GitHub Management](https://community.magento.com/t5/News-Announcements/Improvements-to-GitHub-Management/m-p/44572#M96).
 
 ## Accepted pull requests and ported code
 
@@ -120,7 +120,7 @@ Review the following supported and accepted pull request rules. We defined these
 1. PRs that include bug fixes must be accompanied by a step-by-step description of how to reproduce the bug.
 1. PRs that include new logic or new features must be submitted along with:
    -  Unit/integration test coverage (we will be releasing more information about writing test coverage in the near future).
-   -  Follow the [DevDocs contribution work flow and guidelines](https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md) to submit proposed documentation updates to the [DevDocs Github repository](https://github.com/magento/devdocs).
+   -  Follow the [DevDocs contribution work flow and guidelines](../doc-contributions/index.md) to submit proposed documentation updates.
 1. For large features or changes, [open an issue](https://github.com/magento/magento2/issues) to discuss your proposal first.  Notifying us in advance can prevent duplicate or unnecessary effort, and also offers an opportunity to get additional background information and help from other contributors.
 1. To report a bug, [open an issue](https://github.com/magento/magento2/issues) and follow the [Issue reporting guidelines](https://github.com/magento/magento2/wiki/Issue-reporting-guidelines).
 1. Verify that all automated tests on your pull request pass successfully.
@@ -341,12 +341,3 @@ Labels applied to issues through verification and completion. For details on the
 -  `Fixed in 2.3.x` - The issue has been fixed in one of the 2.3.x releases.
 -  `Fixed in 2.4.x` - The issue has been fixed in one of the 2.4.x releases or in 2.4-develop branch and will be available with the upcoming patch release.
 -  `non-issue` - A described behavior in the issue description is valid and shouldn't be changed in the code base.
-
-### DevDocs
-
-All [contributions to DevDocs](https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md) receive the following labels:
-
--  `New topic`- New topic submissions for content that has never existed on DevDocs such as tutorials, references, instructions, and so on
--  `Major update` - Significant original updates to existing content
--  `Technical` - Updates to the code or processes that alter the technical content of the document, such as code snippets, reference documentation, parameter names and values, and other relevant content
--  `Editorial` - Fixes for typos, grammatical inconsistencies, or minor rewrites to correct inaccuracies

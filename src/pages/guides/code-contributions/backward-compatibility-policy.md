@@ -441,19 +441,11 @@ These backward incompatible changes do not need manual documentation:
 
 ### Where to document
 
-In the [magento/devdocs](https://github.com/magento/devdocs) repository, manually add backward incompatible changes to the following file:
+In the [AdobeDocs/commerce-php](https://github.com/AdobeDocs/commerce-php) repository, manually add backward incompatible changes to the following file:
 
-`https://github.com/magento/devdocs/blob/master/src/guides/v<version>/release-notes/backward-incompatible-changes/index.md`
+`https://github.com/AdobeDocs/commerce-php/blob/main/src/pages/development/backward-incompatible-changes/index.md`
 
-Where: `<version>` is the MINOR version of the product (for example, 2.3).
-
-Example: [`https://github.com/magento/devdocs/blob/master/src/guides/v2.3/release-notes/backward-incompatible-changes/index.md`](https://github.com/magento/devdocs/blob/master/src/guides/v2.3/release-notes/backward-incompatible-changes/index.md).
-
-Update the page for the *next* MINOR product release when working in the `2.x-develop` branch of the DevDocs repository.
-
-For example, when 2.3 is released, a new `backward-incompatible-changes.md` for 2.4 becomes available for editing.
-
-In order to update the page, create a PR to the DevDocs repository with your changes.
+In order to update the page, create a pull request to the DevSite repository with your changes.
 
 ## GraphQl backward compatibility policy
 

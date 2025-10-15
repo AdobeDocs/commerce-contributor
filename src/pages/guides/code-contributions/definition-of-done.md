@@ -42,7 +42,7 @@ Details on different types of automated tests can be found in [Automated tests](
 All changes, additions, and extensions to the product should be documented by the author.
 The documentation should provide an overview of the change, and information about standard use cases, audience, and procedural instructions for implementing the feature.
 
-Documentation for the submitted code should be submitted as a pull request to the official DevDocs [repository](https://github.com/magento/devdocs).
+Documentation for the submitted code should be submitted as a pull request to the relevant technical documentation repository.
 
 When submitting either code or documentation, a brief summary of the work should be included in the commit message.
 
