@@ -5,52 +5,32 @@ description: Learn about policies and workflows related to open-source code cont
 
 # Commerce Contributor Guides
 
-<TextBlock slots="image, heading, text, links" width="50%" />
-
-![Code contributions](../_images/code.svg)
-
 ## Code Contributions
 
 Describes policies and workflows related to open-source code contributions
 
-*  [Learn more](code-contributions/)
-
-<TextBlock slots="image, heading, text, links" width="50%" />
-
-![Doc contributions](../_images/doc.svg)
+*  [Learn more](code-contributions/index.md)
 
 ## Doc Contributions
 
 Describes policies and workflows related to open-source doc contributions
 
-*  [Learn more](doc-contributions/)
-
-<TextBlock slots="image, heading, text, links" width="50%" />
-
-![Contributors](../_images/contributors.svg)
+*  [Learn more](doc-contributions/index.md)
 
 ## Contributors
 
 Acknowledges our community of contributors
 
-*  [Learn more](contributors/)
-
-<TextBlock slots="image, heading, text, links" width="50%" />
-
-![Maintainers](../_images/maintainers.svg)
+*  [Learn more](contributors/index.md)
 
 ## Maintainers
 
 Provides details about what maintainers do and how you can become one
 
-*  [Learn more](maintainers/)
-
-<TextBlock slots="image, heading, text, links" width="50%" />
-
-![Contributor install](../_images/install.svg)
+*  [Learn more](maintainers/index.md)
 
 ## Contributor install
 
 Learn how contributing developers install Magento Open Source
 
-*  [Learn more](install/)
+*  [Learn more](install/index.md)

@@ -11,7 +11,7 @@ You can contribute by creating an issue or pull request (PR) in one of our GitHu
 
 ![Edit or report an issue on GitHub](../../_images/edit-report.png)
 
-Adobe staff members and [community maintainers](../maintainers/) review issues and pull requests on a regular basis. We do our best to address all issues as soon as possible, but working through the backlog takes time. We appreciate your patience.
+Adobe staff members and [community maintainers](../maintainers/index.md) review issues and pull requests on a regular basis. We do our best to address all issues as soon as possible, but working through the backlog takes time. We appreciate your patience.
 
 ## Contributor attribution
 
