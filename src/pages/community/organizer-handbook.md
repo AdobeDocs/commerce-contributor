@@ -105,7 +105,7 @@ Marketing is key: if people do not know about your event, they will not come.
 
 We recommend promoting your event on social media: tweeting about the event and writing blog posts about it are two great ways to get started. If using Twitter, determine what hashtag you want to use and ensure your team is coordinated on its use.
 
-Magento Community Engineering can help co-promote your event on [Twitter](https://twitter.com/MagentoEngCom); get in touch with us via email (engcom@adobe.com) to start a conversation around co-promotion. Let us know what your marketing approach is like and we will do our best to promote you.
+Magento Community Engineering can help co-promote your event on [Twitter](https://x.com/MagentoEngCom); get in touch with us via email (engcom@adobe.com) to start a conversation around co-promotion. Let us know what your marketing approach is like and we will do our best to promote you.
 
 NOTE: We generally do not help promote private / internal events.
 
@@ -119,7 +119,7 @@ While we may be able to send one or more members of the Magento Community Engine
 
 ### Contribution backlog
 
-It is highly recommended preparing a project backlog (also known as a project board) on GitHub.com tailored to the [goals of your event](#event-goals) and your audience. This backlog would contain issues you want to encourage attendees to tackle during your event. Ideally, the issues are strongly related to your [event goals](#event-goals). Please work with us at the Magento Community Engineering team to tailor an appropriate backlog for your event. Another option is to use our generic and publicly-available [High Priority Community Backlog](https://github.com/magento/magento2/projects/26).
+It is highly recommended preparing a project backlog (also known as a project board) on GitHub.com tailored to the [goals of your event](#event-goals) and your audience. This backlog would contain issues you want to encourage attendees to tackle during your event. Ideally, the issues are strongly related to your [event goals](#event-goals). Please work with us at the Magento Community Engineering team to tailor an appropriate backlog for your event. Another option is to use our generic and publicly-available [High Priority Backlog](https://github.com/orgs/magento/projects/21).
 
 ## During the event
 

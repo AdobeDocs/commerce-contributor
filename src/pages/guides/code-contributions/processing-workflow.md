@@ -41,7 +41,7 @@ Working on an issue report as a reporter, maintainer, or developer is always a c
 
 These are steps for reviewing the issue, verifying reproduction steps, and assigning a maintainer to work it.
 
-1. A maintainer selects an unprocessed ticket from the GitHub tracker. The recommended tool is the [Issue Confirmation and Triage Board](https://github.com/magento/magento2/projects/23).
+1. A maintainer selects an unprocessed ticket from the GitHub tracker. The recommended tool is the [Issue Confirmation and Triage Board](https://github.com/orgs/magento/projects/18).
 1. The maintainer reviews the list from the "Ready for Confirmation" column and selects an issue to begin processing.
 1. After selecting the ticket, the maintainer checks the description and reproduction steps.
 1. When the maintainer is ready to start processing the issue, the maintainer should assign the ticket to him/her self. This indicates someone is actively working on the issue.

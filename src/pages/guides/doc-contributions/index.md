@@ -24,12 +24,12 @@ If you write and contribute a new topic, we add your name (or your company's nam
 ![Get started workflow](../../_images/contribute-prerequisites.png)
 
 1. Make sure you have a [GitHub account](https://github.com/signup/free).
-1. Fork the [AdobeDocs](https://github.com/topics/adobe-commerce-devsite) repository that you want to contribute to. Remember to [sync your fork](https://help.github.com/articles/syncing-a-fork/) and update branches as needed.
+1. Fork the Commerce docs repository that you want to contribute to from [AdobeDocs on GitHub](https://github.com/orgs/AdobeDocs/repositories?language=&q=visibility%3Apublic+archived%3Afalse+commerce*&sort=&type=public). Remember to [sync your fork](https://help.github.com/articles/syncing-a-fork/) and update branches as needed.
 1. Review the [contribution guidelines](#contribution-guidelines).
 
 <InlineAlert variant="info" slots="text" />
 
-If you use a fork instead of a branch, set permissions to allow maintainers to edit and update the PR. See [Allowing changes to a pull request branch created from a fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork) in the _GitHub documentation_.
+If you use a fork instead of a branch, set permissions to allow maintainers to edit and update the PR. See [Allowing changes to a pull request branch created from a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork) in the _GitHub documentation_.
 
 ## Contribute documentation
 
@@ -138,8 +138,8 @@ Check the existing [issues](https://github.com/orgs/AdobeDocs/projects/6/views/1
 
 You can provide feedback using the following options:
 
--  Have general feedback? Create an issue in the corresponding [AdobeDocs GitHub repo](https://github.com/topics/adobe-commerce-devsite).
+-  Have general feedback? Create an issue in the corresponding Commerce docs repository on [AdobeDocs GitHub](https://github.com/orgs/AdobeDocs/repositories?language=&q=visibility%3Apublic+archived%3Afalse+commerce*&sort=&type=public).
 -  Have feedback on a specific page? Click the **Edit in GitHub** link at the top right of the page to report on the currently open topic.
--  Have a Community code contribution that needs documentation? Create an issue in the corresponding [AdobeDocs GitHub repo](https://github.com/topics/adobe-commerce-devsite).
+-  Have a Community code contribution that needs documentation? Create an issue in the corresponding in the corresponding Commerce docs repository on [AdobeDocs GitHub](https://github.com/orgs/AdobeDocs/repositories?language=&q=visibility%3Apublic+archived%3Afalse+commerce*&sort=&type=public).
 
 Thank you for contributing to the documentation!
