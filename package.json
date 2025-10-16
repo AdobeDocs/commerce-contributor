@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "node ./dev.mjs",
-    "lint": "npx --yes github:AdobeDocs/adp-devsite-utils runLint -v"
+    "lint": "npx --yes github:commerce-docs/adp-devsite-utils#fix-frontmatter-detection runLint -v"
   },
   "devDependencies": {
     "express": "5.1.0"
