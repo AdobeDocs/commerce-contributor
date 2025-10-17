@@ -2,8 +2,8 @@
 name: Lint
 on:
   pull_request:
-    paths:
-      - 'src/pages/**'
+    # paths:
+    #   - 'src/pages/**'
 
 jobs:
   markdown-lint:
