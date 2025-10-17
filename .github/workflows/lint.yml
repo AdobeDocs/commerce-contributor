@@ -52,7 +52,7 @@ jobs:
             echo "<summary>View detailed issues</summary>" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
-            grep -E "⚠️|❌|WARNING|ERROR" lint-output.txt || cat lint-output.txt >> $GITHUB_STEP_SUMMARY
+            grep -E "⚠️|❌|WARNING|ERROR" lint-output.txt >> $GITHUB_STEP_SUMMARY || cat lint-output.txt >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
             echo "</details>" >> $GITHUB_STEP_SUMMARY
             
