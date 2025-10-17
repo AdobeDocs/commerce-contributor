@@ -52,7 +52,8 @@ jobs:
             echo "<summary>View detailed issues</summary>" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
-            grep -E "⚠️|❌|WARNING|ERROR" lint-output.txt >> $GITHUB_STEP_SUMMARY || cat lint-output.txt >> $GITHUB_STEP_SUMMARY
+            # Extract file paths and their associated warnings/errors
+            grep -B 1 -E "⚠️|❌|WARNING|ERROR" lint-output.txt | grep -E "^src/pages/.*:|⚠️|❌|WARNING|ERROR" >> $GITHUB_STEP_SUMMARY || cat lint-output.txt >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
             echo "</details>" >> $GITHUB_STEP_SUMMARY
             
