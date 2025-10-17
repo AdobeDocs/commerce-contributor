@@ -23,4 +23,22 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Lint
-        run: npm run lint
+        run: |
+          echo "## Lint Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if npm run lint > lint-output.txt 2>&1; then
+            echo "✅ **No issues found!**" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "All files passed linting checks." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Linting issues detected:**" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            cat lint-output.txt >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            cat lint-output.txt
+            rm lint-output.txt
+            exit 1
+          fi
+          rm -f lint-output.txt
