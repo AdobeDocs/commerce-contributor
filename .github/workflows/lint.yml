@@ -3,8 +3,8 @@ name: Lint
 on:
   pull_request:
     branches: [main]
-    paths:
-      - 'src/pages/**'
+    # paths:
+    #   - 'src/pages/**'
 
 jobs:
   lint:
@@ -14,4 +14,49 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Lint
-        run: npm run lint
+        run: |
+          echo "## Lint Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Run lint and capture output
+          set +e
+          npm run lint > lint-output.txt 2>&1
+          EXIT_CODE=$?
+          set -e
+          
+          # Check if there are warnings or errors in the output
+          if grep -q "Files with issues:" lint-output.txt || grep -q "⚠️  WARNING" lint-output.txt || [ $EXIT_CODE -ne 0 ]; then
+            echo "❌ **Linting issues detected**" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            
+            # Extract and display summary
+            if grep -q "📊 Linting Summary:" lint-output.txt; then
+              echo "### Summary" >> $GITHUB_STEP_SUMMARY
+              echo '```' >> $GITHUB_STEP_SUMMARY
+              sed -n '/📊 Linting Summary:/,/^$/p' lint-output.txt | grep -E "(Files processed|Files with issues|Total issues|Warnings|fatal)" >> $GITHUB_STEP_SUMMARY
+              echo '```' >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+            fi
+            
+            # Display detailed issues
+            echo "<details>" >> $GITHUB_STEP_SUMMARY
+            echo "<summary>View detailed issues</summary>" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            # Extract file paths and their associated warnings/errors
+            grep -B 1 -E "⚠️|❌|WARNING|ERROR" lint-output.txt | grep -E "^src/pages/.*:|⚠️|❌|WARNING|ERROR" >> $GITHUB_STEP_SUMMARY || cat lint-output.txt >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            echo "</details>" >> $GITHUB_STEP_SUMMARY
+            
+            # Output to console as well
+            cat lint-output.txt
+            rm lint-output.txt
+            
+            # Fail the workflow
+            exit 1
+          else
+            echo "✅ **No issues found!**" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "All files passed linting checks." >> $GITHUB_STEP_SUMMARY
+            rm -f lint-output.txt
+          fi

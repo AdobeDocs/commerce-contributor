@@ -5,16 +5,15 @@ description: Review resources for contributing to Adobe Commerce open-source pro
 
 <HeroSimple slots="heading, text" background="rgb(244, 111, 37)"/>
 
-# Commerce Contributor
+#Commerce Contributor
 
 Join thousands of community members around the world contributing to open-source Commerce projects, like Magento Open Source and PWA Studio.
 
 <Resources slots="heading, links"/>
 
-## Resources
-
+##### Resources
 *  [Commerce open-source projects](https://developer.adobe.com/open/magento)
-*  [Community Slack workspace](https://opensource.magento.com/slack)
+ *  [Community Slack workspace](https://opensource.magento.com/slack)
 *  [Contributor statistics](https://developer.adobe.com/open/magento/statistic)
 
 ## Overview
