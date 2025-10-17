@@ -7,7 +7,7 @@ description: Review all operational aspects of contributing to Commerce open-sou
 
 <InlineAlert variant="info" slots="text"/>
 
-Connect with Magento Open Source Contributors and Maintainers to learn more about contributions and special projects. Join us in our [Slack workspace](https://opensource.magento.com/slack), in the [#general](https://magentocommeng.slack.com/archives/C4YS78WE6) channel, follow the [#announcements](https://magentocommeng.slack.com/archives/C7FA71S3V), and browse for more [channels](https://developer.adobe.com/commerce/contributor/community/)!
+Connect with Magento Open Source Contributors and Maintainers to learn more about contributions and special projects. Join us in our [Slack workspace](https://developer.adobe.com/open/magento/slack), in the #general channel, follow the #announcements, and browse for more [channels](https://developer.adobe.com/commerce/contributor/community/)!
 
 ## Contribute to Magento Open Source code
 
@@ -85,15 +85,15 @@ The number of 'Yes' answers should help you to determine the severity.
 
 ## GitHub and two-factor authentication
 
-Adobe **requires all Partners** who contribute code to enable 2FA on their GitHub accounts. You can use a mobile device or 2FA application for added protection. See [Configuring two-factor authentication](https://help.github.com/en/articles/configuring-two-factor-authentication) in the GitHub help.
+Adobe **requires all Partners** who contribute code to enable 2FA on their GitHub accounts. You can use a mobile device or 2FA application for added protection. See [Configuring two-factor authentication](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication) in the GitHub help.
 
-We also recommend creating a personal access token for your account to use when interacting with GitHub in scripts and on the command line. See [Creating a personal access token for the command line](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) in the GitHub help.
+We also recommend creating a personal access token for your account to use when interacting with GitHub in scripts and on the command line. See [Creating a personal access token for the command line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) in the GitHub help.
 
 ## Questions or enhancement requests?
 
-We capture code-related issues in the [GitHub repo](https://github.com/magento/magento2) and documentation-related issues in the [DevDocs repo](https://github.com/magento/devdocs). If you have questions about functionality or processes, we recommend posting them to a question-and-answer site, such as [Stack Exchange](https://magento.stackexchange.com/) and the [Community Forums](https://community.magento.com/), where Magento Open Source community members can quickly provide recommendations and advice.
+We capture code-related issues in the [GitHub repo](https://github.com/magento/magento2) and documentation-related issues in the [Commerce Docs - Issues Project Board](https://github.com/orgs/AdobeDocs/projects/6). If you have questions about functionality or processes, we recommend posting them to a question-and-answer site, such as [Stack Exchange](https://magento.stackexchange.com/) and the [Community Forums](https://community.magento.com/), where Magento Open Source community members can quickly provide recommendations and advice.
 
-Submit feature requests or enhancement suggestions to the [Feature Requests and Improvements forum](https://community.magento.com/t5/Magento-2-Feature-Requests-and/idb-p/feature-requests). For details about how requests are managed, see [Improvements to GitHub Management](https://community.magento.com/t5/News-Announcements/Improvements-to-GitHub-Management/m-p/44572#M96).
+Submit feature requests or enhancement suggestions to the [Community Forums](https://community.magento.com/). For details about how requests are managed, see [Improvements to GitHub Management](https://community.magento.com/t5/News-Announcements/Improvements-to-GitHub-Management/m-p/44572#M96).
 
 ## Accepted pull requests and ported code
 
@@ -120,7 +120,7 @@ Review the following supported and accepted pull request rules. We defined these
 1. PRs that include bug fixes must be accompanied by a step-by-step description of how to reproduce the bug.
 1. PRs that include new logic or new features must be submitted along with:
    -  Unit/integration test coverage (we will be releasing more information about writing test coverage in the near future).
-   -  Follow the [DevDocs contribution work flow and guidelines](https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md) to submit proposed documentation updates to the [DevDocs Github repository](https://github.com/magento/devdocs).
+   -  Follow the [documentation contribution workflow and guidelines](../doc-contributions/index.md) to submit proposed documentation updates.
 1. For large features or changes, [open an issue](https://github.com/magento/magento2/issues) to discuss your proposal first.  Notifying us in advance can prevent duplicate or unnecessary effort, and also offers an opportunity to get additional background information and help from other contributors.
 1. To report a bug, [open an issue](https://github.com/magento/magento2/issues) and follow the [Issue reporting guidelines](https://github.com/magento/magento2/wiki/Issue-reporting-guidelines).
 1. Verify that all automated tests on your pull request pass successfully.
@@ -167,7 +167,7 @@ This command has several variations:
 **Actions:** The following actions occur:
 
 -  If the user is a member of the Magento GitHub organization, the user will be assigned to the ticket automatically.
--  If the user is not yet a member of the Magento GitHub organization, an invitation will be sent to the user. Check your email or accept the [Github invitation](https://github.com/orgs/magento/invitation). Once the user has joined the Magento GitHub organization, the user should repeat the command to get assigned to the ticket.
+-  If the user is not yet a member of the Magento GitHub organization, an invitation will be sent to the user. Check your email for the GitHub invitation. Once the user has joined the Magento GitHub organization, the user should repeat the command to get assigned to the ticket.
 
 **Permissions:**
 
@@ -181,7 +181,7 @@ Before creating an issue, do the following:
 
 -  Check the [Developer Documentation](https://developer.adobe.com/commerce) and [User Guide](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home) to make sure the behavior you are reporting is really a bug, not a feature.
 -  Check the [existing issues](https://github.com/magento/magento2/issues) to make sure you are not duplicating somebody's work.
--  Ensure that information you are reporting is a technical issue. Refer to the [Community Forums](https://community.magento.com/) or [Magento Stack Exchange](http://magento.stackexchange.com/) for technical questions, feature requests, etc.
+-  Ensure that information you are reporting is a technical issue. Refer to the [Community Forums](https://community.magento.com/) or [Magento Stack Exchange](https://magento.stackexchange.com/) for technical questions, feature requests, etc.
 -  Verify that the issue you are reporting does not relate to Adobe Commerce. GitHub is intended for Magento Open Source users to report on issues related to Open Source only. You can report Commerce-related issues one of two ways:
 
    -  Use the Support portal associated with your account
@@ -193,7 +193,7 @@ If you are sure that the problem you are experiencing is a bug, file a new issue
 
 ### Issue template
 
-The [Issue Reporting Template](https://github.com/magento/magento2/blob/2.4-develop/.github/ISSUE_TEMPLATE.md) is a default placeholder for every new issue. Follow the sections carefully, as it ensures it will pass `Gate 1` quickly. More information on gates is available in [Magento Issue Gates](https://github.com/magento/magento2/wiki/Magento-Issue-Gates).
+The [Issue Reporting Template](https://github.com/magento/magento2/tree/2.4-develop/.github/ISSUE_TEMPLATE) is a default placeholder for every new issue. Follow the sections carefully, as it ensures it will pass `Gate 1` quickly.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -258,11 +258,9 @@ Actual result:
 
 Additional information is often requested when the bug report is processed. You can save time by providing both Magento Open Source and browser logs, screenshots, repository branch and HEAD commit you checked out to install Magento Open Source and any other artifacts related to the issue.
 
-Once the issue is created, it must pass through a series of [Magento Issue Gates](https://github.com/magento/magento2/wiki/Magento-Issue-Gates).
-
 ## Help triage issues  [![](https://www.codetriage.com/magento/magento2/badges/users.svg)](https://www.codetriage.com/magento/magento2)
 
-In addition to contributing code, you can help triage issues. This can include reproducing bug reports or asking for vital information, such as affected versions or instructions to reproduce bugs.  If you want to triage issues, you can begin by subscribing to [Magento on CodeTriage](https://www.codetriage.com/magento/magento2).
+In addition to contributing code, you can help triage issues. This can include reproducing bug reports or asking for vital information, such as affected versions or instructions to reproduce bugs.  If you want to triage issues, you can start by subscribing to [Magento on CodeTriage](https://www.codetriage.com/magento/magento2).
 
 ## Labels applied by the Community Engineering team
 
@@ -341,12 +339,3 @@ Labels applied to issues through verification and completion. For details on the
 -  `Fixed in 2.3.x` - The issue has been fixed in one of the 2.3.x releases.
 -  `Fixed in 2.4.x` - The issue has been fixed in one of the 2.4.x releases or in 2.4-develop branch and will be available with the upcoming patch release.
 -  `non-issue` - A described behavior in the issue description is valid and shouldn't be changed in the code base.
-
-### DevDocs
-
-All [contributions to DevDocs](https://github.com/magento/devdocs/blob/master/.github/CONTRIBUTING.md) receive the following labels:
-
--  `New topic`- New topic submissions for content that has never existed on DevDocs such as tutorials, references, instructions, and so on
--  `Major update` - Significant original updates to existing content
--  `Technical` - Updates to the code or processes that alter the technical content of the document, such as code snippets, reference documentation, parameter names and values, and other relevant content
--  `Editorial` - Fixes for typos, grammatical inconsistencies, or minor rewrites to correct inaccuracies

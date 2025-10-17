@@ -7,29 +7,29 @@ keywords:
 
 # Update installation dependencies
 
-We use [Composer](http://getcomposer.org) to resolve dependencies before you install the Magento software and extensions.
+We use [Composer](https://getcomposer.org/) to resolve dependencies before you install the Magento software and extensions.
 
 Composer is a separate application that manages PHP dependencies. Before you can install the Magento software, you must perform the following tasks in the order shown:
 
 1. [Install the Composer software](clone-repository.md).
-1. [Create the file system owner](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/overview.html) so Composer can write files to the web server docroot as the correct user.
+1. [Create the file system owner](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/file-system/overview) so Composer can write files to the web server docroot as the correct user.
 1. [Update dependencies](#update-dependencies) in your local root project directory (for example, `/var/www/magento2/`).
 
 The Magento root directory is a subdirectory of your web server's docroot.
 
-If the following error displays, see [troubleshooting](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/download-fails-because-of-changes-in-composer.html):
+If the following error displays, see [troubleshooting](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/download-fails-because-of-changes-in-composer):
 
 ```terminal
 file_get_contents(app/etc/NonComposerComponentRegistration.php): failed to open stream: No such file or directory
 ```
 
-For you to be able to run the Magento application, make sure you perform all tasks as a user with privileges to write to the web server docroot. One way to do this is to log in as or switch to the [switch to the file system owner](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/overview.html).
+For you to be able to run the Magento application, make sure you perform all tasks as a user with privileges to write to the web server docroot. One way to do this is to log in as or switch to the [switch to the file system owner](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/file-system/overview).
 
 ## Update dependencies
 
 Update installation dependencies as follows:
 
-1. Log in to your Magento server as the file system owner or [switch to that user](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/overview.html).
+1. Log in to your Magento server as the file system owner or [switch to that user](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/file-system/overview).
 1. Change to the Magento installation directory and run `composer install`. Examples:
 
    CentOS:
@@ -57,8 +57,8 @@ If so, create [`auth.json`](clone-repository.md) in the file system owner's `<ho
 
 ## Set file ownership and permissions
 
-You must set read and write permissions for the web server group before you install Adobe Commerce or Magento Open Source. It is necessary so that the command line can write to the file system. See [file ownership and permissions](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/overview.html).
+You must set read and write permissions for the web server group before you install Adobe Commerce or Magento Open Source. It is necessary so that the command line can write to the file system. See [file ownership and permissions](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/file-system/overview).
 
 <InlineAlert variant="success" slots="text"/>
 
-Hooray! You've completed the contributor install. Need more advanced help? Check out our [Advanced install](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/advanced.html) guide.
+Hooray! You've completed the contributor install. Need more advanced help? Check out our [Advanced install](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/advanced) guide.

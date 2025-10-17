@@ -439,23 +439,7 @@ These backward incompatible changes do not need manual documentation:
 -  Adding/removing a class/interface constant
 -  Adding removing a class property
 
-### Where to document
-
-In the [magento/devdocs](https://github.com/magento/devdocs) repository, manually add backward incompatible changes to the following file:
-
-`https://github.com/magento/devdocs/blob/master/src/guides/v<version>/release-notes/backward-incompatible-changes/index.md`
-
-Where: `<version>` is the MINOR version of the product (for example, 2.3).
-
-Example: [`https://github.com/magento/devdocs/blob/master/src/guides/v2.3/release-notes/backward-incompatible-changes/index.md`](https://github.com/magento/devdocs/blob/master/src/guides/v2.3/release-notes/backward-incompatible-changes/index.md).
-
-Update the page for the *next* MINOR product release when working in the `2.x-develop` branch of the DevDocs repository.
-
-For example, when 2.3 is released, a new `backward-incompatible-changes.md` for 2.4 becomes available for editing.
-
-In order to update the page, create a PR to the DevDocs repository with your changes.
-
-## GraphQl backward compatibility policy
+## GraphQL backward compatibility policy
 
 -  For backward compatibility, the GraphQL schema should be considered an API.
 -  To allow for the evolution of GraphQL, we allow MINOR changes to be added within a PATCH. This may change in the future.
