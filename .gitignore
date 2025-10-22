@@ -24,11 +24,6 @@ yarn-error.log
 !.yarn/sdks
 !.yarn/versions
 
-# gatsby files
-.env
-.cache
-public
-
 # cypress
 cypress/videos
 cypress/screenshots
@@ -44,3 +39,5 @@ local-test.yml
 # yalc
 .yalc
 yalc.lock
+
+coverage/
