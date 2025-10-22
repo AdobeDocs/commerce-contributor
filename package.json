@@ -8,7 +8,9 @@
   },
   "scripts": {
     "dev": "node ./dev.mjs",
-    "lint": "npx --yes github:AdobeDocs/adp-devsite-utils runLint -v"
+    "lint": "npx --yes github:AdobeDocs/adp-devsite-utils runLint -v",
+    "test": "npx --yes jest",
+    "test:config": "npx --yes jest tests/config.test.js"
   },
   "devDependencies": {
     "express": "5.1.0"
