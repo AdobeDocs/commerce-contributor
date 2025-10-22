@@ -6,7 +6,17 @@ on:
       - 'src/pages/**'
 
 jobs:
+  markdown-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Markdown lint
+        run: npm run lint:md
+
   lint:
+    needs: markdown-lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
