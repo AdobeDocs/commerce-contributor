@@ -1,12 +1,20 @@
 ---
-name: Lint
+name: Validate pull request
 on:
   pull_request:
-    # paths:
-    #   - 'src/pages/**'
 
 jobs:
+  toc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run TOC validation
+        run: npm run test:config
+
   markdown-lint:
+    needs: toc
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -48,14 +56,12 @@ jobs:
             fi
             
             # Display detailed issues
-            echo "<details>" >> $GITHUB_STEP_SUMMARY
-            echo "<summary>View detailed issues</summary>" >> $GITHUB_STEP_SUMMARY
+            echo "### Detailed issues" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
             # Extract file paths and their associated warnings/errors
             grep -B 1 -E "⚠️|❌|WARNING|ERROR" lint-output.txt | grep -E "^src/pages/.*:|⚠️|❌|WARNING|ERROR" >> $GITHUB_STEP_SUMMARY || cat lint-output.txt >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
-            echo "</details>" >> $GITHUB_STEP_SUMMARY
             
             # Output to console as well
             cat lint-output.txt
