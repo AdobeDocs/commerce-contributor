@@ -43,7 +43,7 @@ jobs:
           
           # Check if there are warnings or errors in the output
           if grep -q "Files with issues:" lint-output.txt || grep -q "⚠️  WARNING" lint-output.txt || [ $EXIT_CODE -ne 0 ]; then
-            echo "❌ **Linting issues detected**" >> $GITHUB_STEP_SUMMARY
+            echo "⚠️ **Linting issues detected**" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             
             # Extract and display summary
@@ -65,10 +65,9 @@ jobs:
             
             # Output to console as well
             cat lint-output.txt
-            
-            # Set status to neutral if warnings detected
             rm lint-output.txt
-            exit 78
+            
+            echo "::warning::Linting issues detected. See job summary for details."
           else
             echo "✅ **No issues found!**" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
