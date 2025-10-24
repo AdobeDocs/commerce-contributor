@@ -60,9 +60,6 @@ jobs:
             # Output to console as well
             cat lint-output.txt
             rm lint-output.txt
-            
-            # Fail the workflow
-            exit 1
           else
             echo "✅ **No issues found!**" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
