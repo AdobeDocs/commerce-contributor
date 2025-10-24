@@ -30,7 +30,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Lint
+      - name: Lint DevSite Utils
         run: |
           echo "## Lint Results" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
@@ -67,10 +67,27 @@ jobs:
             cat lint-output.txt
             rm lint-output.txt
             
-            echo "::warning::Linting issues detected. See job summary for details."
+            echo "::warning::Warnings found but no fatal errors. See job summary for details."
+            
+            # Save warning status for the comment workflow
+            echo "true" > has-warnings.txt
+            echo "${{ github.event.pull_request.number }}" > pr-number.txt
           else
             echo "✅ **No issues found!**" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "All files passed linting checks." >> $GITHUB_STEP_SUMMARY
             rm -f lint-output.txt
+            
+            # Save no-warning status
+            echo "false" > has-warnings.txt
+            echo "${{ github.event.pull_request.number }}" > pr-number.txt
           fi
+
+      - name: Upload lint results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lint-results
+          path: |
+            has-warnings.txt
+            pr-number.txt
