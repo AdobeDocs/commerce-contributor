@@ -23,7 +23,7 @@ jobs:
       - name: Markdown lint
         run: npm run lint:md
 
-  lint:
+  remark-lint:
     needs: markdown-lint
     runs-on: ubuntu-latest
     steps:
