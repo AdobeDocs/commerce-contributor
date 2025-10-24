@@ -65,7 +65,10 @@ jobs:
             
             # Output to console as well
             cat lint-output.txt
+            
+            # Set status to neutral if warnings detected
             rm lint-output.txt
+            exit 78
           else
             echo "✅ **No issues found!**" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
