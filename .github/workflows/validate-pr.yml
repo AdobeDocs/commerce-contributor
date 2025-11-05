@@ -131,6 +131,8 @@ jobs:
           # If no src/pages files changed, pass automatically
           if [[ "${{ needs.check-files.outputs.run_validation }}" == "false" ]]; then
             echo "✅ No src/pages/ files changed - validation skipped"
+            echo "false" > has-warnings.txt
+            echo "${{ github.event.pull_request.number }}" > pr-number.txt
             exit 0
           fi
           
@@ -147,3 +149,12 @@ jobs:
             echo "Remark Lint: ${{ needs.remark-lint.result }}"
             exit 1
           fi
+
+      - name: Upload lint results for skipped validation
+        if: needs.check-files.outputs.run_validation == 'false'
+        uses: actions/upload-artifact@v4
+        with:
+          name: lint-results
+          path: |
+            has-warnings.txt
+            pr-number.txt
