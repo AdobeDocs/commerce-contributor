@@ -2,6 +2,10 @@ name: Add to project job
 
 on:
   workflow_call:
+    secrets:
+      COMMERCE_PROJECT_AUTOMATION:
+        description: 'GitHub token for project automation'
+        required: true
 
 jobs:
   add-to-project:
