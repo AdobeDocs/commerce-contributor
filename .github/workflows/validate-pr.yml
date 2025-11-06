@@ -1,7 +1,16 @@
 ---
 name: Validate pull request
 on:
-  pull_request:
+  workflow_call:
+    inputs:
+      pr_number:
+        description: 'Pull request number'
+        required: true
+        type: number
+      base_ref:
+        description: 'Base branch reference'
+        required: true
+        type: string
 
 jobs:
   # Check if src/pages files were changed
@@ -18,8 +27,8 @@ jobs:
       - name: Check for src/pages changes
         id: filter
         run: |
-          git fetch origin ${{ github.base_ref }}
-          CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD)
+          git fetch origin ${{ inputs.base_ref }}
+          CHANGED_FILES=$(git diff --name-only origin/${{ inputs.base_ref }}...HEAD)
           if echo "$CHANGED_FILES" | grep -q "^src/pages/"; then
             echo "run_validation=true" >> $GITHUB_OUTPUT
             echo "✅ Changes detected in src/pages/"
@@ -99,7 +108,7 @@ jobs:
             
             # Save warning status for the comment workflow
             echo "true" > has-warnings.txt
-            echo "${{ github.event.pull_request.number }}" > pr-number.txt
+            echo "${{ inputs.pr_number }}" > pr-number.txt
           else
             echo "✅ **No issues found!**" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
@@ -108,7 +117,7 @@ jobs:
             
             # Save no-warning status
             echo "false" > has-warnings.txt
-            echo "${{ github.event.pull_request.number }}" > pr-number.txt
+            echo "${{ inputs.pr_number }}" > pr-number.txt
           fi
 
       - name: Upload lint results
@@ -131,6 +140,8 @@ jobs:
           # If no src/pages files changed, pass automatically
           if [[ "${{ needs.check-files.outputs.run_validation }}" == "false" ]]; then
             echo "✅ No src/pages/ files changed - validation skipped"
+            echo "false" > has-warnings.txt
+            echo "${{ inputs.pr_number }}" > pr-number.txt
             exit 0
           fi
           
@@ -147,3 +158,12 @@ jobs:
             echo "Remark Lint: ${{ needs.remark-lint.result }}"
             exit 1
           fi
+
+      - name: Upload lint results for skipped validation
+        if: needs.check-files.outputs.run_validation == 'false'
+        uses: actions/upload-artifact@v4
+        with:
+          name: lint-results
+          path: |
+            has-warnings.txt
+            pr-number.txt
