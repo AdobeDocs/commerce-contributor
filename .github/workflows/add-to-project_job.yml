@@ -1,7 +1,7 @@
 name: Add to project job
 
 on:
-  workflow_call
+  workflow_call:
 
 jobs:
   add-to-project:
