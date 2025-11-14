@@ -79,7 +79,8 @@ jobs:
           set -e
           
           # Check if there are warnings or errors in the output
-          if grep -q "Files with issues:" lint-output.txt || grep -q "⚠️  WARNING" lint-output.txt || [ $EXIT_CODE -ne 0 ]; then
+          # Only consider it a warning if we actually find issue indicators in the output
+          if grep -q "Files with issues:" lint-output.txt || grep -q "⚠️  WARNING" lint-output.txt || grep -q "❌" lint-output.txt; then
             echo "⚠️ **Linting issues detected**" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             
@@ -104,20 +105,40 @@ jobs:
             cat lint-output.txt
             rm lint-output.txt
             
-            echo "::warning::Warnings found but no fatal errors. See job summary for details."
-            
-            # Save warning status for the comment workflow
-            echo "true" > has-warnings.txt
-            echo "${{ inputs.pr_number }}" > pr-number.txt
+            # Check if there are fatal errors (non-zero exit code)
+            if [ $EXIT_CODE -ne 0 ]; then
+              echo "::error::Fatal linting errors detected. See details above."
+              echo "false" > has-warnings.txt
+              echo "${{ inputs.pr_number }}" > pr-number.txt
+              exit 1
+            else
+              echo "::warning::Warnings found but no fatal errors. See job summary for details."
+              # Save warning status for the comment workflow
+              echo "true" > has-warnings.txt
+              echo "${{ inputs.pr_number }}" > pr-number.txt
+            fi
           else
-            echo "✅ **No issues found!**" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "All files passed linting checks." >> $GITHUB_STEP_SUMMARY
-            rm -f lint-output.txt
-            
-            # Save no-warning status
-            echo "false" > has-warnings.txt
-            echo "${{ inputs.pr_number }}" > pr-number.txt
+            # No warning markers found, but check exit code
+            if [ $EXIT_CODE -ne 0 ]; then
+              echo "⚠️ **Unexpected error during linting**" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo '```' >> $GITHUB_STEP_SUMMARY
+              cat lint-output.txt >> $GITHUB_STEP_SUMMARY
+              echo '```' >> $GITHUB_STEP_SUMMARY
+              cat lint-output.txt
+              rm lint-output.txt
+              echo "::error::Linting command failed with exit code $EXIT_CODE"
+              exit 1
+            else
+              echo "✅ **No issues found!**" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo "All files passed linting checks." >> $GITHUB_STEP_SUMMARY
+              rm -f lint-output.txt
+              
+              # Save no-warning status
+              echo "false" > has-warnings.txt
+              echo "${{ inputs.pr_number }}" > pr-number.txt
+            fi
           fi
 
       - name: Upload lint results
