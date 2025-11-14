@@ -5,14 +5,13 @@ description: Learn what an open-source maintainer does and how to become one.
 
 # Maintainers
 
-Adobe trusts our active community members to review pull requests and accept or reject proposed code changes. [Community Maintainers](https://magento.biterg.io/app/dashboards#/view/Overview) take part in discussions, reviews, and help process pull requests.
+Adobe trusts our active community members to review pull requests and accept or reject proposed code changes. Community Maintainers take part in discussions, reviews, and help process pull requests.
 
 ## Who becomes a maintainer?
 
 When considering new maintainers, we look for contributors who have shown a propensity for:
 
 -  Contributing good and accepted code to multiple projects, including fixes for issues and new features
--  Participating in discussions in our development projects, including the [architecture](https://github.com/magento/architecture) and [backlog](https://github.com/magento/backlog) projects
 -  Reviewing and discussing pull requests from other contributors
 -  Helping other contributors with complex decisions and questions, like architecture questions, and providing advice according to [technical guidelines](https://developer.adobe.com/commerce/php/coding-standards/technical-guidelines/)
 
