@@ -64,3 +64,5 @@ MD049: false
 MD050:
   style: asterisk
 
+# MD060/table-column-style - Table column style
+MD060: false
