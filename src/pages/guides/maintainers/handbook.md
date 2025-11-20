@@ -9,19 +9,16 @@ This document describes activities performed by a community maintainer, provides
 
 ## Repositories and projects
 
-Our maintainers work on numerous repositories within the Magento Github organization. The repository that has most activity is [magento2](https://github.com/magento/magento2). Depending on your interest, you might also interact with some of our other repositories, such as:
+Our maintainers work on repositories within the Magento Github organization. Currently, contributions are accepted from the following repositories:
 
--  [pwa-studio](https://developer.adobe.com/commerce/pwa-studio/)
--  [magento2-phpstorm-plugin](https://github.com/magento/magento2-phpstorm-plugin)
--  [inventory](https://github.com/magento/inventory)
--  [adobe-stock-integration](https://github.com/magento/adobe-stock-integration)
--  and [many others](https://github.com/magento)
+-  [magento2](https://github.com/magento/magento2)
+-  [magento2-page-builder](https://github.com/magento/magento2-page-builder)
 
-Because most contributions go to the [magento2](https://github.com/magento/magento2) repository, there are several GitHub projects to help manage these contributions.
+There are several GitHub projects to help manage these contributions.
 
 ![Repository and Projects](../../_images/repo-and-projects-v2.png)
 
-Each project has a description of what it does. One important project is the **Community Dashboard**, where you can find the pull requests (PR) that will bring most value for the community and will be delivered first.
+Each project has a description of what it does.
 
 ## Pull requests dashboard
 
@@ -31,7 +28,7 @@ Within projects there are pull request dashboards. There you will find our Kanba
 
 ## Pull request review process
 
-The first step in the review process is to choose and self-assign a pull request from the dashboard. To help maintainers choose a PR to review, there are several labels, the most important being **Priority**. We encourage our maintainers to choose pull requests with the highest priority from the **Community Dashboard** in the **Pending Review** column.
+The first step in the review process is to choose and self-assign a pull request from the dashboard. To help maintainers choose a PR to review, there are several labels, the most important being **Priority**. We encourage our maintainers to choose pull requests with the highest priority from the **Pending Review** column.
 
 Once you have chosen a pull request, there are some steps to be followed during the review process.
 
@@ -93,6 +90,4 @@ We communicate with our community maintainers on our Slack channel. Once you are
 
 ### Regular meetings
 
-Currently, we have a meeting that we encourage our maintainers to attend and engage with the Community Engineering team:
-
--  [Community Contributions Triage](https://github.com/magento/magento2/wiki/Public-Triage-Meeting) – Scheduled once a week.
+Currently, there are no regularly scheduled meetings for maintainers. Please check the [Magento GitHub organization](https://github.com/magento) for any updates on future meetings or community events.
