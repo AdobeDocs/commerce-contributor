@@ -3,10 +3,6 @@ name: Validate pull request
 on:
   workflow_call:
     inputs:
-      pr_number:
-        description: 'Pull request number'
-        required: true
-        type: number
       base_ref:
         description: 'Base branch reference'
         required: true
@@ -68,66 +64,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Lint DevSite Utils
-        run: |
-          echo "## Lint Results" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          
-          # Run lint and capture output
-          set +e
-          npm run lint > lint-output.txt 2>&1
-          EXIT_CODE=$?
-          set -e
-          
-          # Check if there are warnings or errors in the output
-          if grep -q "Files with issues:" lint-output.txt || grep -q "⚠️  WARNING" lint-output.txt || [ $EXIT_CODE -ne 0 ]; then
-            echo "⚠️ **Linting issues detected**" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            
-            # Extract and display summary
-            if grep -q "📊 Linting Summary:" lint-output.txt; then
-              echo "### Summary" >> $GITHUB_STEP_SUMMARY
-              echo '```' >> $GITHUB_STEP_SUMMARY
-              sed -n '/📊 Linting Summary:/,/^$/p' lint-output.txt | grep -E "(Files processed|Files with issues|Total issues|Warnings|fatal)" >> $GITHUB_STEP_SUMMARY
-              echo '```' >> $GITHUB_STEP_SUMMARY
-              echo "" >> $GITHUB_STEP_SUMMARY
-            fi
-            
-            # Display detailed issues
-            echo "### Detailed issues" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
-            # Extract file paths and their associated warnings/errors
-            grep -B 1 -E "⚠️|❌|WARNING|ERROR" lint-output.txt | grep -E "^src/pages/.*:|⚠️|❌|WARNING|ERROR" >> $GITHUB_STEP_SUMMARY || cat lint-output.txt >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
-            
-            # Output to console as well
-            cat lint-output.txt
-            rm lint-output.txt
-            
-            echo "::warning::Warnings found but no fatal errors. See job summary for details."
-            
-            # Save warning status for the comment workflow
-            echo "true" > has-warnings.txt
-            echo "${{ inputs.pr_number }}" > pr-number.txt
-          else
-            echo "✅ **No issues found!**" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "All files passed linting checks." >> $GITHUB_STEP_SUMMARY
-            rm -f lint-output.txt
-            
-            # Save no-warning status
-            echo "false" > has-warnings.txt
-            echo "${{ inputs.pr_number }}" > pr-number.txt
-          fi
-
-      - name: Upload lint results
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: lint-results
-          path: |
-            has-warnings.txt
-            pr-number.txt
+        run: npm run lint
 
   # Gate job that always runs and becomes the required check
   validate-pr:
@@ -140,8 +77,6 @@ jobs:
           # If no src/pages files changed, pass automatically
           if [[ "${{ needs.check-files.outputs.run_validation }}" == "false" ]]; then
             echo "✅ No src/pages/ files changed - validation skipped"
-            echo "false" > has-warnings.txt
-            echo "${{ inputs.pr_number }}" > pr-number.txt
             exit 0
           fi
           
@@ -158,12 +93,3 @@ jobs:
             echo "Remark Lint: ${{ needs.remark-lint.result }}"
             exit 1
           fi
-
-      - name: Upload lint results for skipped validation
-        if: needs.check-files.outputs.run_validation == 'false'
-        uses: actions/upload-artifact@v4
-        with:
-          name: lint-results
-          path: |
-            has-warnings.txt
-            pr-number.txt
