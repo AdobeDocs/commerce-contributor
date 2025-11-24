@@ -91,4 +91,6 @@ We communicate with our community maintainers on our Slack channel. Once you are
 
 ### Regular meetings
 
-Currently, there are no regularly scheduled meetings for maintainers. Please check the [Magento GitHub organization](https://github.com/magento) for any updates on future meetings or community events.
+Currently, we have a meeting that we encourage our maintainers to attend and engage with the Community Engineering team:
+
+-  [Community Contributions Triage](https://github.com/magento/magento2/wiki/Public-Triage-Meeting) – Scheduled once a week.
