@@ -1,23 +1,22 @@
 ---
 name: GitHub Pages preview
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       branch:
         description: "Branch to deploy"
         type: string
         required: false
         default: ""
-  push:
-    branches:
-      - "**/preview**"
-      - "**gh-pages**"
-      - "preview-**"
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+      workflow_repo:
+        description: "Repository containing the reusable workflow (for fetching scripts)"
+        type: string
+        required: false
+        default: "AdobeDocs/commerce-contributor"
+    outputs:
+      page_url:
+        description: "The deployed GitHub Pages URL"
+        value: ${{ jobs.deploy.outputs.page_url }}
 
 concurrency:
   group: pages
@@ -210,11 +209,17 @@ jobs:
           fi
 
       - name: Inject GitHub Pages interceptor
+        env:
+          WORKFLOW_REPO: ${{ inputs.workflow_repo }}
         run: |
           cd _site
           
+          # Fetch the interceptor script from the workflow repository
+          SCRIPT_URL="https://raw.githubusercontent.com/${WORKFLOW_REPO}/main/.github/scripts/gh-pages-interceptor.js"
+          echo "Fetching interceptor from: $SCRIPT_URL"
+          
           # Minify the interceptor script and replace placeholders with actual values
-          INTERCEPTOR=$(cat ../content/.github/scripts/gh-pages-interceptor.js | sed "s/__PATH_PREFIX__/$PATH_PREFIX/g" | sed "s/__SITE_PREFIX__/$SITE_PREFIX/g" | tr '\n' ' ' | sed 's/  */ /g')
+          INTERCEPTOR=$(curl -sf "$SCRIPT_URL" | sed "s/__PATH_PREFIX__/$PATH_PREFIX/g" | sed "s/__SITE_PREFIX__/$SITE_PREFIX/g" | tr '\n' ' ' | sed 's/  */ /g')
           
           # Create script tag
           echo "<script>${INTERCEPTOR}</script>" > /tmp/interceptor.txt

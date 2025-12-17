@@ -1,0 +1,26 @@
+---
+name: Deploy GitHub Pages preview
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to deploy"
+        type: string
+        required: false
+        default: ""
+  push:
+    branches:
+      - "**/preview**"
+      - "**gh-pages**"
+      - "preview-**"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  preview:
+    uses: ./.github/workflows/github-pages-preview.yml
+    with:
+      branch: ${{ inputs.branch || github.ref }}
