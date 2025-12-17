@@ -176,10 +176,11 @@ jobs:
             
             # Extract unique top-level nav paths from config.md pages section
             # Looks for patterns like [Label](/path/...) and extracts the first directory segment
+            # Uses \Q...\E to escape regex metacharacters in nav_path
             grep -oE '\]\(/[^/)]+/' ../content/src/pages/config.md | \
               sed 's/](//' | \
               sort -u | while read nav_path; do
-                perl -i -pe "s|href=\"${nav_path}|href=\"/${PATH_PREFIX}/${SITE_PATH}${nav_path}|g" "$CONFIG_FILE"
+                perl -i -pe "s|\Qhref=\"${nav_path}\E|href=\"/${PATH_PREFIX}/${SITE_PATH}${nav_path}|g" "$CONFIG_FILE"
               done
             
             echo "✓ Config paths rewritten"

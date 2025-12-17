@@ -4,6 +4,11 @@
   var SITE_PREFIX = "/__SITE_PREFIX__";
   var ORIGIN = location.origin;
 
+  /* Check if path matches prefix with proper boundary validation */
+  function matchesSitePrefix(path) {
+    return path === SITE_PREFIX || path.startsWith(SITE_PREFIX + "/");
+  }
+
   /* URL Normalization - Remove /index.html suffix */
   if (location.pathname.endsWith("/index.html")) {
     history.replaceState(
@@ -21,9 +26,9 @@
     if (url.startsWith(ORIGIN) && !url.includes(BASE)) {
       var path = url.substring(ORIGIN.length);
       if (
-        path.startsWith("/hlx_statics") ||
-        path.startsWith("/franklin_assets") ||
-        path.startsWith(SITE_PREFIX)
+        path.startsWith("/hlx_statics/") ||
+        path.startsWith("/franklin_assets/") ||
+        matchesSitePrefix(path)
       ) {
         return ORIGIN + BASE + path;
       }
@@ -33,9 +38,9 @@
     if (
       url.startsWith("/") &&
       !url.startsWith(BASE) &&
-      (url.startsWith("/hlx_statics") ||
-        url.startsWith("/franklin_assets") ||
-        url.startsWith(SITE_PREFIX))
+      (url.startsWith("/hlx_statics/") ||
+        url.startsWith("/franklin_assets/") ||
+        matchesSitePrefix(url))
     ) {
       return BASE + url;
     }
