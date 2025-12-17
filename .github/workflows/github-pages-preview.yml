@@ -11,9 +11,8 @@ on:
   push:
     branches:
       - "**/preview**"
-      - "**/gh-pages**"
+      - "**gh-pages**"
       - "preview-**"
-      - "gh-pages-**"
 
 permissions:
   contents: read
