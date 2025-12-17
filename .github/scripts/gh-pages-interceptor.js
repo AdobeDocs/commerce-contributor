@@ -52,7 +52,18 @@
       if (fixed) input = fixed;
     } else if (input instanceof Request) {
       fixed = fix(input.url);
-      if (fixed) input = new Request(fixed, input);
+      if (fixed) input = new Request(fixed, {
+        method: input.method,
+        headers: input.headers,
+        body: input.body,
+        mode: input.mode,
+        credentials: input.credentials,
+        cache: input.cache,
+        redirect: input.redirect,
+        referrer: input.referrer,
+        referrerPolicy: input.referrerPolicy,
+        integrity: input.integrity
+      });
     }
     return originalFetch.call(this, input, options);
   };
