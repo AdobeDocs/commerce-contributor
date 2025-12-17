@@ -113,7 +113,7 @@
       main &&
       main.classList.contains("no-sidenav") &&
       template &&
-      template.content === "documentation"
+      template.getAttribute("content") === "documentation"
     ) {
       main.classList.remove("no-sidenav");
     }
