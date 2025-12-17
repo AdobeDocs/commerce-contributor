@@ -214,12 +214,22 @@ jobs:
         run: |
           cd _site
           
-          # Fetch the interceptor script from the workflow repository
+          # Try local file first (from content repo), fallback to remote fetch
+          LOCAL_SCRIPT="../content/.github/scripts/gh-pages-interceptor.js"
           SCRIPT_URL="https://raw.githubusercontent.com/${WORKFLOW_REPO}/main/.github/scripts/gh-pages-interceptor.js"
-          echo "Fetching interceptor from: $SCRIPT_URL"
           
-          # Minify the interceptor script and replace placeholders with actual values
-          INTERCEPTOR=$(curl -sf "$SCRIPT_URL" | sed "s/__PATH_PREFIX__/$PATH_PREFIX/g" | sed "s/__SITE_PREFIX__/$SITE_PREFIX/g" | tr '\n' ' ' | sed 's/  */ /g')
+          if [ -f "$LOCAL_SCRIPT" ]; then
+            echo "Using local interceptor script"
+            INTERCEPTOR=$(cat "$LOCAL_SCRIPT" | sed "s/__PATH_PREFIX__/$PATH_PREFIX/g" | sed "s/__SITE_PREFIX__/$SITE_PREFIX/g" | tr '\n' ' ' | sed 's/  */ /g')
+          else
+            echo "Fetching interceptor from: $SCRIPT_URL"
+            INTERCEPTOR=$(curl -sf "$SCRIPT_URL" | sed "s/__PATH_PREFIX__/$PATH_PREFIX/g" | sed "s/__SITE_PREFIX__/$SITE_PREFIX/g" | tr '\n' ' ' | sed 's/  */ /g')
+          fi
+          
+          if [ -z "$INTERCEPTOR" ]; then
+            echo "ERROR: Failed to load interceptor script"
+            exit 1
+          fi
           
           # Create script tag
           echo "<script>${INTERCEPTOR}</script>" > /tmp/interceptor.txt
