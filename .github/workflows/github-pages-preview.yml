@@ -39,12 +39,19 @@ jobs:
         id: config
         run: |
           SITE_PATH=$(node -p "require('./content/package.json').config.sitePath")
+          
+          # Validate sitePath format (alphanumeric, slashes, hyphens, underscores only - no shell metacharacters)
+          if ! echo "$SITE_PATH" | grep -qE '^[a-zA-Z0-9/_-]+$'; then
+            echo "ERROR: Invalid sitePath format in package.json. Must contain only alphanumeric characters, slashes, hyphens, or underscores."
+            exit 1
+          fi
+          
           # Strip leading slash if present, then extract first path segment
           SITE_PREFIX=$(echo "$SITE_PATH" | sed 's|^/||' | cut -d'/' -f1)
           echo "SITE_PATH=$SITE_PATH" >> $GITHUB_ENV
           echo "SITE_PREFIX=$SITE_PREFIX" >> $GITHUB_ENV
           echo "site_path=$SITE_PATH" >> $GITHUB_OUTPUT
-          echo "Site path: $SITE_PATH (prefix: $SITE_PREFIX)"
+          echo "✓ Site path validated: $SITE_PATH (prefix: $SITE_PREFIX)"
 
       - name: Clone adp-devsite
         uses: actions/checkout@v4
@@ -208,6 +215,17 @@ jobs:
             perl -i -0pe 's|(<div class="superhero">.*?<div>\s*)<img ([^>]+)>(.*?</div>\s*</div>)|$1<picture><img $2></picture>$3|gs' "${SITE_PATH}/index.html"
             echo "✓ Superhero images wrapped in <picture>"
           fi
+
+      - name: Validate workflow inputs
+        env:
+          WORKFLOW_REPO: ${{ inputs.workflow_repo }}
+        run: |
+          # Validate workflow_repo format (owner/repo, alphanumeric with hyphens/underscores/dots only)
+          if ! echo "$WORKFLOW_REPO" | grep -qE '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$'; then
+            echo "ERROR: Invalid workflow_repo format. Must be 'owner/repo' with alphanumeric characters, hyphens, underscores, or dots only."
+            exit 1
+          fi
+          echo "✓ workflow_repo validated: $WORKFLOW_REPO"
 
       - name: Inject GitHub Pages interceptor
         env:
