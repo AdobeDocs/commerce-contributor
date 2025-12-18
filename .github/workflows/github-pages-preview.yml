@@ -8,11 +8,6 @@ on:
         type: string
         required: false
         default: ""
-      workflow_repo:
-        description: "Repository containing the reusable workflow (for fetching scripts)"
-        type: string
-        required: false
-        default: "AdobeDocs/commerce-contributor"
     outputs:
       page_url:
         description: "The deployed GitHub Pages URL"
@@ -216,32 +211,24 @@ jobs:
             echo "✓ Superhero images wrapped in <picture>"
           fi
 
-      - name: Validate workflow inputs
-        env:
-          WORKFLOW_REPO: ${{ inputs.workflow_repo }}
-        run: |
-          # Validate workflow_repo format (owner/repo, alphanumeric with hyphens/underscores/dots only)
-          if ! echo "$WORKFLOW_REPO" | grep -qE '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$'; then
-            echo "ERROR: Invalid workflow_repo format. Must be 'owner/repo' with alphanumeric characters, hyphens, underscores, or dots only."
-            exit 1
-          fi
-          echo "✓ workflow_repo validated: $WORKFLOW_REPO"
-
       - name: Inject GitHub Pages interceptor
-        env:
-          WORKFLOW_REPO: ${{ inputs.workflow_repo }}
         run: |
           cd _site
           
-          # Try local file first (from content repo), fallback to remote fetch
+          # Security: Hardcoded trusted source for the interceptor script
+          # This prevents any user input from controlling where code is fetched from
+          TRUSTED_REPO="AdobeDocs/commerce-contributor"
+          
+          # Try local file first (for when this repo uses the workflow)
           LOCAL_SCRIPT="../content/.github/scripts/gh-pages-interceptor.js"
-          SCRIPT_URL="https://raw.githubusercontent.com/${WORKFLOW_REPO}/main/.github/scripts/gh-pages-interceptor.js"
           
           if [ -f "$LOCAL_SCRIPT" ]; then
-            echo "Using local interceptor script"
+            echo "Using local interceptor script: $LOCAL_SCRIPT"
             INTERCEPTOR=$(cat "$LOCAL_SCRIPT" | sed "s/__PATH_PREFIX__/$PATH_PREFIX/g" | sed "s/__SITE_PREFIX__/$SITE_PREFIX/g" | tr '\n' ' ' | sed 's/  */ /g')
           else
-            echo "Fetching interceptor from: $SCRIPT_URL"
+            # Fetch from the hardcoded trusted source
+            SCRIPT_URL="https://raw.githubusercontent.com/${TRUSTED_REPO}/main/.github/scripts/gh-pages-interceptor.js"
+            echo "Fetching interceptor from trusted source: $SCRIPT_URL"
             INTERCEPTOR=$(curl -sf "$SCRIPT_URL" | sed "s/__PATH_PREFIX__/$PATH_PREFIX/g" | sed "s/__SITE_PREFIX__/$SITE_PREFIX/g" | tr '\n' ' ' | sed 's/  */ /g')
           fi
           
