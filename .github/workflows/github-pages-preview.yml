@@ -248,24 +248,65 @@ jobs:
           MODIFIED=$(grep -l "$PATH_PREFIX" "${SITE_PATH}"/*.html 2>/dev/null | wc -l | tr -d ' ')
           echo "✓ Interceptor injected into $MODIFIED files"
 
+      - name: Add security headers
+        run: |
+          cd _site
+          
+          # Content Security Policy to mitigate XSS attacks
+          # - 'self' allows resources from same origin
+          # - 'unsafe-inline' required for the interceptor script and inline styles
+          # - data: allows data URIs for images (used by some frameworks)
+          # - blob: allows blob URIs (used for dynamic content)
+          # - https: restricts external resources to HTTPS only
+          CSP_CONTENT="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:; frame-ancestors 'self';"
+          CSP_TAG="<meta http-equiv=\"Content-Security-Policy\" content=\"${CSP_CONTENT}\">"
+          
+          # X-Content-Type-Options to prevent MIME sniffing
+          XCTO_TAG="<meta http-equiv=\"X-Content-Type-Options\" content=\"nosniff\">"
+          
+          # Referrer-Policy for privacy
+          RP_TAG="<meta name=\"referrer\" content=\"strict-origin-when-cross-origin\">"
+          
+          # Combine security meta tags
+          SECURITY_TAGS="${CSP_TAG}${XCTO_TAG}${RP_TAG}"
+          
+          # Inject security headers into all HTML files (after <head>)
+          find . -name "*.html" -type f | while read htmlfile; do
+            # Check if CSP already exists to avoid duplicates
+            if ! grep -q "Content-Security-Policy" "$htmlfile" 2>/dev/null; then
+              perl -i -pe "s|<head>|<head>${SECURITY_TAGS}|" "$htmlfile" 2>/dev/null || true
+            fi
+          done
+          
+          SECURED=$(grep -l "Content-Security-Policy" "${SITE_PATH}"/*.html 2>/dev/null | wc -l | tr -d ' ')
+          echo "✓ Security headers added to $SECURED files"
+
       - name: Create root redirect
         run: |
           cd _site
-          cat > index.html << EOF
+          cat > index.html << 'HTMLEOF'
           <!DOCTYPE html>
           <html>
           <head>
             <meta charset="utf-8">
+            <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'unsafe-inline'; img-src 'none'; frame-ancestors 'self';">
+            <meta http-equiv="X-Content-Type-Options" content="nosniff">
+            <meta name="referrer" content="strict-origin-when-cross-origin">
             <title>Preview</title>
-            <meta http-equiv="refresh" content="0; url=${SITE_PATH}/">
-            <link rel="canonical" href="${SITE_PATH}/">
+          HTMLEOF
+          # Add dynamic content with proper escaping
+          echo "    <meta http-equiv=\"refresh\" content=\"0; url=${SITE_PATH}/\">" >> index.html
+          echo "    <link rel=\"canonical\" href=\"${SITE_PATH}/\">" >> index.html
+          cat >> index.html << 'HTMLEOF'
           </head>
           <body>
-            <p>Redirecting to <a href="${SITE_PATH}/">documentation</a>...</p>
+          HTMLEOF
+          echo "    <p>Redirecting to <a href=\"${SITE_PATH}/\">documentation</a>...</p>" >> index.html
+          cat >> index.html << 'HTMLEOF'
           </body>
           </html>
-          EOF
-          echo "✓ Root redirect created"
+          HTMLEOF
+          echo "✓ Root redirect created with security headers"
 
       - name: Stop servers
         if: always()
