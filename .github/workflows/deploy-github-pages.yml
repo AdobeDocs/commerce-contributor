@@ -6,13 +6,8 @@ on:
       branch:
         description: "Branch to deploy"
         type: string
-        required: false
-        default: ""
-  push:
-    branches:
-      - "**/preview**"
-      - "**gh-pages**"
-      - "preview-**"
+        required: true
+        default: main
 
 permissions:
   contents: read
