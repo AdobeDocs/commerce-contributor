@@ -31,7 +31,7 @@ MD030: false
 # MD033/no-inline-html - Inline HTML (allow Adobe doc components)
 MD033:
   allowed_elements:
-    - HeroSimple
+    - SuperHero
     - Resources
     - DiscoverBlock
     - InlineAlert
