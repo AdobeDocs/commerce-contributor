@@ -6,10 +6,14 @@
 .history
 .idea
 .editorconfig
+.cursor
 
 # npm yarn
 node_modules
 package-lock.json
+yarn-error.log
+.pnp.*
+.yarn/*
 yarn-error.log
 .pnp.*
 .yarn/*
@@ -45,6 +49,6 @@ local-test.yml
 .yalc
 yalc.lock
 
-#txt
+# Added by update-bot
 linter-output.txt
 linter-report.txt
