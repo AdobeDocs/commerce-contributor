@@ -33,7 +33,7 @@ jobs:
       - name: Read site config
         id: config
         run: |
-          SITE_PATH=$(node -p "require('./content/package.json').config.sitePath")
+          SITE_PATH=$(grep -A1 '^- pathPrefix:' ./content/src/pages/config.md | tail -1 | sed 's/.*- //' | sed 's|^/||' | sed 's|/$||')
           
           # Validate sitePath format (alphanumeric, slashes, hyphens, underscores only - no shell metacharacters)
           if ! echo "$SITE_PATH" | grep -qE '^[a-zA-Z0-9/_-]+$'; then
