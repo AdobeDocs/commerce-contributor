@@ -1,8 +1,0 @@
-# Markdownlint ignore patterns
-node_modules/
-coverage/
-.github/
-
-# Special config file with custom format
-src/pages/config.md
-
