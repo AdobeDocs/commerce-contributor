@@ -139,6 +139,27 @@ jobs:
           
           echo "✓ wget crawl complete"
 
+      - name: Fetch content server assets
+        run: |
+          cd _site
+
+          # Find all asset paths referenced from the content server (127.0.0.1:3003).
+          # wget's --domains localhost excludes 127.0.0.1, so these are never downloaded
+          # during the main crawl and their URLs are left as localhost references.
+          find localhost+3000 -name "*.html" -type f -print0 | \
+            xargs -0 perl -ne 'print "$1\n" while m{http://127\.0\.0\.1:3003([^"<> ]+)}g' 2>/dev/null | \
+            sort -u | while IFS= read -r asset_path; do
+              asset_dir="localhost+3000$(dirname "$asset_path")"
+              mkdir -p "$asset_dir"
+              curl -sf "http://127.0.0.1:3003${asset_path}" -o "localhost+3000${asset_path}" && echo "✓ ${asset_path}" || true
+            done
+
+          # Rewrite all 127.0.0.1:3003 references to use the GitHub Pages base path
+          find localhost+3000 -name "*.html" -type f -print0 | \
+            xargs -0 perl -i -pe 's{http://127\.0\.0\.1:3003/}{/$ENV{PATH_PREFIX}/}g'
+
+          echo "✓ Content server assets fetched and paths rewritten"
+
       - name: Copy static assets
         run: |
           cd _site
