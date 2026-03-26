@@ -10,6 +10,7 @@
 
 # npm yarn
 node_modules
+package-lock.json
 
 # cypress
 cypress/videos
