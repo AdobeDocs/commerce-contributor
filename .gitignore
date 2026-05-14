@@ -1,3 +1,5 @@
+# .gitignore
+
 
 # OS and IDE generated files #
 ##############################
@@ -6,28 +8,11 @@
 .history
 .idea
 .editorconfig
+.cursor
 
 # npm yarn
 node_modules
 package-lock.json
-yarn-error.log
-.pnp.*
-.yarn/*
-
-# keep in repo
-!.gitignore
-!.yarn.lock
-!.yarnrc.yml
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-
-# gatsby files
-.env
-.cache
-public
 
 # cypress
 cypress/videos
@@ -40,11 +25,23 @@ lerna-debug.log
 .actrc
 .secrets
 local-test.yml
+linter-report.txt
 
-# yalc
+# Added by update-bot
+yarn-error.log
+.pnp.*
+.yarn/*
+!.gitignore
+!.yarn.lock
+!.yarnrc.yml
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.env
+.cache
+public
 .yalc
 yalc.lock
-
-#txt
 linter-output.txt
-linter-report.txt
