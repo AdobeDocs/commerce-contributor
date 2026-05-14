@@ -1,3 +1,5 @@
+# .gitignore
+
 
 # OS and IDE generated files #
 ##############################
@@ -24,3 +26,22 @@ lerna-debug.log
 .secrets
 local-test.yml
 linter-report.txt
+
+# Added by update-bot
+yarn-error.log
+.pnp.*
+.yarn/*
+!.gitignore
+!.yarn.lock
+!.yarnrc.yml
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.env
+.cache
+public
+.yalc
+yalc.lock
+linter-output.txt
