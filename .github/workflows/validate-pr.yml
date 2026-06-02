@@ -7,6 +7,11 @@ on:
         description: 'Base branch reference'
         required: true
         type: string
+      pr_number:
+        description: 'Pull request number (used to associate the linter report artifact with the PR)'
+        required: false
+        type: number
+        default: 0
 
 jobs:
   # Check if src/pages files were changed
@@ -58,13 +63,9 @@ jobs:
   remark-lint:
     needs: [check-files, markdown-lint]
     if: needs.check-files.outputs.run_validation == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Lint DevSite Utils
-        run: npm run lint
+    uses: AdobeDocs/adp-devsite-workflow/.github/workflows/lint.yml@DEVSITE-2424
+    with:
+      pr_number: ${{ inputs.pr_number }}
 
   # Gate job that always runs and becomes the required check
   validate-pr:
