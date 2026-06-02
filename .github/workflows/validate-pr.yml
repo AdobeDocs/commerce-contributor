@@ -1,4 +1,16 @@
 ---
+# Reusable workflow called by PR-triggered workflows (pr-validate.yml).
+# Runs content validation jobs only when src/pages/ files are changed,
+# then reports a single status via the validate-pr gate job.
+#
+# Jobs:
+#   check-files   — detects whether src/pages/ changed; gates all other jobs
+#   toc           — validates table-of-contents config (npm run test:config)
+#   markdown-lint — lints Markdown files (npm run lint:md)
+#   validate-pr   — required status check; passes when jobs above succeed or
+#                   are skipped (no src/pages/ changes)
+#
+# Remark-lint runs in a separate workflow: .github/workflows/lint.yml
 name: Validate pull request
 on:
   workflow_call:
@@ -9,7 +21,9 @@ on:
         type: string
 
 jobs:
-  # Check if src/pages files were changed
+  # Detects whether any src/pages/ files changed between HEAD and the base
+  # branch. Sets run_validation output used to skip downstream jobs when
+  # only non-content files (config, scripts, etc.) were modified.
   check-files:
     runs-on: ubuntu-latest
     outputs:
@@ -33,6 +47,8 @@ jobs:
             echo "⏭️ No changes in src/pages/, skipping validation"
           fi
 
+  # Validates the table-of-contents configuration so nav entries stay
+  # consistent with the pages that exist in src/pages/.
   toc:
     needs: check-files
     if: needs.check-files.outputs.run_validation == 'true'
@@ -44,6 +60,8 @@ jobs:
       - name: Run TOC validation
         run: npm run test:config
 
+  # Lints Markdown files for style and formatting issues.
+  # Runs after toc so a broken config doesn't flood the log with lint noise.
   markdown-lint:
     needs: [check-files, toc]
     if: needs.check-files.outputs.run_validation == 'true'
@@ -55,21 +73,12 @@ jobs:
       - name: Markdown lint
         run: npm run lint:md
 
-  remark-lint:
-    needs: [check-files, markdown-lint]
-    if: needs.check-files.outputs.run_validation == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Lint DevSite Utils
-        run: npm run lint
-
-  # Gate job that always runs and becomes the required check
+  # Single required status check for branch protection rules.
+  # Always runs so GitHub never sees a missing/skipped check on PRs that
+  # touch only non-content files.
   validate-pr:
     runs-on: ubuntu-latest
-    needs: [check-files, toc, markdown-lint, remark-lint]
+    needs: [check-files, toc, markdown-lint]
     if: always()
     steps:
       - name: Check validation results
@@ -79,17 +88,15 @@ jobs:
             echo "✅ No src/pages/ files changed - validation skipped"
             exit 0
           fi
-          
+
           # If src/pages files changed, check that all validation jobs succeeded
           if [[ "${{ needs.toc.result }}" == "success" ]] && \
-             [[ "${{ needs.markdown-lint.result }}" == "success" ]] && \
-             [[ "${{ needs.remark-lint.result }}" == "success" ]]; then
+             [[ "${{ needs.markdown-lint.result }}" == "success" ]]; then
             echo "✅ All validation checks passed"
             exit 0
           else
             echo "❌ One or more validation checks failed"
             echo "TOC: ${{ needs.toc.result }}"
             echo "Markdown Lint: ${{ needs.markdown-lint.result }}"
-            echo "Remark Lint: ${{ needs.remark-lint.result }}"
             exit 1
           fi
