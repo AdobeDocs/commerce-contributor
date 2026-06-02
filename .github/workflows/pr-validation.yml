@@ -8,4 +8,5 @@ jobs:
     uses: ./.github/workflows/validate-pr.yml
     with:
       base_ref: ${{ github.event.pull_request.base.ref }}
+      pr_number: ${{ github.event.pull_request.number }}
 
