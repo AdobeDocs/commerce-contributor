@@ -78,15 +78,12 @@ jobs:
         run: npm run lint:md
 
   # Runs adp-devsite-utils remark linter via the centralized lint workflow.
-  # Runs after markdown-lint so basic formatting is clean before remark runs.
-  # Uses always() so it runs even when markdown-lint is skipped (no src/pages/
-  # changes); lint-v3.yml handles the skip internally via the skip input.
+  # lint-v3.yml detects src/pages/ changes internally via base_ref, so no
+  # conditional needed here — it handles the skip sentinel on its own.
   lint:
-    needs: [check-files, markdown-lint]
-    if: always() && needs.check-files.result == 'success'
     uses: AdobeDocs/adp-devsite-workflow/.github/workflows/lint-v3.yml@DEVSITE-2424
     with:
-      skip: ${{ needs.check-files.outputs.run_validation != 'true' }}
+      base_ref: ${{ inputs.base_ref }}
       pr_number: ${{ inputs.pr_number }}
 
   # Single required status check for branch protection rules.
