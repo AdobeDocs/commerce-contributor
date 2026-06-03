@@ -79,27 +79,15 @@ jobs:
 
   # Runs adp-devsite-utils remark linter via the centralized lint workflow.
   # Runs after markdown-lint so basic formatting is clean before remark runs.
+  # Uses always() so it runs even when markdown-lint is skipped (no src/pages/
+  # changes); lint-v3.yml handles the skip internally via the skip input.
   lint:
     needs: [check-files, markdown-lint]
-    if: needs.check-files.outputs.run_validation == 'true'
+    if: always() && needs.check-files.result == 'success'
     uses: AdobeDocs/adp-devsite-workflow/.github/workflows/lint-v3.yml@DEVSITE-2424
     with:
+      skip: ${{ needs.check-files.outputs.run_validation != 'true' }}
       pr_number: ${{ inputs.pr_number }}
-
-  # When src/pages/ is unchanged the lint job is skipped and produces no artifact.
-  # Upload a sentinel so post-lint-comment-v3.yml can detect the skip gracefully.
-  upload-lint-skip-marker:
-    needs: [check-files]
-    if: needs.check-files.outputs.run_validation != 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Create skipped marker
-        run: echo "skipped" > lint-skipped.txt
-      - name: Upload linter-report artifact (skipped marker)
-        uses: actions/upload-artifact@v4
-        with:
-          name: linter-report
-          path: lint-skipped.txt
 
   # Single required status check for branch protection rules.
   # Always runs so GitHub never sees a missing/skipped check on PRs that
