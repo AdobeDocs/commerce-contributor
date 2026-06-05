@@ -7,7 +7,7 @@
 #   check-files   — detects whether src/pages/ changed; gates all other jobs
 #   toc           — validates table-of-contents config (npm run test:config)
 #   markdown-lint — lints Markdown files (npm run lint:md)
-#   lint          — runs adp-devsite-utils remark linter via adp-devsite-workflow
+#   adp-lint      — runs adp-devsite-utils remark linter via adp-devsite-workflow
 #   validate-pr   — required status check; passes when jobs above succeed or
 #                   are skipped (no src/pages/ changes)
 name: Validate pull request
@@ -80,7 +80,7 @@ jobs:
   # Runs adp-devsite-utils remark linter via the centralized lint workflow.
   # lint-v3.yml detects src/pages/ changes internally via base_ref, so no
   # conditional needed here — it handles the skip sentinel on its own.
-  lint:
+  adp-lint:
     uses: AdobeDocs/adp-devsite-workflow/.github/workflows/lint-v3.yml@DEVSITE-2424
     with:
       base_ref: ${{ inputs.base_ref }}
@@ -91,7 +91,7 @@ jobs:
   # touch only non-content files.
   validate-pr:
     runs-on: ubuntu-latest
-    needs: [check-files, toc, markdown-lint, lint]
+    needs: [check-files, toc, markdown-lint, adp-lint]
     if: always()
     steps:
       - name: Check validation results
@@ -105,13 +105,13 @@ jobs:
           # If src/pages files changed, check that all validation jobs succeeded
           if [[ "${{ needs.toc.result }}" == "success" ]] && \
              [[ "${{ needs.markdown-lint.result }}" == "success" ]] && \
-             [[ "${{ needs.lint.result }}" == "success" ]]; then
+             [[ "${{ needs.adp-lint.result }}" == "success" ]]; then
             echo "✅ All validation checks passed"
             exit 0
           else
             echo "❌ One or more validation checks failed"
             echo "TOC: ${{ needs.toc.result }}"
             echo "Markdown Lint: ${{ needs.markdown-lint.result }}"
-            echo "Lint: ${{ needs.lint.result }}"
+            echo "Lint: ${{ needs.adp-lint.result }}"
             exit 1
           fi
