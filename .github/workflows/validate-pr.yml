@@ -80,7 +80,9 @@ jobs:
   # Runs adp-devsite-utils remark linter via the centralized lint workflow.
   # lint-v3.yml detects src/pages/ changes internally via base_ref, so no
   # conditional needed here — it handles the skip sentinel on its own.
+  # Runs after toc and markdown-lint.
   adp-lint:
+    needs: [check-files, toc, markdown-lint]
     uses: AdobeDocs/adp-devsite-workflow/.github/workflows/lint-v3.yml@DEVSITE-2424
     with:
       base_ref: ${{ inputs.base_ref }}
