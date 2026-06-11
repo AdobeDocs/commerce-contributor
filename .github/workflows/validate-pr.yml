@@ -83,7 +83,7 @@ jobs:
   # Runs after toc and markdown-lint.
   adp-lint:
     needs: [check-files, toc, markdown-lint]
-    uses: AdobeDocs/adp-devsite-workflow/.github/workflows/lint-v3.yml@DEVSITE-2424
+    uses: AdobeDocs/adp-devsite-workflow/.github/workflows/lint-v3.yml@main
     with:
       base_ref: ${{ inputs.base_ref }}
       pr_number: ${{ inputs.pr_number }}
