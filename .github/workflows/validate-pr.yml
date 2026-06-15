@@ -7,10 +7,9 @@
 #   check-files   — detects whether src/pages/ changed; gates all other jobs
 #   toc           — validates table-of-contents config (npm run test:config)
 #   markdown-lint — lints Markdown files (npm run lint:md)
+#   adp-lint      — runs adp-devsite-utils remark linter via adp-devsite-workflow
 #   validate-pr   — required status check; passes when jobs above succeed or
 #                   are skipped (no src/pages/ changes)
-#
-# Remark-lint runs in a separate workflow: .github/workflows/lint.yml
 name: Validate pull request
 on:
   workflow_call:
@@ -19,6 +18,11 @@ on:
         description: 'Base branch reference'
         required: true
         type: string
+      pr_number:
+        description: 'Pull request number (used to associate the linter report artifact with the PR)'
+        required: false
+        type: number
+        default: 0
 
 jobs:
   # Detects whether any src/pages/ files changed between HEAD and the base
@@ -73,12 +77,23 @@ jobs:
       - name: Markdown lint
         run: npm run lint:md
 
+  # Runs adp-devsite-utils remark linter via the centralized lint workflow.
+  # lint-v3.yml detects src/pages/ changes internally via base_ref, so no
+  # conditional needed here — it handles the skip sentinel on its own.
+  # Runs after toc and markdown-lint.
+  adp-lint:
+    needs: [check-files, toc, markdown-lint]
+    uses: AdobeDocs/adp-devsite-workflow/.github/workflows/lint-v3.yml@main
+    with:
+      base_ref: ${{ inputs.base_ref }}
+      pr_number: ${{ inputs.pr_number }}
+
   # Single required status check for branch protection rules.
   # Always runs so GitHub never sees a missing/skipped check on PRs that
   # touch only non-content files.
   validate-pr:
     runs-on: ubuntu-latest
-    needs: [check-files, toc, markdown-lint]
+    needs: [check-files, toc, markdown-lint, adp-lint]
     if: always()
     steps:
       - name: Check validation results
@@ -91,12 +106,14 @@ jobs:
 
           # If src/pages files changed, check that all validation jobs succeeded
           if [[ "${{ needs.toc.result }}" == "success" ]] && \
-             [[ "${{ needs.markdown-lint.result }}" == "success" ]]; then
+             [[ "${{ needs.markdown-lint.result }}" == "success" ]] && \
+             [[ "${{ needs.adp-lint.result }}" == "success" ]]; then
             echo "✅ All validation checks passed"
             exit 0
           else
             echo "❌ One or more validation checks failed"
             echo "TOC: ${{ needs.toc.result }}"
             echo "Markdown Lint: ${{ needs.markdown-lint.result }}"
+            echo "Lint: ${{ needs.adp-lint.result }}"
             exit 1
           fi
