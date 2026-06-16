@@ -18,3 +18,5 @@ linter-report.txt
 # Preserved from external contributors
 .history
 .cursor
+tmp
+.claude
