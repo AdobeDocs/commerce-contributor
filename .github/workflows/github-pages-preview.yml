@@ -65,6 +65,11 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version-file: "content/.nvmrc"  # must match path: in step checkout-content
+          cache: npm
+          cache-dependency-path: |
+            content/package-lock.json
+            adp-devsite/package-lock.json
+            devsite-runtime-connector/package-lock.json
 
       - name: Install dependencies
         run: |
