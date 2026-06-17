@@ -34,9 +34,7 @@ jobs:
       run_validation: ${{ steps.filter.outputs.run_validation }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v6
 
       - name: Check for src/pages changes
         id: filter
@@ -59,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Run TOC validation
         run: npm run test:config
@@ -72,7 +70,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Markdown lint
         run: npm run lint:md

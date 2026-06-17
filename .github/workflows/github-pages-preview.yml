@@ -25,7 +25,7 @@ jobs:
       PATH_PREFIX: ${{ github.event.repository.name }}
     steps:
       - name: Checkout content repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ inputs.branch || github.ref }}
           path: content
@@ -49,21 +49,21 @@ jobs:
           echo "✓ Site path validated: $SITE_PATH (prefix: $SITE_PREFIX)"
 
       - name: Clone adp-devsite
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: AdobeDocs/adp-devsite
           path: adp-devsite
 
       - name: Clone devsite-runtime-connector
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: aemsites/devsite-runtime-connector
           path: devsite-runtime-connector
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: "lts/jod"
+          node-version-file: ".nvmrc"
 
       - name: Install dependencies
         run: |
@@ -353,10 +353,10 @@ jobs:
           echo "✓ Build verification passed"
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
@@ -372,4 +372,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
