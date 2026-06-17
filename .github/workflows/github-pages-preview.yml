@@ -79,8 +79,11 @@ jobs:
           (cd "$ROOT_DIR/content" && npm run dev > "$ROOT_DIR/content-server.log" 2>&1) &
           echo $! > /tmp/content.pid
           
-          # Start adp-devsite (port 3000)
-          (cd "$ROOT_DIR/adp-devsite" && npm run dev > "$ROOT_DIR/devsite-server.log" 2>&1) &
+          # Start adp-devsite markup server (port 3000)
+          # Run node ./dev.mjs directly instead of npm run dev to avoid the concurrently wrapper,
+          # which would also launch dev:aem (conflicts with devsite-runtime-connector on port 3001)
+          # and dev:markup's trailing `open` call (macOS-only, kills the process tree on Linux).
+          (cd "$ROOT_DIR/adp-devsite" && node ./dev.mjs > "$ROOT_DIR/devsite-server.log" 2>&1) &
           echo $! > /tmp/devsite.pid
           
           # Start runtime connector (port 3001)
