@@ -79,14 +79,18 @@ jobs:
           (cd "$ROOT_DIR/content" && npm run dev > "$ROOT_DIR/content-server.log" 2>&1) &
           echo $! > /tmp/content.pid
           
-          # Start adp-devsite markup server (port 3000)
-          # Run node ./dev.mjs directly instead of npm run dev to avoid the concurrently wrapper,
-          # which would also launch dev:aem (conflicts with devsite-runtime-connector on port 3001)
-          # and dev:markup's trailing `open` call (macOS-only, kills the process tree on Linux).
+          # Start adp-devsite markup proxy (port 3000)
+          # Run node ./dev.mjs directly to avoid the npm run dev concurrently wrapper whose
+          # dev:markup script ends with `open http://localhost:3000` (macOS-only; fails on Linux
+          # and causes concurrently -k to kill the entire process group).
           (cd "$ROOT_DIR/adp-devsite" && node ./dev.mjs > "$ROOT_DIR/devsite-server.log" 2>&1) &
           echo $! > /tmp/devsite.pid
-          
-          # Start runtime connector (port 3001)
+
+          # Start AEM CLI (port 3001) — required by dev.mjs to proxy non-docs content
+          (cd "$ROOT_DIR/adp-devsite" && npx @adobe/aem-cli --no-open --port 3001 up > "$ROOT_DIR/aem-server.log" 2>&1) &
+          echo $! > /tmp/aem.pid
+
+          # Start runtime connector (port 3002)
           (cd "$ROOT_DIR/devsite-runtime-connector" && npm run dev > "$ROOT_DIR/connector-server.log" 2>&1) &
           echo $! > /tmp/connector.pid
           
@@ -95,7 +99,7 @@ jobs:
       - name: Wait for servers to be ready
         run: |
           echo "Waiting for servers..."
-          for port in 3000 3003; do
+          for port in 3000 3001 3003; do
             for i in {1..60}; do
               if curl -s "http://localhost:$port" > /dev/null 2>&1; then
                 echo "✓ Port $port is ready"
@@ -335,7 +339,7 @@ jobs:
       - name: Stop servers
         if: always()
         run: |
-          for pidfile in /tmp/content.pid /tmp/devsite.pid /tmp/connector.pid; do
+          for pidfile in /tmp/content.pid /tmp/devsite.pid /tmp/aem.pid /tmp/connector.pid; do
             if [ -f "$pidfile" ]; then
               kill $(cat "$pidfile") 2>/dev/null || true
             fi
