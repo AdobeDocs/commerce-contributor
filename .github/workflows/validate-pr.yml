@@ -34,15 +34,13 @@ jobs:
       run_validation: ${{ steps.filter.outputs.run_validation }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v6
 
       - name: Check for src/pages changes
         id: filter
         run: |
           git fetch origin ${{ inputs.base_ref }}
-          CHANGED_FILES=$(git diff --name-only origin/${{ inputs.base_ref }}...HEAD)
+          CHANGED_FILES=$(git diff --name-only origin/${{ inputs.base_ref }}..HEAD)
           if echo "$CHANGED_FILES" | grep -q "^src/pages/"; then
             echo "run_validation=true" >> $GITHUB_OUTPUT
             echo "✅ Changes detected in src/pages/"
@@ -59,7 +57,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
 
       - name: Run TOC validation
         run: npm run test:config
@@ -72,7 +75,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
 
       - name: Markdown lint
         run: npm run lint:md

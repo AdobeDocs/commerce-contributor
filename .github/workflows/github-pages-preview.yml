@@ -25,7 +25,8 @@ jobs:
       PATH_PREFIX: ${{ github.event.repository.name }}
     steps:
       - name: Checkout content repo
-        uses: actions/checkout@v4
+        id: checkout-content
+        uses: actions/checkout@v6
         with:
           ref: ${{ inputs.branch || github.ref }}
           path: content
@@ -49,21 +50,26 @@ jobs:
           echo "✓ Site path validated: $SITE_PATH (prefix: $SITE_PREFIX)"
 
       - name: Clone adp-devsite
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: AdobeDocs/adp-devsite
           path: adp-devsite
 
       - name: Clone devsite-runtime-connector
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: aemsites/devsite-runtime-connector
           path: devsite-runtime-connector
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: "lts/jod"
+          node-version-file: "content/.nvmrc"  # must match path: in step checkout-content
+          cache: npm
+          cache-dependency-path: |
+            content/package-lock.json
+            adp-devsite/package-lock.json
+            devsite-runtime-connector/package-lock.json
 
       - name: Install dependencies
         run: |
@@ -79,11 +85,18 @@ jobs:
           (cd "$ROOT_DIR/content" && npm run dev > "$ROOT_DIR/content-server.log" 2>&1) &
           echo $! > /tmp/content.pid
           
-          # Start adp-devsite (port 3000)
-          (cd "$ROOT_DIR/adp-devsite" && npm run dev > "$ROOT_DIR/devsite-server.log" 2>&1) &
+          # Start adp-devsite markup proxy (port 3000)
+          # Run node ./dev.mjs directly to avoid the npm run dev concurrently wrapper whose
+          # dev:markup script ends with `open http://localhost:3000` (macOS-only; fails on Linux
+          # and causes concurrently -k to kill the entire process group).
+          (cd "$ROOT_DIR/adp-devsite" && node ./dev.mjs > "$ROOT_DIR/devsite-server.log" 2>&1) &
           echo $! > /tmp/devsite.pid
-          
-          # Start runtime connector (port 3001)
+
+          # Start AEM CLI (port 3001) — required by dev.mjs to proxy non-docs content
+          (cd "$ROOT_DIR/adp-devsite" && npx @adobe/aem-cli --no-open --port 3001 up > "$ROOT_DIR/aem-server.log" 2>&1) &
+          echo $! > /tmp/aem.pid
+
+          # Start runtime connector (port 3002)
           (cd "$ROOT_DIR/devsite-runtime-connector" && npm run dev > "$ROOT_DIR/connector-server.log" 2>&1) &
           echo $! > /tmp/connector.pid
           
@@ -92,7 +105,7 @@ jobs:
       - name: Wait for servers to be ready
         run: |
           echo "Waiting for servers..."
-          for port in 3000 3003; do
+          for port in 3000 3001 3003; do
             for i in {1..60}; do
               if curl -s "http://localhost:$port" > /dev/null 2>&1; then
                 echo "✓ Port $port is ready"
@@ -332,7 +345,7 @@ jobs:
       - name: Stop servers
         if: always()
         run: |
-          for pidfile in /tmp/content.pid /tmp/devsite.pid /tmp/connector.pid; do
+          for pidfile in /tmp/content.pid /tmp/devsite.pid /tmp/aem.pid /tmp/connector.pid; do
             if [ -f "$pidfile" ]; then
               kill $(cat "$pidfile") 2>/dev/null || true
             fi
@@ -353,10 +366,10 @@ jobs:
           echo "✓ Build verification passed"
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
@@ -372,4 +385,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
