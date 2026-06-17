@@ -40,7 +40,7 @@ jobs:
         id: filter
         run: |
           git fetch origin ${{ inputs.base_ref }}
-          CHANGED_FILES=$(git diff --name-only origin/${{ inputs.base_ref }}...HEAD)
+          CHANGED_FILES=$(git diff --name-only origin/${{ inputs.base_ref }}..HEAD)
           if echo "$CHANGED_FILES" | grep -q "^src/pages/"; then
             echo "run_validation=true" >> $GITHUB_OUTPUT
             echo "✅ Changes detected in src/pages/"
