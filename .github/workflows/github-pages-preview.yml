@@ -25,6 +25,7 @@ jobs:
       PATH_PREFIX: ${{ github.event.repository.name }}
     steps:
       - name: Checkout content repo
+        id: checkout-content
         uses: actions/checkout@v6
         with:
           ref: ${{ inputs.branch || github.ref }}
@@ -63,7 +64,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version-file: "content/.nvmrc"
+          node-version-file: "content/.nvmrc"  # must match path: in step checkout-content
 
       - name: Install dependencies
         run: |
