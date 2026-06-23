@@ -35,10 +35,15 @@ jobs:
         id: config
         run: |
           SITE_PATH=$(grep -A1 '^- pathPrefix:' ./content/src/pages/config.md | tail -1 | sed 's/.*- //' | sed 's|^/||' | sed 's|/$||')
-          
+
+          if [ -z "$SITE_PATH" ]; then
+            echo "ERROR: Could not read pathPrefix from config.md"
+            exit 1
+          fi
+
           # Validate sitePath format (alphanumeric, slashes, hyphens, underscores only - no shell metacharacters)
           if ! echo "$SITE_PATH" | grep -qE '^[a-zA-Z0-9/_-]+$'; then
-            echo "ERROR: Invalid sitePath format in package.json. Must contain only alphanumeric characters, slashes, hyphens, or underscores."
+            echo "ERROR: Invalid pathPrefix value in config.md: '$SITE_PATH'. Must contain only alphanumeric characters, slashes, hyphens, or underscores."
             exit 1
           fi
           
@@ -105,7 +110,7 @@ jobs:
       - name: Wait for servers to be ready
         run: |
           echo "Waiting for servers..."
-          for port in 3000 3001 3003; do
+          for port in 3000 3001 3002 3003; do
             for i in {1..60}; do
               if curl -s "http://localhost:$port" > /dev/null 2>&1; then
                 echo "✓ Port $port is ready"
@@ -136,6 +141,7 @@ jobs:
           echo "Crawling $(wc -l < "$ROOT_DIR/urls.txt" | tr -d ' ') pages..."
           
           cd "$ROOT_DIR/_site"
+          set +e
           wget \
             --input-file="$ROOT_DIR/urls.txt" \
             --page-requisites \
@@ -147,9 +153,32 @@ jobs:
             --wait=0.1 \
             --tries=3 \
             --timeout=30 \
-            --quiet \
-            2>&1 || true
-          
+            --quiet
+          WGET_EXIT=$?
+          set -e
+
+          URL_COUNT=$(wc -l < "$ROOT_DIR/urls.txt" | tr -d ' ')
+          HTML_COUNT=$(find localhost+3000 -name "*.html" 2>/dev/null | wc -l | tr -d ' ')
+          echo "Crawled $HTML_COUNT HTML files from $URL_COUNT URLs (wget exit: $WGET_EXIT)"
+
+          if [ "$HTML_COUNT" -lt 5 ]; then
+            echo "ERROR: Only $HTML_COUNT HTML files generated — crawl likely failed"
+            exit 1
+          fi
+
+          MIN_REQUIRED=$(( URL_COUNT * 80 / 100 ))
+          if [ "$MIN_REQUIRED" -lt 5 ]; then
+            MIN_REQUIRED=5
+          fi
+          if [ "$HTML_COUNT" -lt "$MIN_REQUIRED" ]; then
+            echo "ERROR: Expected at least $MIN_REQUIRED pages but only $HTML_COUNT HTML files were generated"
+            exit 1
+          fi
+
+          if [ "$WGET_EXIT" -ne 0 ]; then
+            echo "WARNING: wget exited with code $WGET_EXIT but $HTML_COUNT pages were captured"
+          fi
+
           echo "✓ wget crawl complete"
 
       - name: Fetch content server assets
@@ -200,6 +229,39 @@ jobs:
           # Site-wide banner
           curl -sf "http://localhost:3000/${SITE_PATH}/site-wide-banner.json" -o "localhost+3000/${SITE_PATH}/site-wide-banner.json" || echo "○ site-wide-banner (optional)"
 
+      - name: Fetch fragment includes
+        run: |
+          ROOT_DIR=$(pwd)
+          cd "$ROOT_DIR/content"
+
+          # Fragment blocks fetch .plain.html at runtime on GitHub Pages. The local dev
+          # stack does not serve .plain.html URLs — fetch the rendered page and extract
+          # <main> content to match the production .plain.html fragment format.
+          # Output must be under ${SITE_PATH}/ so relative fetches from topic pages resolve.
+          if [ -d src/pages/includes ]; then
+            FAILED=0
+            while IFS= read -r mdfile; do
+              rel_path=$(echo "$mdfile" | sed 's|src/pages/||' | sed 's|\.md$||')
+              out_dir="$ROOT_DIR/_site/localhost+3000/${SITE_PATH}/$(dirname "$rel_path")"
+              out_file="$out_dir/$(basename "$rel_path").plain.html"
+              mkdir -p "$out_dir"
+              if curl -sf "http://localhost:3000/${SITE_PATH}/${rel_path}" | \
+                perl -0777 -ne 'if (/<main[^>]*>(.*?)<\/main>/s) { print $1 }' > "$out_file" && \
+                [ -s "$out_file" ]; then
+                echo "✓ ${rel_path}.plain.html"
+              else
+                echo "✗ ${rel_path}.plain.html"
+                rm -f "$out_file"
+                FAILED=$((FAILED + 1))
+              fi
+            done < <(find src/pages/includes -name "*.md")
+
+            if [ "$FAILED" -gt 0 ]; then
+              echo "ERROR: $FAILED fragment include(s) failed to fetch"
+              exit 1
+            fi
+          fi
+
       - name: Rewrite paths for GitHub Pages
         run: |
           cd _site
@@ -210,9 +272,15 @@ jobs:
             # Rewrite the main site path
             perl -i -pe "s|href=\"/${SITE_PATH}/|href=\"/${PATH_PREFIX}/${SITE_PATH}/|g" "$CONFIG_FILE"
             
-            # Extract unique top-level nav paths from config.md pages section
-            # Looks for patterns like [Label](/path/...) and extracts the first directory segment
-            # Uses \Q...\E to escape regex metacharacters in nav_path
+            # Extract unique top-level nav paths from config.md pages section.
+            # Expected format: Markdown links like [Label](/segment/index.md) where
+            # /segment/ is a single path segment (regex: ](/[^/)]+/). Matches
+            # /rest/, /graphql/, /get-started/ etc. but not multi-level paths like
+            # /reference/rest/ or external URLs. If config.md changes format
+            # (different delimiters, bare paths, multi-segment links), this grep
+            # silently produces wrong or empty output — affected side-nav hrefs
+            # won't be rewritten but the build continues. Update the regex if
+            # config.md structure changes.
             grep -oE '\]\(/[^/)]+/' ../content/src/pages/config.md | \
               sed 's/](//' | \
               sort -u | while read nav_path; do
@@ -233,6 +301,21 @@ jobs:
             echo "✓ Output structure organized"
           fi
 
+      - name: Rewrite static asset paths
+        run: |
+          cd _site
+
+          # wget --convert-links emits relative paths like ../../hlx_statics/ that resolve
+          # without the repo PATH_PREFIX on GitHub Pages, so scripts.js never loads and
+          # client-side blocks (Fragment, SuperHero, Edition, etc.) stay unrendered.
+          find . -name "*.html" -type f -print0 | \
+            xargs -0 perl -i -pe '
+              s/(href|src)="(\.\.\/)*hlx_statics\//$1="\/$ENV{PATH_PREFIX}\/hlx_statics\//g;
+              s/(href|src)="(\.\.\/)*franklin_assets\//$1="\/$ENV{PATH_PREFIX}\/franklin_assets\//g;
+            '
+
+          echo "✓ Static asset paths rewritten"
+
       - name: Fix superhero block images
         run: |
           cd _site
@@ -249,8 +332,11 @@ jobs:
         run: |
           cd _site
           
-          # Security: Hardcoded trusted source for the interceptor script
-          # This prevents any user input from controlling where code is fetched from
+          # Interceptor script source is hardcoded (not user-controlled). Placeholder
+          # substitution uses sed with / delimiters — PATH_PREFIX and SITE_PREFIX must
+          # not contain slashes or other delimiter-breaking characters. PATH_PREFIX
+          # comes from github.event.repository.name and SITE_PREFIX is regex-validated
+          # earlier in this workflow, so both are safe today.
           TRUSTED_REPO="AdobeDocs/commerce-contributor"
           
           # Try local file first (for when this repo uses the workflow)
@@ -303,12 +389,15 @@ jobs:
           
           # Combine security meta tags
           SECURITY_TAGS="${CSP_TAG}${XCTO_TAG}${RP_TAG}"
-          
+
+          # Write to a temp file to avoid perl delimiter issues if tag content changes
+          echo "${SECURITY_TAGS}" > /tmp/security-tags.txt
+
           # Inject security headers into all HTML files (after <head>)
           find . -name "*.html" -type f | while read htmlfile; do
             # Check if CSP already exists to avoid duplicates
             if ! grep -q "Content-Security-Policy" "$htmlfile" 2>/dev/null; then
-              perl -i -pe "s|<head>|<head>${SECURITY_TAGS}|" "$htmlfile" 2>/dev/null || true
+              perl -i -pe 'BEGIN{open(F,"/tmp/security-tags.txt");$s=<F>;chomp $s;close F} s/<head>/<head>$s/' "$htmlfile" 2>/dev/null || true
             fi
           done
           
@@ -354,15 +443,30 @@ jobs:
       - name: Verify build output
         run: |
           cd _site
+          HTML_COUNT=$(find . -name "*.html" | wc -l | tr -d ' ')
           echo "=== Build Summary ==="
           echo "Total files: $(find . -type f | wc -l | tr -d ' ')"
-          echo "HTML files: $(find . -name '*.html' | wc -l | tr -d ' ')"
-          
+          echo "HTML files: $HTML_COUNT"
+
           if [ ! -d "${SITE_PATH}" ]; then
             echo "ERROR: No content generated!"
             exit 1
           fi
-          
+
+          if [ "$HTML_COUNT" -lt 5 ]; then
+            echo "ERROR: Only $HTML_COUNT HTML files in output — build likely failed"
+            exit 1
+          fi
+
+          if [ -d "${SITE_PATH}/includes" ]; then
+            INCLUDE_COUNT=$(find "${SITE_PATH}/includes" -name "*.plain.html" | wc -l | tr -d ' ')
+            if [ "$INCLUDE_COUNT" -lt 1 ]; then
+              echo "ERROR: No fragment include .plain.html files in output — Fragment blocks will not render"
+              exit 1
+            fi
+            echo "Fragment includes: $INCLUDE_COUNT .plain.html files"
+          fi
+
           echo "✓ Build verification passed"
 
       - name: Setup Pages
