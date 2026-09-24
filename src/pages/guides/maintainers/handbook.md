@@ -49,7 +49,7 @@ It is important to ensure that pull requests are targeted to the correct branch.
 
 ### Code review
 
-The code review is one of the most important parts of the review process. Our community maintainers are responsible for reviewing the proposed changes and confirm they are following the [Technical Guidelines](https://developer.adobe.com/commerce/php/coding-standards/technical-guidelines). It is important to evaluate if the proposed changes are backward compatible and follow the rules and best practice of our [Backward Compatible Development Guide](../code-contributions/backward-compatibility-policy.md). We count on our Maintainers judgement for other recommendations to increase contribution quality.
+Code review is one of the most important stages of the contribution process. Community maintainers are responsible for reviewing proposed changes and ensuring they comply with the [Technical Guidelines](https://developer.adobe.com/commerce/php/coding-standards/technical-guidelines). Maintainers must also assess whether changes are backward compatible and adhere to the principles and best practices outlined in the [Backward Compatible Development Guide](../code-contributions/backward-compatibility-policy.md). Beyond these requirements, we count on the expertise and judgment of our Maintainers for further recommendations that strengthen the quality, consistency, and sustainability of contributions.
 
 ![Code review](../../_images/pr-code-review.png)
 

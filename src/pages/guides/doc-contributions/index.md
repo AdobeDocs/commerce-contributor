@@ -52,7 +52,7 @@ New issues and PRs automatically appear in the following GitHub project boards:
 
 1. Create a pull request to the target AdobeDocs repository.
 
-   In general, you should use `main` as the base branch when creating a PR. If your contribution is related to a release that is in progress, use a version-specific integration branch, such as `2.x-develop`.
+   In general, use `main` as the base branch when creating a PR. If your contribution is related to a release that is in progress, use a version-specific integration branch, such as `2.x-develop`.
 
 1. Complete the pull request template.
 
@@ -79,7 +79,6 @@ The following guidelines may answer most of your questions and help you get star
 -  Review your work for basic typos, formatting errors, or ambiguous sentences before opening a pull request.
 -  Revise pull requests according to review feedback. We will close pull requests that require an inordinate amount of time to review and process (especially for minor changes) if you fail to make revisions according to review feedback.
 -  Do not directly contact Adobe team members or maintainers on Slack to review your pull request unless it has been open for more than five days. We have a process and queue for pull requests that everyone must follow.
--  We no longer recognize individual community members who contribute features to the Magento 2 codebase in the corresponding feature topic(s) in the documentation.
 
 ## Tips for writing content
 
@@ -96,7 +95,7 @@ Use the following guidelines to help you with the writing process:
 
 ### Review changes locally
 
-_(Optional)_ To review your changes in HTML output, follow the instructions in the repo's README to build the site locally.
+_(Optional)_ To review your changes in HTML output, follow the instructions in the repository README to build the site locally.
 
 ### Edit metadata
 

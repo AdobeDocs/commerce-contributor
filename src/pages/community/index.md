@@ -17,7 +17,7 @@ Learn where to ask questions, report bugs, make feature requests, and start disc
 
 [The Community Hub](https://business.adobe.com/products/commerce/community.html)
 
-Our vast global community of ecommerce developers, contributors, and innovators is the perfect starting point for any Commerce project.
+Our global community of ecommerce developers, contributors, and innovators is the perfect starting point for any Commerce project.
 
 <DiscoverBlock slots="link, text"/>
 
