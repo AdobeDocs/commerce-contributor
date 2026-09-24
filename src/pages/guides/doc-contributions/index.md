@@ -1,9 +1,9 @@
 ---
 title: Doc Contributions | Commerce Contributor
-description: Learn the difference between code contributions and doc contributions.
+description: Learn the difference between code contributions and documentation contributions.
 ---
 
-# Doc contributions
+# Documentation contributions
 
 Share your knowledge with the community by contributing to Commerce technical documentation! We welcome all types of contributions; from minor typo fixes to new topics.
 
@@ -11,11 +11,9 @@ You can contribute by creating an issue or pull request (PR) in one of our GitHu
 
 ![Edit or report an issue on GitHub](../../_images/edit-report.png)
 
-Adobe staff members and [community maintainers](../maintainers/index.md) review issues and pull requests on a regular basis. We do our best to address all issues as soon as possible, but working through the backlog takes time. We appreciate your patience.
-
 ## Contributor attribution
 
-If you write and contribute a new topic, we add your name (or your company's name) at the top of the page and link it to your GitHub profile (or company website)! For example:
+If you write and contribute a new topic, we add your name (or your company's name) at the end of the page and link it to your GitHub profile (or company website)! For example:
 
 ![Contributor attribution](../../_images/contributor-attribution-example.png)
 
@@ -54,7 +52,7 @@ New issues and PRs automatically appear in the following GitHub project boards:
 
 1. Create a pull request to the target AdobeDocs repository.
 
-   In general, you should use `main` as the base branch when creating a PR. If your contribution is related to a release that is in progress, use a version-specific integration branch, such as `develop`.
+   In general, you should use `main` as the base branch when creating a PR. If your contribution is related to a release that is in progress, use a version-specific integration branch, such as `2.x-develop`.
 
 1. Complete the pull request template.
 
@@ -81,8 +79,7 @@ The following guidelines may answer most of your questions and help you get star
 -  Review your work for basic typos, formatting errors, or ambiguous sentences before opening a pull request.
 -  Revise pull requests according to review feedback. We will close pull requests that require an inordinate amount of time to review and process (especially for minor changes) if you fail to make revisions according to review feedback.
 -  Do not directly contact Adobe team members or maintainers on Slack to review your pull request unless it has been open for more than five days. We have a process and queue for pull requests that everyone must follow.
--  Get recognized on the Adobe web site for writing new topics! Add your name and a link to your company website or GitHub profile to the file metadata so that we can display it on the page. See [Edit metadata](#edit-metadata).
--  We no longer recognize individual community members who contribute features to the Magento 2 codebase in the corresponding feature topic(s) in the documentation. Adobe recognizes these contributions in more appropriate channels (for example, the [Magento DevBlog](https://community.magento.com/t5/Magento-DevBlog/bg-p/devblog)).
+-  We no longer recognize individual community members who contribute features to the Magento 2 codebase in the corresponding feature topic(s) in the documentation.
 
 ## Tips for writing content
 
@@ -99,7 +96,7 @@ Use the following guidelines to help you with the writing process:
 
 ### Review changes locally
 
-_(Optional)_ To review your changes in HTML output, follow the instructions in the repo's README to build the site locally using Gatsby.
+_(Optional)_ To review your changes in HTML output, follow the instructions in the repo's README to build the site locally.
 
 ### Edit metadata
 
@@ -109,8 +106,6 @@ The Markdown (.md) file's metadata is a set of YAML key-value pairs. The metadat
 ---
 title:
 description:
-contributor_name:
-contributor_link:
 ---
 ```
 
@@ -118,10 +113,8 @@ contributor_link:
 
 | Property  | Description | Required? |
 | ------------- | ---------- | ---------- |
-| `title`       | Sets the title of the page in the HTML metadata and the main title on the page. Max character limit is 60. | Yes |
+| `title`       | Sets the title of the page in the HTML metadata. Max character limit is 60. | Yes |
 | `description` | Sets the description of the page in the HTML metadata. Max character limit is 160. | Yes |
-| `contributor_name` | Sets the name of the contributor who wrote the topic and displays it on the page. | No |
-| `contributor_link` | Creates a link to the contributor's GitHub profile or company website. | No |
 
 ## Report an issue
 
