@@ -11,12 +11,6 @@ You can contribute by creating an issue or pull request (PR) in one of our GitHu
 
 ![Edit or report an issue on GitHub](../../_images/edit-report.png)
 
-## Contributor attribution
-
-If you write and contribute a new topic, we add your name (or your company's name) at the end of the page and link it to your GitHub profile (or company website)! For example:
-
-![Contributor attribution](../../_images/contributor-attribution-example.png)
-
 ## Get started
 
 ![Get started workflow](../../_images/contribute-prerequisites.png)
