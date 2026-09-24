@@ -13,14 +13,14 @@ When considering new maintainers, we look for contributors who have shown a prop
 
 -  Contributing good and accepted code to multiple projects, including fixes for issues and new features
 -  Reviewing and discussing pull requests from other contributors
--  Helping other contributors with complex decisions and questions, like architecture questions, and providing advice according to [technical guidelines](https://developer.adobe.com/commerce/php/coding-standards/technical-guidelines/)
+-  Helping other contributors with complex decisions and questions, like architecture questions, and providing advice according to [technical guidelines](https://developer.adobe.com/commerce/php/coding-standards/technical-guidelines)
 
 ## Maintainer activities
 
 Maintainers take part in these main activities:
 
 -  Review pull request descriptions to make sure that they are meaningful and contain all required details; expedites pull request delivery without requiring additional clarification from contributors
--  Review pull requests according to [technical guidelines](https://developer.adobe.com/commerce/php/coding-standards/technical-guidelines/)
+-  Review pull requests according to [technical guidelines](https://developer.adobe.com/commerce/php/coding-standards/technical-guidelines)
 -  Avoid [backward incompatible changes](../code-contributions/backward-compatibility-policy.md) in proposed changes
 -  Make sure all new code is covered with appropriate unit, integration, and functional tests
 -  Review issue descriptions to make sure that they are meaningful and provide clear reproduction steps

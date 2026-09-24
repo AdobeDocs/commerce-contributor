@@ -21,7 +21,7 @@ All backward incompatible changes should be approved and covered by static tests
 
 Technical interfaces include PHP interfaces or classes, CLI commands, URLs, or any other interfaces that can be used by 3rd-party developer, system integrator, or user of Magento.
 Any change to an interface that can lead to a broken integration is a breaking technical change.
-Technical interfaces and the corresponding level of change are described in [Code Changes](https://developer.adobe.com/commerce/php/development/versioning/code-changes/) and [Module Version Dependencies](https://developer.adobe.com/commerce/php/development/versioning/dependencies/).
+Technical interfaces and the corresponding level of change are described in [Code Changes](https://developer.adobe.com/commerce/php/development/versioning/code-changes) and [Module Version Dependencies](https://developer.adobe.com/commerce/php/development/versioning/dependencies).
 
 Technical backward compatibility must be retained between PATCH (marketing) versions of Magento products. It should also be retained between MINOR (marketing) releases if possible.
 Any breaking changes must be approved by an architect, product owner and release manager.

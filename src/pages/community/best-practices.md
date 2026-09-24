@@ -23,8 +23,8 @@ The Adobe team verifies and provides the following best practices and recommenda
 *  [Best Practices for Extension Development](https://developer.adobe.com/commerce/php/best-practices/)
 *  [Upgrade Best Practices](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/prepare/best-practices)
 *  [Programming Best Practices](https://developer.adobe.com/commerce/php/best-practices/extensions/)
-*  [Observers Best Practices](https://developer.adobe.com/commerce/php/best-practices/extensions/observers/)
-*  [Theme Development Best Practices](https://developer.adobe.com/commerce/frontend-core/guide/best-practices/)
+*  [Observers Best Practices](https://developer.adobe.com/commerce/php/best-practices/extensions/observers)
+*  [Theme Development Best Practices](https://developer.adobe.com/commerce/frontend-core/guide/best-practices)
 *  [Performance Best Practices](https://experienceleague.adobe.com/en/docs/commerce-operations/performance-best-practices/overview)
 *  [Best Practices for Store Configuration](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure-store/best-practices) for Adobe Commerce on cloud infrastructure
 *  [Deployment Process](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices) for Adobe Commerce on cloud infrastructure

@@ -21,7 +21,7 @@ If you write and contribute a new topic, we add your name (or your company's nam
 
 ![Get started workflow](../../_images/contribute-prerequisites.png)
 
-1. Make sure you have a [GitHub account](https://github.com/signup/free).
+1. Make sure you have a [GitHub account](https://github.com/).
 1. Fork the Commerce docs repository that you want to contribute to from [AdobeDocs on GitHub](https://github.com/orgs/AdobeDocs/repositories?language=&q=visibility%3Apublic+archived%3Afalse+commerce*&sort=&type=public). Remember to [sync your fork](https://help.github.com/articles/syncing-a-fork/) and update branches as needed.
 1. Review the [contribution guidelines](#contribution-guidelines).
 
