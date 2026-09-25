@@ -120,4 +120,4 @@ Label descriptions:
 
 ## Questions and Discussion
 
-If you have any questions, feedback, or proposals for this workflow, join the [Community Engineering Slack Workspace](https://opensource.magento.com/slack). We have a [#backlog-maintainers](https://magentocommeng.slack.com/messages/CCV2S9P7S) channel specifically for these discussions.
+If you have any questions, feedback, or proposals for this workflow, join the [Community Engineering Slack Workspace](https://developer.adobe.com/open/magento/slack).

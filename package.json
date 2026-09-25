@@ -28,5 +28,12 @@
   },
   "engines": {
     "node": "^24.11.0"
+  },
+  "lint": {
+     "skipUrlPatterns": [
+       "magento.stackexchange.com",
+       "business.adobe.com/products/commerce/community.html",
+       "magentocommeng.slack.com"
+     ]
   }
 }

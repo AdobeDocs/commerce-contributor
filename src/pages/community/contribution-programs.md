@@ -18,7 +18,7 @@ When you join, you start receiving program benefits:
 
 1. Make sure all of your contributors have an active GitHub account with two-factor authentication enabled.
 1. Create a list of your contributors' emails and their GitHub accounts (example format: `github.com/accountname`).
-1. Contact [engcom@adobe.com](engcom@adobe.com) with the list and ask to join.
+1. Contact [engcom@adobe.com](mailto:engcom@adobe.com) with the list and ask to join.
 1. After onboarding, in addition to Magento Open Source projects, you will get permissions to Adobe Commerce and B2B for Adobe Commerce private code repositories for partners.
 
-If you need help, contact us at [engcom@adobe.com](engcom@adobe.com) and we will walk you through enrollment.
+If you need help, contact us at [engcom@adobe.com](mailto:engcom@adobe.com) and we will walk you through enrollment.

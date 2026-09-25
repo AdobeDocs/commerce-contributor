@@ -9,23 +9,21 @@ Learn where to ask questions, report bugs, make feature requests, and start disc
 
 ## Resources
 
-You've got a place to start discussions.
-
 <DiscoverBlock slots="image, heading, link, text" width="25%"/>
 
 ![Community forum](../_images/experience-cloud.svg)
 
-### Community forum & blog
+### Community
 
-[Get started](https://community.magento.com/)
+[The Community Hub](https://business.adobe.com/products/commerce/community.html)
 
-Open discussion and support with community experts and Adobe staff
+Our global community of ecommerce developers, contributors, and innovators is the perfect starting point for any Commerce project.
 
 <DiscoverBlock slots="link, text"/>
 
-[Magento DevBlog](https://community.magento.com/t5/Magento-DevBlog/bg-p/devblog)
+[Adobe Developers Blog](https://blog.developer.adobe.com/)
 
-The DevBlog is a great resource for news about Magento Open Source projects, new community resources, and events.
+The DevBlog is a great resource for news about Commerce projects, new community resources, and events.
 
 <DiscoverBlock slots="image, heading, link, text" width="100%"/>
 
@@ -33,9 +31,9 @@ The DevBlog is a great resource for news about Magento Open Source projects, new
 
 ### Slack
 
-[Explore](https://magentocommeng.slack.com)
+[Explore](https://developer.adobe.com/open/magento/slack)
 
-Hundreds of channels for Commerce open-source projects ([self sign-up](https://join.slack.com/t/magentocommeng/shared_invite/zt-mje5x2ye-3VGeNoaNxDGYMDle6qLuXA))
+Channels for Magento Open Source projects
 
 <DiscoverBlock slots="image, heading, link, text" width="100%"/>
 

@@ -93,8 +93,6 @@ We also recommend creating a personal access token for your account to use when 
 
 We capture code-related issues in the [GitHub repo](https://github.com/magento/magento2) and documentation-related issues in the [Commerce Docs - Issues Project Board](https://github.com/orgs/AdobeDocs/projects/6). If you have questions about functionality or processes, we recommend posting them to a question-and-answer site, such as [Stack Exchange](https://magento.stackexchange.com/) and the [Community Forums](https://community.magento.com/), where Magento Open Source community members can quickly provide recommendations and advice.
 
-Submit feature requests or enhancement suggestions to the [Community Forums](https://community.magento.com/). For details about how requests are managed, see [Improvements to GitHub Management](https://community.magento.com/t5/News-Announcements/Improvements-to-GitHub-Management/m-p/44572#M96).
-
 ## Accepted pull requests and ported code
 
 <InlineAlert variant="help" slots="text"/>
@@ -258,7 +256,7 @@ Actual result:
 
 Additional information is often requested when the bug report is processed. You can save time by providing both Magento Open Source and browser logs, screenshots, repository branch and HEAD commit you checked out to install Magento Open Source and any other artifacts related to the issue.
 
-## Help triage issues  [![](https://www.codetriage.com/magento/magento2/badges/users.svg)](https://www.codetriage.com/magento/magento2)
+## Help triage issues  [![Open Source Helpers](https://www.codetriage.com/magento/magento2/badges/users.svg)](https://www.codetriage.com/magento/magento2)
 
 In addition to contributing code, you can help triage issues. This can include reproducing bug reports or asking for vital information, such as affected versions or instructions to reproduce bugs.  If you want to triage issues, you can start by subscribing to [Magento on CodeTriage](https://www.codetriage.com/magento/magento2).
 
