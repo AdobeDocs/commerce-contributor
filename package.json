@@ -7,6 +7,8 @@
     "url": "https://github.com/AdobeDocs/commerce-contributor"
   },
   "scripts": {
+    "helper:render": "cd _helper && bundle exec rake render",
+    "helper:whatsnew": "cd _helper && bundle exec rake whatsnew",
     "dev": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils dev",
     "buildNavigation": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils buildNavigation -v",
     "buildRedirections": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils buildRedirections -v",
@@ -30,6 +32,13 @@
     "node": "^24.11.0"
   },
   "lint": {
+    "skipRules": {
+      "check-frontmatter": {
+        "paths": [
+          "src/pages/_includes"
+        ]
+      }
+    },
      "skipUrlPatterns": [
        "magento.stackexchange.com",
        "business.adobe.com/products/commerce/community.html",
