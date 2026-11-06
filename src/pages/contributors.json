@@ -1,16 +1,24 @@
 {
-  "total": 26,
+  "total": 27,
   "offset": 0,
-  "limit": 26,
+  "limit": 27,
   "data": [
     {
       "page": "/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/57922?v=4"
       ],
-      "lastUpdated": "1/29/2026"
+      "lastUpdated": "11/4/2026"
+    },
+    {
+      "page": "/_includes/templated/whats-new",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/12731225?v=4"
+      ],
+      "lastUpdated": "11/4/2026"
     },
     {
       "page": "/community/",
